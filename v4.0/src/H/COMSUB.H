@@ -69,7 +69,7 @@ extern unsigned computmsg (
 /*
  *  verify correct DOS version
  */
-extern unsigned comcheckdosver();
+extern unsigned comcheckdosver(void);
 
 /*
  *  return code conversion to message id
