@@ -6,8 +6,8 @@
 /*                                                                          */
 
 #define FLAG      char                                                  /* AN000 */
-#define BEGIN     {
-#define END       }
+/*#define BEGIN     {								*/
+/*/#define END       }								*/
 #define ESC       0x1B
 #define ESC_FLAG  -2                                                    /* AN000 */
 #define NUL       0x00
@@ -153,7 +153,7 @@
 
 
 struct entry
-    BEGIN
+    {
      unsigned char       boot_ind;
      unsigned char       start_head;
      unsigned char       start_sector;
@@ -171,34 +171,34 @@ struct entry
      char                vol_label[12];                                 /* AN000 */
      char                system[9];                                     /* AN000 */
      char                drive_letter;                                  /* AN000 */
-    END;
+    };
 
 struct freespace
-   BEGIN
+   {
     unsigned        space;
     unsigned        start;
     unsigned        end;
     unsigned        mbytes_unused;                                      /* AN000 */
     unsigned        percent_unused;                                     /* AN000 */
     char            volume_id[12];                                      /* AN000 */
-   END;
+   };
 
 struct diskaccess                                                       /* AN002 */
-   BEGIN                                                                /* AN002 */
+   {                                                                /* AN002 */
     char            dac_special_func;                                   /* AN002 */
     char            dac_access_flag;                                    /* AN002 */
-   END;                                                                 /* AN002 */
+   };                                                                 /* AN002 */
 
 struct dx_buffer_ioctl                                                  /* AN000 */
-   BEGIN                                                                /* AN000 */
+   {                                                                /* AN000 */
     unsigned int    info_level;          /* Information level */        /* AN000 */
     unsigned long   serial_num;          /* serial number     */        /* AN000 */
     char            vol_label[11];       /* volume label      */        /* AN000 */
     char            file_system[8];      /* file system       */        /* AN000 */
-   END;                                                                 /* AN000 */
+   };                                                                 /* AN000 */
 
 struct subst_list                                                       /* AN000 */
-  BEGIN                                                                 /* AN000 */
+  {                                                                 /* AN000 */
     char        sl_size1;      /* Size of List */                       /* AN000 */
     char        zero1;         /* Reserved */                           /* AN000 */
     char far   *value1;        /* Time, date, or ptr to data item*/     /* AN000 */
@@ -207,10 +207,10 @@ struct subst_list                                                       /* AN000
     char        max_width1;    /* Maximum FIELD width */                /* AN000 */
     char        min_width1;    /* Minimum FIELD width */                /* AN000 */
     char        pad_char1;     /* Character for pad FIELD */            /* AN000 */
-  END;                                                                  /* AN000 */
+  };                                                                  /* AN000 */
 
 struct sublistx                                                                                                                /* ;an000; */
-  BEGIN                                                                                                                          /* ;an000; */
+  {                                                                                                                          /* ;an000; */
     unsigned char size;                                                         /* sublist size                         */       /* ;an000; */
     unsigned char reserved;                                                     /* reserved for future growth           */       /* ;an000; */
     unsigned far *value;                                                        /* pointer to replaceable parm          */       /* ;an000; */
@@ -219,6 +219,6 @@ struct sublistx                                                                 
     unsigned char max_width;                                                    /* max width of replaceable field       */       /* ;an000; */
     unsigned char min_width;                                                    /* min width of replaceable field       */       /* ;an000; */
     unsigned char pad_char;                                                     /* pad character for replaceable field  */       /* ;an000; */
-  END;
+  };
                                                                                                                                  /* ;an000; */
 

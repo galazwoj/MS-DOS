@@ -8,7 +8,7 @@
 
 void    main()
 
-BEGIN
+{
 
 unsigned i;
 
@@ -64,9 +64,9 @@ unsigned i;
         insert[0] = 'C';
         display(menu_5);
         for (i=0;i < 92;i++)
-           BEGIN
+           {
             insert[i] = 'x';
-           END
+           }
         display(menu_14);
         insert[0] = 'x';
         insert[1] = 'x';
@@ -92,9 +92,9 @@ unsigned i;
         insert[0] = 'C';
         display(menu_5);
         for (i=0;i < 92;i++)
-           BEGIN
+           {
             insert[i] = 'x';
-           END
+           }
         display(menu_14);
         insert[0] = 'x';
         insert[1] = 'x';
@@ -115,14 +115,14 @@ unsigned i;
         clear_screen(0,0,24,39);
         display(menu_18);
         for (i=0;i < 168;i++)
-           BEGIN
+           {
             insert[i]= 'x';
-           END
+           }
         display(menu_19);
         for (i=0;i < 168;i++)
-           BEGIN
+           {
             insert[i]= 'x';
-           END
+           }
         display(menu_20);
         insert[0] = 'x';
         insert[1] = 'x';
@@ -149,9 +149,9 @@ unsigned i;
         insert[0] = 'C';
         display(menu_5);
         for (i=0;i < 92;i++)
-           BEGIN
+           {
             insert[i] = 'x';
-           END
+           }
         display(menu_14);
         insert[0] = 'x';
         insert[1] = 'x';
@@ -181,9 +181,9 @@ unsigned i;
         insert[0] = 'C';
         display(menu_5);
         for (i=0;i < 92;i++)
-           BEGIN
+           {
             insert[i] = 'x';
-           END
+           }
         display(menu_14);
         insert[0] = 'x';
         insert[1] = 'x';
@@ -201,9 +201,9 @@ unsigned i;
         insert[0] = 'C';
         display(menu_5);
         for (i=0;i<92;i++)
-           BEGIN
+           {
             insert[i] = 'x';
-           END
+           }
         display(menu_14);
         insert[0] = 'x';
         insert[1] = 'x';
@@ -220,9 +220,9 @@ unsigned i;
         display(menu_32);
         display(menu_18);
         for (i=0;i<168;i++)
-           BEGIN
+           {
             insert[i]='x';
-           END
+           }
         display(menu_19);
         insert[0] = 'x';
         insert[1] = 'x';
@@ -239,9 +239,9 @@ unsigned i;
         insert[0] = 'C';
         display(menu_5);
         for (i=0;i<92;i++)
-           BEGIN
+           {
             insert[i] = 'x';
-           END
+           }
         display(menu_14);
         insert[0] = 'x';
         insert[1] = 'x';
@@ -256,14 +256,14 @@ unsigned i;
         clear_screen(0,0,24,39);
         display(menu_37);
         for (i=0;i<168;i++)
-           BEGIN
+           {
             insert[i]='x';
-           END
+           }
         display(menu_19);
         for (i=0;i<168;i++)
-           BEGIN
+           {
             insert[i]='x';
-           END
+           }
         display(menu_20);
         display(menu_11);
         wait_for_ESC();
@@ -447,7 +447,7 @@ unsigned i;
         clear_screen(0,0,24,39);
         DOSEXIT(0,0);
 
-END
+}
 
 
 /******************* START OF SPECIFICATIONS *******************/
@@ -525,7 +525,7 @@ void display(s)
 
 char far *s;
 
-BEGIN
+{
         unsigned      row;
         unsigned      col;
         char          attribute;
@@ -539,31 +539,31 @@ BEGIN
         insert_count = 0;
         /* check for a request to display a null string */
         if (*s == '\0')
-           BEGIN
+           {
             /* Message string error */
             insert[0] = '1';
             display(debug_msg);
-           END
+           }
         else
-           BEGIN
+           {
             /* There is data there, lets go handle it */
 
             attribute = 0x00;
             /* Go until end of string */
             while (*s != '\0')
-               BEGIN
+               {
 
                 /* Check for any imbedded control strings */
                 switch (*s)
-                   BEGIN
+                   {
                     /* Check for control characters */
                     case '<':
-                              BEGIN
+                              {
                                s++;
                                while ( (*s != '>') && (*s != '\0') )
-                                  BEGIN
+                                  {
                                    switch (*s++)
-                                      BEGIN
+                                      {
                                        case 'H': attribute = (attribute & 0x80) | 0x0F;
                                                  break;
 
@@ -581,183 +581,183 @@ BEGIN
                                                  break;
 
                                        case 'I':
-                                                 BEGIN
+                                                 {
                                                    /* display next element in the array */
                                                   if (attribute == 0x00)
                                                       attribute = 0x07;
                                                   VIOWRTCHARSTRATT(pinsert+insert_count++,1,row,col++,attribute_ptr,0);
                                                   break;
-                                                 END
+                                                 }
 
 
                                        case 'Y':
-                                                 BEGIN
+                                                 {
                                                   /* display YES character in next location */
                                                   *--s = YES;
                                                   if (attribute == 0x00)
                                                       attribute = 0x07;
                                                   VIOWRTCHARSTRATT(s++,1,row,col++,attribute_ptr,0);
                                                   break;
-                                                 END
+                                                 }
 
                                        case 'N':
-                                                 BEGIN
+                                                 {
                                                   /* display NO character in next location */
                                                   *--s = NO;
                                                   if (attribute == 0x00)
                                                       attribute = 0x07;
                                                   VIOWRTCHARSTRATT(s++,1,row,col++,attribute_ptr,0);
                                                   break;
-                                                 END
+                                                 }
 
 
                                        case 'S':
-                                                 BEGIN
+                                                 {
                                                   input_row = row;
                                                   input_col = col;
                                                   break;
-                                                 END
+                                                 }
 
                                        case 'C':
-                                                 BEGIN
+                                                 {
                                                   /* Clear from current position to end of line */
                                                   clear_screen(row,col,row,39);
                                                   break;
-                                                 END
+                                                 }
 
                                        case '\0':
-                                                 BEGIN
+                                                 {
                                                   /* Message string error - string ended in the middle of control string*/
                                                   insert[0] = '7';
                                                   display(debug_msg);
                                                   break;
-                                                 END
+                                                 }
 
                                        default:
-                                                 BEGIN
+                                                 {
                                                   /* Message string error - no valid control char found */
                                                   insert[0] = '6';
                                                   display(debug_msg);
                                                   break;
-                                                 END
-                                      END /* Switch */
-                                  END /* While */
+                                                 }
+                                      } /* Switch */
+                                  } /* While */
                                /* Get the pointer past the '>' */
                                s++;
                                break;
-                              END /* control characters */
+                              } /* control characters */
 
                     /* Check for row,col */
                     case '%':
-                              BEGIN
+                              {
                                s++;
                                /* determine the row to put the message on */
                                if ( !isdigit(*s) )
-                                  BEGIN
+                                  {
                                    /* Message string error */
                                    insert[0] = '2';
                                    display(debug_msg);
-                                  END
+                                  }
                                else
-                                  BEGIN
+                                  {
                                    row = row+((unsigned)(((*s++ - '0')*10)));
                                    if ( !isdigit(*s) )
-                                     BEGIN
+                                     {
                                       /* Message string error */
                                       insert[0] = '2';
                                       display(debug_msg);
-                                     END
+                                     }
                                    else
-                                      BEGIN
+                                      {
                                        row = row+((unsigned)(*s++ - '0'));
                                        /* determine the col to put the message on */
                                        if ( !isdigit(*s) )
-                                          BEGIN
+                                          {
                                            /* Message string error */
                                            insert[0] = '3';
                                            display(debug_msg);
-                                          END
+                                          }
                                        else
-                                          BEGIN
+                                          {
                                            col = ((unsigned)(*s++ - '0'));
                                            if ( !isdigit(*s) )
-                                              BEGIN
+                                              {
                                                /* Message string error */
                                                insert[0] = '3';
                                                display(debug_msg);
-                                              END
+                                              }
                                            else
-                                              BEGIN
+                                              {
                                                col = ((unsigned)((col* 10) + (*s++ - '0')));
                                                if (*s++ != '%')
-                                                  BEGIN
+                                                  {
                                                    /* Message string error */
                                                    insert[0] = '4';
                                                    display(debug_msg);
-                                                  END /* 2nd sq bracket */
-                                              END /* 2nd digit col */
-                                          END /* 1st digit col */
-                                      END /* 2nd digit row */
-                                  END /* 1st digit row */
+                                                  } /* 2nd sq bracket */
+                                              } /* 2nd digit col */
+                                          } /* 1st digit col */
+                                      } /* 2nd digit row */
+                                  } /* 1st digit row */
                                break;
-                              END
+                              }
                     /* Handle anything else */
 
 
                     default:
-                            BEGIN
+                            {
                              /* See if attribute set to anything */
                              if (attribute == 0x00)
                                   attribute = 0x07;
                              VIOWRTCHARSTRATT(s++,1,row,col++,attribute_ptr,0);
                              break;
-                            END
-                   END
-               END /* End of string check */
-           END /* No characters in string check */
+                            }
+                   }
+               } /* End of string check */
+           } /* No characters in string check */
         return;
 
-END
+}
 
 void number_in_msg(number,start)
 
 unsigned    number;
 unsigned    start;
 
-BEGIN
+{
 
 unsigned     i;
 
         /* init the four spots to zero's */
         for (i = 0; i < 4;i++)
-            BEGIN
+            {
              insert[start+i] = ' ';
-            END
+            }
         /* Divide the space down and get it into decimal */
         if (number > 999)
-           BEGIN
+           {
             insert[start] = ((char)(number/1000))+'0';
             insert[start+1] = '0';
             insert[start+2] = '0';
             insert[start+3] = '0';
             number = number%1000;
-           END
+           }
         if (number > 99)
-           BEGIN
+           {
             insert[start+1] = ((char)(number/100))+'0';
             insert[start+2] = '0';
             insert[start+3] = '0';
             number = number%100;
-           END
+           }
         if (number > 9)
-           BEGIN
+           {
             insert[start+2] = ((char)(number/10))+'0';
             insert[start+3] = '0';
             number = number%10;
-           END
+           }
         insert[start+3] = ((char)(number +'0'));
         return;
-END
+}
 
 
 
@@ -768,7 +768,7 @@ unsigned     LeftCol;
 unsigned     BotRow;
 unsigned     RightCol;
 
-BEGIN
+{
 
 char    attribute;
 char    *attribute_ptr = &attribute;
@@ -776,17 +776,17 @@ char    *attribute_ptr = &attribute;
    attribute = 0x07;
    VIOSCROLLUP(TopRow,LeftCol,BotRow,RightCol,0,attribute_ptr,0);
    return;
-END
+}
 
 
 
 char wait_for_ESC()
 
-BEGIN
+{
      char  input;
 
     while (input != ESC)
-       BEGIN
+       {
         /* position the cursor at the end of the ESC prompt */
         VIOSETCURPOS(24,39,0);
 
@@ -795,8 +795,8 @@ BEGIN
       /*KBDCHARIN(input_data,0,0);*/
       /*input = input_data->char_code;*/
           input = ((char)(getch()));
-       END
+       }
     return(ESC);
-END
+}
 
 

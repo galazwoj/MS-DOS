@@ -92,7 +92,7 @@
 /*  */
 void create_partition()
 
-BEGIN
+{
 
 char   input;
 char   default_value;
@@ -113,7 +113,7 @@ char   max_input;
 
     /* See if there are free partitions */
     if (find_free_partition() != ((char)(NOT_FOUND)))                  /* AC000 */
-        BEGIN
+        {
         /* display menu */
         display(menu_3);                                                /* AN000 */
         display(menu_9);
@@ -134,7 +134,7 @@ char   max_input;
 
         /* Go branch to the requested function */
         switch(input)
-            BEGIN
+            {
             case '1': dos_create_partition();
                 break;
 
@@ -143,43 +143,43 @@ char   max_input;
                    (find_partition_type(uc(DOSNEW))))                   /* AN000 */                         /* AC000 */
                     ext_create_partition();
                 else
-                    BEGIN                                               /* AN000 */
+                    {                                               /* AN000 */
                     /* don't have a primary partition yet, can't create an ext */
                     display(error_19);                                  /* AN000 */
                     clear_screen(u(17),u(0),u(17),u(79));               /* AN000 */
                     wait_for_ESC();                                     /* AN000 */
-                    END                                                 /* AN000 */
+                    }                                                 /* AN000 */
                 break;
 
             case '3':
-                BEGIN
+                {
                 if (find_partition_type(uc(EXTENDED)))                  /* AC000 */
                     volume_create();
                 else                                                    /* AN000 */
-                    BEGIN                                               /* AN000 */
+                    {                                               /* AN000 */
                     display(error_35);                                  /* AN000 */
                     clear_screen(u(17),u(0),u(17),u(79));               /* AN000 */
                     wait_for_ESC();                                     /* AN000 */
-                    END                                                 /* AN000 */
+                    }                                                 /* AN000 */
                 break;
-                END
+                }
 
             case ESC: break;
 
             default:  internal_program_error();
-            END
-        END
+            }
+        }
     else
-        BEGIN
+        {
 
         /* Display prompt telling there is no avail partition */
         display(error_10);
         input = wait_for_ESC();
-        END
+        }
     /* clear the screen before going back to main menu */
     clear_screen(u(0),u(0),u(24),u(79));                               /* AC000 */
     return;
-END
+}
 
 
 /*  */
@@ -265,7 +265,7 @@ END
 void dos_create_partition()
 
 
-BEGIN
+{
 
     char   input;
     char   temp;
@@ -291,42 +291,42 @@ BEGIN
     /* See if already exists */
     if ((!find_partition_type(uc(DOS12))) && (!find_partition_type(uc(DOS16))) && (!find_partition_type(uc(DOSNEW))))  /* AC000 */
 
-        BEGIN
+        {
         /* Display prompt, depending on what disk */
         if (cur_disk == c(0))                                           /* AC000 */
             /* Put up make active partition message */
             display(menu_13);
         else
-            BEGIN
+            {
             /* Second disk, so don;t put up prompt mentioning active partition */
             second_disk_flag = (FLAG)TRUE;                              /* AN000 */
             display(menu_45);                                           /* AC000 */
-            END
+            }
         /* Get Y/N input */
         input = get_yn_input(c(Yes),input_row,input_col);               /* AC000 AC011 */
 
         /* Go handle input */
         switch(input)
-            BEGIN
+            {
             case 1:                                                     /* AC000 */
                 if ( second_disk_flag == (FLAG)FALSE)
-                    BEGIN
+                    {
                     /* Go get the biggest area left */
                     temp = find_part_free_space(c(PRIMARY));            /* AC000 */
                     make_partition(free_space[temp].space,temp,uc(ACTIVE),c(PRIMARY)); /* AC000 */
                     reboot_flag = (FLAG)TRUE;                           /* AC000 */
                     if (number_of_drives == uc(1))                      /* AN000 */
-                        BEGIN                                           /* AN000 */
+                        {                                           /* AN000 */
                         write_info_to_disk();
                         reboot_system();                                /* AC000 */
-                        END                                             /* AN000 */
+                        }                                             /* AN000 */
                     clear_screen(u(16),u(0),u(23),u(79));               /* AN000 */
                     display(status_12);                                 /* AN000 */
                     wait_for_ESC();
                     break;
-                    END
+                    }
                 else
-                    BEGIN                                               /* AN000 */
+                    {                                               /* AN000 */
                     /* Go get the biggest area left */                  /* AN000 */
                     temp = find_part_free_space(c(PRIMARY));            /* AN000 */
                     make_partition(free_space[temp].space,temp,uc(NUL),c(PRIMARY)); /* AN000 */
@@ -335,7 +335,7 @@ BEGIN
                     display(status_12);                                 /* AN000 */
                     wait_for_ESC();
                     break;
-                    END
+                    }
 
             case  0:  input_dos_create();                               /* AC000 */
                 break;
@@ -343,19 +343,19 @@ BEGIN
             case ESC: break;   /* take no action */
 
             default : internal_program_error();
-            END
-        END
+            }
+        }
     else
-        BEGIN
+        {
         /* Display partition table-it will return if no partitions there */
         table_display();
 
         /* Primary partition already exists message */
         display(error_8);
         wait_for_ESC();
-        END
+        }
     return;
-END
+}
 
 
 /*  */
@@ -440,7 +440,7 @@ END
 /*  */
 void input_dos_create()
 
-BEGIN
+{
 
     unsigned  input;
     unsigned  default_entry;
@@ -473,7 +473,7 @@ BEGIN
     /* Is there any ?*/
     if (free_space[temp].mbytes_unused != u(0))                        /* AC000 */
 
-        BEGIN
+        {
         /* Display disk space */
         sprintf(insert,"%4.0d",total_mbytes[cur_disk]);
         display(menu_15);
@@ -491,7 +491,7 @@ BEGIN
 
         while (!valid_input)
 
-            BEGIN
+            {
             /* Display prompt */
             sprintf(insert,"%4.0d",default_entry);
             display(menu_39);
@@ -503,29 +503,29 @@ BEGIN
 
             default_entry = input;
             clear_screen(u(19),u(0),u(23),u(79));                      /* AC000 */
-            END
+            }
 
         if (input != ((unsigned)(ESC_FLAG)))                               /* AC000 */
 
-            BEGIN
+            {
             /* Change input to cylinders */
             /* check to see if input was in percent or mbytes */
 
             if (PercentFlag)                                          /* AN000 */
-                BEGIN                                                 /* AN000 */
+                {                                                 /* AN000 */
                 if (input == free_space[temp].percent_unused)
                     input = free_space[temp].space;                   /* AN000 */
                 else                                                  /* AN000 */
                     input = percent_to_cylinders(input,total_disk[cur_disk]);
-                END                                                   /* AN000 */
+                }                                                   /* AN000 */
             else                                                      /* AN000 */
-                BEGIN                                                 /* AN000 */
+                {                                                 /* AN000 */
                 if (input == free_space[temp].mbytes_unused)
                     input = free_space[temp].space;                   /* AN000 */
                 else                                                  /* AN000 */
                     input = (unsigned)mbytes_to_cylinders(input,
                                                           cur_disk);  /* AN004 */
-                END                                                   /* AN000 */
+                }                                                   /* AN000 */
 
             /* Initialize PecentFlag back to FALSE */
             PercentFlag = (FLAG)FALSE;                                  /* AN000 */
@@ -543,19 +543,19 @@ BEGIN
             if (number_of_drives == uc(1))                              /* AN000 */
                 display(status_5);
             else
-                BEGIN                                                   /* AN000 */
+                {                                                   /* AN000 */
                 clear_screen(u(16),u(0),u(23),u(79));                   /* AN000 */
                 display(status_12);                                     /* AN000 */
-                END                                                     /* AN000 */
+                }                                                     /* AN000 */
 
             wait_for_ESC();
 
             reboot_flag = TRUE;
 
-            END
-        END
+            }
+        }
     return;
-END
+}
 
 
 /*  */
@@ -641,7 +641,7 @@ END
 void ext_create_partition()
 
 
-BEGIN
+{
 
     unsigned  input;
     unsigned  default_entry;
@@ -668,17 +668,17 @@ BEGIN
     /* Go see if primary already exists and ext doesn't */
     if ((cur_disk == c(1)) || (find_partition_type(uc(DOS12))) || (find_partition_type(uc(DOS16))) ||
         (find_partition_type(uc(DOSNEW))))                                            /* AC000 */
-        BEGIN
+        {
         if (!find_partition_type(uc(EXTENDED)))                         /* AC000 */
             /* We can go create one now */
-            BEGIN
+            {
 
             /* Get the free space */
             temp = find_part_free_space(c(EXTENDED));                    /* AC000 */
 
             /* Is there any ?*/
             if (free_space[temp].percent_unused != u(0))                  /* AC000 */
-                BEGIN
+                {
 
                 /* Display disk space */
                 sprintf(insert,"%4.0d",total_mbytes[cur_disk]);
@@ -694,20 +694,20 @@ BEGIN
                 /* Force repeats on the input until something valid (Non-Zero return) */
                 /* Display MBytes unless MBytes == 0, then display percent */
                 if (free_space[temp].mbytes_unused == u(0))             /* AN000 */
-                    BEGIN                                               /* AN000 */
+                    {                                               /* AN000 */
                     default_entry = (unsigned)free_space[temp].percent_unused; /* AC000 */
                     PercentFlag = (FLAG)TRUE;                           /* AN000 */
-                    END                                                 /* AN000 */
+                    }                                                 /* AN000 */
                 else                                                    /* AN000 */
-                    BEGIN
+                    {
                     default_entry = (unsigned)free_space[temp].mbytes_unused; /* AC000 */
                     PercentFlag = (FLAG)FALSE;                          /* AN000 */
-                    END
+                    }
 
                 valid_input = (FLAG)FALSE;                              /* AC000 */
 
                 while (!valid_input)
-                    BEGIN
+                    {
                     /* Display prompt */
                     if (!PercentFlag)                                   /* AN000 */
                         sprintf(insert,"%4.0d",default_entry);
@@ -722,27 +722,27 @@ BEGIN
 
                     default_entry = input;
                     clear_screen(u(19),u(0),u(23),u(79));                /* AC000 */
-                    END
+                    }
 
                 if (input != ((unsigned)(ESC_FLAG)))                          /* AC000 */
-                    BEGIN
+                    {
 
                     /* Change input to cylinders */
                     if (PercentFlag)                                          /* AN000 */
-                        BEGIN                                                 /* AN000 */
+                        {                                                 /* AN000 */
                         if (input == free_space[temp].percent_unused)
                             input = free_space[temp].space;                   /* AN000 */
                         else                                                  /* AN000 */
                             input = percent_to_cylinders(input,total_disk[cur_disk]);
-                        END                                                   /* AN000 */
+                        }                                                   /* AN000 */
                     else                                                      /* AN000 */
-                        BEGIN                                                 /* AN000 */
+                        {                                                 /* AN000 */
                         if (input == free_space[temp].mbytes_unused)
                             input = free_space[temp].space;                   /* AN000 */
                         else                                                  /* AN000 */
                             input = (unsigned)mbytes_to_cylinders(input,
                                                                   cur_disk);  /* AN004 */
-                        END                                                   /* AN000 */
+                        }                                                   /* AN000 */
 
 
                     /* Initialize PecentFlag back to FALSE */
@@ -769,31 +769,31 @@ BEGIN
 
                     /* Go allow him to create disk volumes */
                     volume_create();
-                    END
-                END
+                    }
+                }
             else
-                BEGIN
+                {
                 /* No room */
                 display(error_10);
                 wait_for_ESC();
-                END
-            END
+                }
+            }
         else
-            BEGIN
+            {
             /* Already have ext partition, tell user and bow out */
             display(error_9);
             wait_for_ESC();
-            END
-        END
+            }
+        }
     else
-        BEGIN
+        {
         /* don't have a primary partition yet, can't create an ext */
         display(error_19);
         wait_for_ESC();
-        END
+        }
 
     return;
-END
+}
 
 
 /*  */
@@ -880,7 +880,7 @@ END
 /*  */
 void volume_create()
 
-BEGIN
+{
 
     unsigned  input;
     unsigned  default_entry;
@@ -914,7 +914,7 @@ BEGIN
     input = u(NUL);                                                     /* AC000 */
     while (input != ((unsigned)(ESC_FLAG)))                                  /* AC000 */
 
-        BEGIN
+        {
         /* See if we have hit the max number of drives */
         defined_drives = c(0);                                          /* AC000 */
         temp_cur_disk = cur_disk;
@@ -922,7 +922,7 @@ BEGIN
         /* Search both drives for defined drives */
         for (i = uc(0); i < number_of_drives; i++)                      /* AC000 */
 
-            BEGIN
+            {
             cur_disk = ((char)(i));
 
             /* See if there is a primary drive letter */
@@ -931,17 +931,17 @@ BEGIN
 
             /* See if extended partition on disk */
             if (find_partition_type(uc(EXTENDED)))                      /* AC000 */
-                BEGIN
+                {
                 /* Get number of logical drives */
                 defined_drives = defined_drives + get_num_logical_dos_drives();
-                END
-            END
+                }
+            }
         /* Restore cur_disk  to original */
         cur_disk = temp_cur_disk;
 
         /* See if 26 or less drives total */
         if (defined_drives < c(24))                                     /* AC000 */
-            BEGIN
+            {
             location = find_ext_free_space();
 
             /* find the number of the extended partiton to figure out percent */
@@ -954,7 +954,7 @@ BEGIN
 
             /* Is there any ?*/
             if (ext_part_percent_unused != u(0))             /* AC000 */
-                BEGIN
+                {
 
                 /* Display disk space */
                 sprintf(insert,"%4.0d",get_partition_size(uc(EXTENDED)) );
@@ -970,20 +970,20 @@ BEGIN
                 /* Force repeats on the input until something valid (Non-Zero return) */
                 /* If MBytes unused  is equel to zero, display percent unused */
                 if (free_space[location].mbytes_unused == u(0))         /* AN000 */
-                    BEGIN                                               /* AN000 */
+                    {                                               /* AN000 */
                     default_entry = (unsigned)ext_part_percent_unused;     /* AN000 */
                     PercentFlag = (FLAG)TRUE;                           /* AN000 */
-                    END                                                 /* AN000 */
+                    }                                                 /* AN000 */
                 else                                                    /* AN000 */
-                    BEGIN                                               /* AN000 */
+                    {                                               /* AN000 */
                     default_entry = (unsigned)free_space[location].mbytes_unused;     /* AC000 */
                     PercentFlag = (FLAG)FALSE;                          /* AN000 */
-                    END                                                 /* AN000 */
+                    }                                                 /* AN000 */
 
                 valid_input = (FLAG)FALSE;                              /* AC000 */
 
                 while (!valid_input)
-                    BEGIN
+                    {
                     /* Display prompt */
                     if (!PercentFlag)                                   /* AN000 */
                         sprintf(insert,"%4.0d",default_entry);
@@ -999,27 +999,27 @@ BEGIN
 
                     default_entry = input;
                     clear_screen(u(19),u(0),u(23),u(79));               /* AC000 */
-                    END
+                    }
 
                 if (input != ((unsigned)(ESC_FLAG)))                    /* AC000 */
-                    BEGIN
+                    {
 
                     /* Change input to cylinders */
                     if (PercentFlag)                                          /* AN000 */
-                        BEGIN                                                 /* AN000 */
+                        {                                                 /* AN000 */
                         if (input == ext_part_percent_unused)
                             input = free_space[location].space;                   /* AN000 */
                         else                                                  /* AN000 */
                             input = percent_to_cylinders(input,((part_table[cur_disk][ext_part_num].end_cyl-part_table[cur_disk][ext_part_num].start_cyl)+1));
-                        END                                                   /* AN000 */
+                        }                                                   /* AN000 */
                     else                                                      /* AN000 */
-                        BEGIN                                                 /* AN000 */
+                        {                                                 /* AN000 */
                         if (input == free_space[location].mbytes_unused)
                             input = free_space[location].space;                   /* AN000 */
                         else                                                  /* AN000 */
                             input = (unsigned)mbytes_to_cylinders(input,
                                                                   cur_disk);  /* AN004 */
-                        END                                                   /* AN000 */
+                        }                                                   /* AN000 */
 
                     /* Initialize PecentFlag back to FALSE */
                     PercentFlag = (FLAG)FALSE;                                  /* AN000 */
@@ -1037,10 +1037,10 @@ BEGIN
 
                     /* Tell user we created it */
                     display(status_7);
-                    END
-                END
+                    }
+                }
             else
-                BEGIN
+                {
                 /* No space left or already max'd on the devices */
                 /* Get rid of the size prompts */
                 clear_screen(u(17),u(0),u(21),u(79));                   /* AC000 */
@@ -1048,10 +1048,10 @@ BEGIN
                 volume_display();
                 wait_for_ESC();                         /* KWC, 11-01-87 */
                 input = u(ESC_FLAG);                    /* KWC, 11-01-87 */
-                END
-            END
+                }
+            }
         else
-            BEGIN
+            {
             /* Reached the maximum */
             /* Get rid of the size prompts */
             clear_screen(u(17),u(0),u(21),u(79));                       /* AC000 */
@@ -1059,9 +1059,9 @@ BEGIN
             /* Force an exit with ESC */
             wait_for_ESC();                         /* KWC, 11-01-87 */
             input = u(ESC_FLAG);                    /* KWC, 11-01-87 */
-            END
-        END
+            }
+        }
     clear_screen(u(0),u(0),u(24),u(79));                               /* AC000 */
     return;
-END
+}
 

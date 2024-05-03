@@ -186,7 +186,7 @@
 /*  */
 void change_active_partition()
 
-BEGIN
+{
 
     char   temp;
     char   default_value;
@@ -218,34 +218,34 @@ BEGIN
     /* Only allow active partitions on the first (and bootable) disk */
     if (cur_disk == c(0))                                               /* AC000 */
 
-       BEGIN
+       {
         /* Display partition info and see if any partitions exist*/
         if (table_display())
 
-           BEGIN
+           {
             /* See if active partition is bootable */
             for (i=u(0); i < u(4); i++)                                 /* AC000 */
-               BEGIN
+               {
                 if (part_table[0][i].sys_id != uc(0) &&
                     part_table[0][i].boot_ind == uc(0x80))  /* AC000 */
-                   BEGIN
+                   {
                     if ((part_table[0][i].sys_id == uc(BAD_BLOCK)) ||
                         (part_table[0][i].sys_id==uc(EXTENDED)))  /* AC000 */
-                       BEGIN
+                       {
                         /* The active partition is not bootable, so warn user */
                         display(error_24);
-                       END
-                   END
-               END
+                       }
+                   }
+               }
 
             /* Check to see if only one partition */
             num_partitions = c(0) ;                                     /* AC000 */
             num_of_bootable_partitions = c(0);                          /* AC000 */
             for (i=u(0); i < u(4); i++)                                 /* AC000 */
 
-               BEGIN
+               {
                 if (part_table[0][i].sys_id != uc(0))                   /* AC000 */
-                   BEGIN
+                   {
                     /* Get a count of partitions */
                     num_partitions++;
 
@@ -253,28 +253,28 @@ BEGIN
                     /* count those we know aren't bootable */
                     if ((part_table[0][i].sys_id != uc(BAD_BLOCK)) &&
                         (part_table[0][i].sys_id != uc(EXTENDED)))  /* AC000 */
-                       BEGIN
+                       {
                         num_of_bootable_partitions++;
-                       END
-                   END
-               END
+                       }
+                   }
+               }
             /* If only one partition found, see if it is active already */
             if (num_of_bootable_partitions == c(1))                     /* AC000 */
-               BEGIN
+               {
 
                 /* Find the partition and see if it is already active */
                 for (i=u(0); i < u(4); i++)                             /* AC000 */
 
-                   BEGIN
+                   {
                     if (part_table[0][i].sys_id !=uc(0) &&
                         part_table[0][i].boot_ind == uc(0x80))  /* AC000 */
 
-                       BEGIN
+                       {
                         /* Make sure it is not unbootable partition again*/
                         if ((part_table[0][i].sys_id != uc(BAD_BLOCK)) &&
                             (part_table[0][i].sys_id!=uc(EXTENDED)))  /* AC000 */
 
-                           BEGIN
+                           {
                             /* Once it is found, put out the message */
                             display(error_15);
 
@@ -284,22 +284,22 @@ BEGIN
                             /* clear the screen before going back to main menu*/
                             clear_screen(u(0),u(0),u(24),u(79));        /* AC000 */
                             return;
-                           END
-                       END
-                   END
-               END
+                           }
+                       }
+                   }
+               }
             /* See if any bootable partitions exist */
             if (num_of_bootable_partitions == c(0))                     /* AC000 */
-               BEGIN
+               {
                 /* At this point, we know at least one partition does exist due to*/
                 /* getting past the table_display call, so the only ones around   */
                 /* must be unbootable  */
 
                 /* Display this fact then get out of here */
                 display(error_25);
-               END
+               }
             else
-               BEGIN
+               {
                   /* All is okay to go and set one, do display prompts */
                    number_in_msg((XFLOAT)total_mbytes[cur_disk],u(0));          /* AC000 */
                    display(menu_15);
@@ -313,7 +313,7 @@ BEGIN
                   input_default = c(NUL);                               /* AC000 */
 
                   while (!valid_input)
-                     BEGIN
+                     {
                       /* Go get partition to make active */
                       input = get_num_input(input_default,num_partitions,input_row,input_col);
 
@@ -323,7 +323,7 @@ BEGIN
                       clear_screen(u(18),u(0),u(23),u(79));             /* AC000 */
 
                       if (input != c(ESC))                              /* AC000 */
-                         BEGIN
+                         {
                           /* See if known unbootable partition */
                           /* Set the new one */
                           valid_partitions = c(0);                      /* AC000 */
@@ -333,31 +333,31 @@ BEGIN
 
                           /* Go find existing partitiona */
                           for (i=u(0);i < u(4); i++)                    /* AC000 */
-                             BEGIN
+                             {
                               /* First we have to find it */
                               if (part_table[0][sort[i]].sys_id != uc(0))   /* AC000 */
-                                 BEGIN
+                                 {
                                   /* If this is the 'input'th one, then we got it */
                                   if (valid_partitions == (input-'1'))
-                                     BEGIN
+                                     {
                                       /* See if it is an unbootable partition */
                                       if ((part_table[0][sort[i]].sys_id != uc(BAD_BLOCK)) &&
                                        (part_table[0][sort[i]].sys_id !=  uc(EXTENDED)))        /* AC000 */
 
-                                         BEGIN
+                                         {
                                           /* Its bootable, so we have good input */
                                           valid_input = c(TRUE);        /* AC000 */
 
                                           /* Remove the active indicator from the old partition */
                                           for (x=u(0); x < u(4); x++)   /* AC000 */
-                                             BEGIN
+                                             {
 
                                               if (part_table[0][x].boot_ind == uc(0x80))  /* AC000 */
-                                                 BEGIN
+                                                 {
                                                   part_table[0][x].changed = TRUE;
                                                   part_table[0][x].boot_ind = uc(0);      /* AC000 */
-                                                 END
-                                             END
+                                                 }
+                                             }
 
                                           /* Put in new active indicator */
                                           part_table[0][sort[i]].boot_ind = uc(0x80);     /* AC000 */
@@ -375,49 +375,49 @@ BEGIN
                                           insert[0] = input;
                                           display(status_4);
                                           break;
-                                         END
+                                         }
                                       else
-                                         BEGIN
+                                         {
                                           /* It is, so setup message and tell user */
                                           insert[0] = input;
                                           display(error_17);
                                           break;
-                                         END
-                                     END
+                                         }
+                                     }
                                   else
-                                     BEGIN
+                                     {
                                       /* Indicate we found one but keep going */
                                       valid_partitions++;
-                                     END
-                                 END
-                             END
-                         END
+                                     }
+                                 }
+                             }
+                         }
                       else
-                         BEGIN
+                         {
                           /* Mark ESC as ok input so we can get out of here */
                           valid_input = c(TRUE);                        /* AC000 */
-                         END
-                     END /* While loop */
-               END
-           END /* table display test endif */
+                         }
+                     } /* While loop */
+               }
+           } /* table display test endif */
         else
-           BEGIN
+           {
             /* No partitions to make active */
             display(error_16);
-           END
-       END
+           }
+       }
     else
-       BEGIN
+       {
         display(error_26);
-       END
+       }
     /* clear the screen before going back to main menu */
     if (input != c(ESC))                                                /* AC000 */
-       BEGIN
+       {
         wait_for_ESC();
-       END
+       }
     clear_screen(u(0),u(0),u(24),u(79));                                /* AC000 */
     return;
-END
+}
 
 
 /*  */
@@ -497,7 +497,7 @@ END
 /*  */
 void display_partition_information()
 
-BEGIN
+{
 
     char   input;
     char    temp;
@@ -518,7 +518,7 @@ BEGIN
 
     /* Display information */
     if (table_display())
-       BEGIN
+       {
 
         /* Setup and print disk space msg */
         number_in_msg((XFLOAT)total_mbytes[cur_disk],u(0));                     /* AC000 */
@@ -526,10 +526,10 @@ BEGIN
 
         /* See if any logical drive stuff to display */
         if (find_partition_type(uc(EXTENDED)))                          /* AC000 */
-           BEGIN
+           {
             /* See if any logical drives exist */
             if (find_logical_drive())
-               BEGIN
+               {
 
                 /* Prompt to see if they want to see EXTENDED info */
                 display(menu_36);
@@ -537,7 +537,7 @@ BEGIN
                 /* Get Y/N input, default is YES */
                 input = get_yn_input(c(Yes),input_row,input_col);       /* AC000 AC011 */
                 switch(input)
-                   BEGIN
+                   {
 
                     case 1:    display_volume_information();            /* AC000 */
                                break;
@@ -548,20 +548,20 @@ BEGIN
 
                     default:   internal_program_error();
                                break;
-                   END
-               END
+                   }
+               }
              else
                 input = wait_for_ESC();
-           END
+           }
         else
            input = wait_for_ESC();
-       END
+       }
     else
        input = wait_for_ESC();
     /* clear the screen before going back to main menu */
     clear_screen(u(0),u(0),u(24),u(79));                                /* AC000 */
     return;
-END
+}
 
 
 
@@ -634,7 +634,7 @@ END
 /*  */
 void display_volume_information()
 
-BEGIN
+{
 
     char   input;
     char    temp;
@@ -659,11 +659,11 @@ BEGIN
     /* Wait to exit */
     input = wait_for_ESC();
     return;
-END
+}
 
 /*  */
 char check_valid_environment()
-BEGIN
+{
 
         /* See if the net is there */
         regs.x.ax = u(INSTALLATION_CHECK);                              /* AC000 */
@@ -675,24 +675,24 @@ BEGIN
 
         /* Is it ? */
         if (regs.h.al != uc(0))                                         /* AC000 */
-           BEGIN
+           {
 
             /* See if server is loaded, otherwise okay */
             if ((regs.x.bx & SERVER_CHECK) != u(0))                     /* AC000 */
-               BEGIN
+               {
                 no_fatal_error = FALSE;
                 display_msg((int)4,(int)DosStdEr,(int)nosubcnt,(int)nosubptr,c(noinput),c(Utility_Msg_Class)); /* AN000 AC014*/
                 return(FALSE);
-               END
-           END
+               }
+           }
         return(TRUE);
-END
+}
 
 
 
 /*  */
 void init_partition_tables()
-BEGIN
+{
 
 unsigned i;
 unsigned char j;
@@ -710,7 +710,7 @@ unsigned index;
 
         /* Look at both disks */
         for (j = uc(0); j < number_of_drives; j++)                      /* AC000 */
-           BEGIN
+           {
 
             /* Initialize the cur_disk field to the drive in question so */
             /* that the calls to the partition information routines will work */
@@ -718,25 +718,25 @@ unsigned index;
 
             /* Read in the master boot record and see if it was okay */
             if (read_boot_record(u(0),j,uc(0),uc(1)))                      /* AC000 */
-               BEGIN
+               {
 
                 /* See if there was a valid boot record there */
                 if ((boot_record[510] == uc(0x55)) && (boot_record[511] == uc(0xAA)))  /* AC000 */
-                   BEGIN
+                   {
 
                     /* What was on the disk is a valid boot record, so save it */
                     for (i=u(0);i < u(BYTES_PER_SECTOR); i++)           /* AC000 */
-                       BEGIN
+                       {
                         master_boot_record[j][i] = boot_record[i];
-                       END
-                   END
+                       }
+                   }
                 /* We've now got a copy of the master boot record saved. Now we need */
                 /* to translate what in the boot record to the area that it's going  */
                 /* to be worked on (part_table) */
 
                 /* Read in the data from the master boot record partition entries*/
                 for (i=u(0); i < u(4); i++)                             /* AC000 */
-                   BEGIN
+                   {
                     index = i*16;
 
                     /* Get boot ind */
@@ -808,17 +808,17 @@ unsigned index;
 
                     /* Set changed flag */
                     part_table[j][i].changed = FALSE;
-                   END
-               END
+                   }
+               }
             else
-               BEGIN
+               {
                  return;
-               END
-           END
+               }
+           }
 
         /* Look at both disks */
         for (j = uc(0); j < number_of_drives; j++)                      /* AC000 */
-           BEGIN
+           {
 
             /* Initialize the cur_disk field to the drive in question so */
             /* that the calls to the partition information routines will work */
@@ -826,13 +826,13 @@ unsigned index;
 
             /* Read in the master boot record and see if it was okay */
             if (read_boot_record(u(0),j,uc(0),uc(1)))                      /* AC000 */
-               BEGIN
+               {
                 /* Now, go read in extended partition info */
                 if (find_partition_type(uc(EXTENDED)))                      /* AC000 */
-                   BEGIN
+                   {
                     /* Initialize the array to zero's - include one dummy entry */
                     for (i=u(0); i < u(24); i++)                            /* AC000 */
-                       BEGIN
+                       {
                         ext_table[j][i].boot_ind = uc(0);                   /* AC000 */
                         ext_table[j][i].start_head = uc(0);                 /* AC000 */
                         ext_table[j][i].start_sector = uc(0);               /* AC000 */
@@ -851,7 +851,7 @@ unsigned index;
                         strcpy(ext_table[cur_disk][i].system,NUL);          /* AN000 */
                         strcpy(ext_table[cur_disk][i].vol_label,NUL);       /* AN000 */
 
-                       END
+                       }
 
                     /* Find where the first extended boot record is */
                     temp = find_partition_location(uc(EXTENDED));        /* AC000 */
@@ -864,7 +864,7 @@ unsigned index;
                     num_logical_drives = c(0);                           /* AC000 */
 
                     while (more_drives_exist)
-                       BEGIN
+                       {
                        /* Assume we won't find another logical drive */
                        more_drives_exist = FALSE;
 
@@ -873,17 +873,17 @@ unsigned index;
                                               j,
                                               uc(0),
                                               uc(1)))   /* AC000 */
-                            BEGIN
+                            {
                              load_logical_drive(num_logical_drives,j);
 
 
                              /* find the next logical drive */
                              for (i = u(0); i < u(4); i++)                      /* AC000 */
-                                BEGIN
+                                {
                                  index = i*16;
                                  /* See if a sys id byte of exteneded exists */
                                  if (boot_record[0x1C2+index] == uc(EXTENDED))   /* AC000 */
-                                    BEGIN
+                                    {
                                      /* Found another drive, now get its location */
                                      partition_location= (((((unsigned)(boot_record[0x1C0 + index])) & 0x00C0) << 2));
                                      partition_location = partition_location + ((unsigned)(boot_record[0x1C1+index]));
@@ -894,15 +894,15 @@ unsigned index;
                                      /* Up the count of found ones */
                                      num_logical_drives++;
                                      break;
-                                    END
-                                END
-                            END
-                       END
-                   END
-               END
-           END
+                                    }
+                                }
+                            }
+                       }
+                   }
+               }
+           }
         return;
-END
+}
 
 
 /*  */
@@ -911,7 +911,7 @@ void load_logical_drive(point,drive)
 char   point;
 unsigned char   drive;
 
-BEGIN
+{
 
 char        volume_label[13];                                           /* AC000 *//*Used be 11*/
 unsigned    ext_part_num;                                               /* AN000 */
@@ -925,15 +925,15 @@ unsigned    partition_location;                                         /* AN000
 
         /* Check to see if anything is there */
         if ((boot_record[510] == uc(0x55)) && (boot_record[511] == uc(0xAA)))  /* AC000 */
-            BEGIN
+            {
             /* The boot record is there - read in the logical drive if it is there */
             for (i = u(0); i < u(4); i++)                               /* AC000 */
-                BEGIN
+                {
 
                 index = i*16;
                 /* See if it is a defined extended drive*/
                 if ((boot_record[0x1C2 + index] != uc(0)) && (boot_record[0x1C2 + index] != uc(EXTENDED)))  /* AC000 */
-                    BEGIN
+                    {
                     /* Get boot ind */
                     ext_table[drive][point].boot_ind = boot_record[0x1BE + index];
 
@@ -1007,96 +1007,96 @@ unsigned    partition_location;                                         /* AN000
                                          drive,
                                          ext_table[drive][point].start_head,
                                          ext_table[drive][point].start_sector));
-                         BEGIN                                                                  /* AN000 */
+                         {                                                                  /* AN000 */
                          /* See if the disk has already been formated */
                          if (check_format(ext_table[drive][point].drive_letter) == TRUE )       /* AN002 */
-                             BEGIN                                                              /* AN000 */
+                             {                                                              /* AN000 */
                              /* get volume and system info */
 
                              /* AC000 Just for cleaning up purposes */
 
                              for (k = u(0); k < u(12); k++)                                     /* AC000 */
-                                 BEGIN                                                          /* AC000 */
+                                 {                                                          /* AC000 */
                                      ext_table[drive][point].vol_label[k]=u(0);                 /* AC000 */
-                                 END                                                            /* AC000 */
+                                 }                                                            /* AC000 */
 
                              for (k = u(0); k < u(9); k++)                                      /* AC000 */
-                                 BEGIN                                                          /* AC000 */
+                                 {                                                          /* AC000 */
                                      ext_table[drive][point].system[k]=u(0);                    /* AC000 */
-                                 END                                                            /* AC000 */
+                                 }                                                            /* AC000 */
 
                              get_volume_string(ext_table[drive][point].drive_letter,&volume_label[0]);   /* AN000 AC015 */
 
                               for (k = u(0); k < strlen(volume_label); k++)                     /* AC000 AC015 */
-                                   BEGIN                                                        /* AC000 AC015 */
+                                   {                                                        /* AC000 AC015 */
                                      ext_table[drive][point].vol_label[k]=volume_label[k];      /* AC000 AC015 */
-                                   END                                                          /* AC000 AC015 */
+                                   }                                                          /* AC000 AC015 */
 
                              /* Now try to get it using GET MEDIA ID function */
                              if (get_fs_and_vol(ext_table[drive][point].drive_letter))          /* AN000 */
 
-                                BEGIN                                                           /* AN000 */
+                                {                                                           /* AN000 */
                                 /* AC000 Just use more conceptually simple logic */
                                 for (k=u(0); k < u(8); k++)                                     /* AC000 */
 
-                                    BEGIN                                                       /* AC000 */
+                                    {                                                       /* AC000 */
                                       if (dx_buff.file_system[k] != ' ')                        /* AC000 */
                                                 length = k+1;                                   /* AC000 */
-                                    END                                                         /* AC000 */
+                                    }                                                         /* AC000 */
 
                                 strncpy(ext_table[drive][point].system,&dx_buff.file_system[0],u(length)); /* AN000 */
-                                END                                                             /* AN000 */
+                                }                                                             /* AN000 */
 
                               else                                                              /* AN000 */
 
-                                BEGIN                                                           /* AN000 */
+                                {                                                           /* AN000 */
                                 if (ext_table[drive][point].num_sec > (unsigned long)FAT16_SIZE) /* AN000 */
                                     strcpy(ext_table[drive][point].system,FAT16);               /* AN000 */
                                 else
                                     strcpy(ext_table[drive][point].system,FAT12);               /* AN000 */
-                                END                                                             /* AN000 */
-                             END                                                                /* AN000 */
+                                }                                                             /* AN000 */
+                             }                                                                /* AN000 */
                          else                                                                   /* AN000 */
-                             BEGIN                                                              /* AN000 */
+                             {                                                              /* AN000 */
                              /* set up array to say no file system or volume label */
                              strcpy(ext_table[drive][point].vol_label,NOVOLUME);                /* AN000 */
                              strcpy(ext_table[drive][point].system,NOFORMAT);                   /* AN000 */
-                             END                                                                /* AN000 */
+                             }                                                                /* AN000 */
 
                          regs.x.dx = u(0);
                          regs.x.ax = NETWORK_IOCTL;
                          regs.h.bl = ((ext_table[drive][point].drive_letter - 'A') + 1);
                          intdos(&regs,&regs);
                          if (regs.x.dx & 0x1000) strcpy(ext_table[drive][point].vol_label,"* Remote * ");
-                         END
+                         }
                     read_boot_record(ext_table[drive][point].start_cyl,
                                      drive,
                                      uc(0),
                                      uc(1));                                                    /* AN000 */
-                    END
-                END
-            END
+                    }
+                }
+            }
 
         return;
 
-END
+}
 
 
 
 /*  */
 void reboot_system()
-BEGIN
+{
 
 
         clear_screen(u(0),u(0),u(24),u(79));                            /* AC000 */
         if (quiet_flag == FALSE)
-            BEGIN
+            {
             display(menu_38);
             getch();
             reboot();
-            END
+            }
         else
-            BEGIN
+            {
             cur_disk = c(0);                                            /* AN001 */
             reset_video_information();                                  /* AN006 */
             if ( (find_partition_type(uc(DOS12))) ||
@@ -1105,17 +1105,17 @@ BEGIN
                 exit(ERR_LEVEL_0);                                      /* AN001 */
             else                                                        /* AN001 */
                 exit(ERR_LEVEL_1);                                      /* AN001 */
-            END
-END
+            }
+}
 
 
 /*  */
 void internal_program_error()
 
-BEGIN
+{
    display(internal_error);
    DOSEXIT(u(0),u(0));                                                  /* AC000 */
    return;
-END
+}
 
 

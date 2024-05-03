@@ -11,7 +11,7 @@
 /*  */
 char table_display()
 
-BEGIN
+{
 
 
 unsigned    i;
@@ -34,16 +34,16 @@ char        partition_num;
      partition_num = c(0);                                              /* AC000 */
 
      for (i=u(0); i < u(4); i++)                                        /* AC000 */
-         BEGIN
+         {
 
          if (part_table[cur_disk][sort[i]].sys_id != uc(0))             /* AC000 */
-             BEGIN
+             {
 
              partition_found = TRUE;
 
              strcpy(ThisPartitionLetter,"  ");
              switch(part_table[cur_disk][sort[i]].sys_id)
-                 BEGIN
+                 {
                  case DOSNEW:                                           /* AN000 */
                  case DOS16:
                  case DOS12:
@@ -71,7 +71,7 @@ char        partition_num;
                  default:
                      ThisPartitionType = NON_DOS_part;
                      break;
-                 END
+                 }
 
              io += sprintf(&insert[io],"%-2.2s%c%c%-7.7s%4.0d%3.0d%%",
                         ThisPartitionLetter,
@@ -83,9 +83,9 @@ char        partition_num;
 
              partition_num++;
 
-             END
+             }
 
-         END
+         }
 
     /* Do a clearscreen to erase previous data */
     clear_screen(u(8),u(0),u(12),u(79));                               /* AC000 */
@@ -98,22 +98,22 @@ char        partition_num;
 
     return(FALSE);
 
-END
+}
 
 /*  */
 char table_drive_letter()
 
-BEGIN
+{
 char drive_letter;
 
       /* Put in drive letter in display */
       if (cur_disk == c(0))                                             /* AC000 */
-         BEGIN
+         {
           /* There is a primary partition on 80h, so drive C: */
           drive_letter = c('C');                                        /* AC000 */
-         END
+         }
       else
-         BEGIN
+         {
           /* We are on drive 81h, so assume D: */
           drive_letter = c('D');                                        /* AC000 */
 
@@ -123,12 +123,12 @@ char drive_letter;
 
           /* Check for primary on drive 80h */
           if (!(find_partition_type(uc(DOS12)) || find_partition_type(uc(DOS16)) || find_partition_type(uc(DOSNEW)))) /* AC000 */
-             BEGIN
+             {
               drive_letter = c('C');                                    /* AC000 */
-             END
+             }
           /* restore cur_disk to normal */
           cur_disk = c(1);                                              /* AC000 */
-         END
+         }
       return(drive_letter);
-END
+}
 

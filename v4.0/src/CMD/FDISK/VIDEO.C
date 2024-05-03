@@ -15,7 +15,7 @@ unsigned     LeftCol;
 unsigned     BotRow;
 unsigned     RightCol;
 
-BEGIN
+{
 
 char    attribute;
 char    *attribute_ptr = &attribute;
@@ -26,7 +26,7 @@ char    *attribute_ptr = &attribute;
        attribute = WHITE_ON_BLUE;                                       /* AC000 */
    VIOSCROLLUP(TopRow,LeftCol,BotRow,RightCol,u(0),attribute_ptr,u(0)); /* AC000 */
    return;
-END
+}
 
 
 
@@ -46,7 +46,7 @@ END
 
 void init_video_information()
 
-BEGIN
+{
         mono_flag = FALSE;                                              /* AN006 */
 
         /* Get the current video state */
@@ -59,23 +59,23 @@ BEGIN
 
         get_video_attribute();                                          /* AN006 */
 
-        BEGIN
+        {
         /* assume color mode */
         regs.h.al = uc(Color80_25);                                     /* AC000 */
 
         /* See if we are in MONOCHROME mode */
         if ((video_mode == uc(MONO80_25)) || (video_mode == uc(MONO80_25A))) /* AC000 AC006 */
-           BEGIN
+           {
 
             /* Nope,set to BW80x25*/
             regs.h.al = uc(BW80_25);                                    /* AC000 */
             mono_flag = TRUE;                                           /* AN006 */
-           END
+           }
 
         /* go set the new mode */
         regs.h.ah = uc(SET_MODE);                                       /* AC000 */
         int86((int)VIDEO,&regs,&regs);                                  /* AC000 */
-       END
+       }
 
         /* Set the display page */
         regs.h.ah = uc(SET_ACTIVE_DISPLAY_PAGE);                        /* AC000 */
@@ -83,7 +83,7 @@ BEGIN
         int86((int)VIDEO,&regs,&regs);                                  /* AC000 */
 
         return;
-END
+}
 
 /*  */
 /*                                             */
@@ -92,7 +92,7 @@ END
 
 void reset_video_information()
 
-BEGIN
+{
 
 char    *attribute_ptr = &video_attribute;                              /* AN006 */
 
@@ -110,7 +110,7 @@ char    *attribute_ptr = &video_attribute;                              /* AN006
         int86((int)VIDEO,&regs,&regs);                                  /* AC000 */
         return;
 
-END
+}
 
 /******************************************************************************/
 /*Routine name:  GET_VIDEO_ATTRIBUTE                                          */
@@ -133,7 +133,7 @@ END
 
 void get_video_attribute()                                              /* AN006 */
 
-BEGIN                                                                   /* AN006 */
+{                                                                   /* AN006 */
 
         /* Get current attributes */
         regs.h.ah = CURRENT_VIDEO_ATTRIBUTE;                            /* AN006 */
@@ -142,5 +142,5 @@ BEGIN                                                                   /* AN006
         video_attribute = regs.h.ah;                                    /* AN006 */
         return;                                                         /* AN006 */
 
-END                                                                     /* AN006 */
+}                                                                     /* AN006 */
 

@@ -156,7 +156,7 @@ void main(argc,argv)                                                    /* AC000
 int     argc;                                                           /* AN000 */
 char    *argv[];                                                        /* AN000 */
 
-BEGIN
+{
 
     char       temp;                                                    /* AN000 */
     unsigned   input;
@@ -170,23 +170,23 @@ BEGIN
     /* Preload messages and return */
     if ( preload_messages() &&
          get_yes_no_values() )                                          /* AN000 AC012 */
-    BEGIN                                                               /* AN000 */
+    {                                                               /* AN000 */
 
         /* Parse the command line for syntax and switches */
         if(parse_command_line(argc,argv))                               /* AN000 */
 
-        BEGIN                                                           /* AN000 */
+        {                                                           /* AN000 */
         /* check to see if switches were set */
         if ((primary_flag == FALSE)  &&
             (extended_flag == FALSE) &&
             (logical_flag == FALSE)  &&
             (disk_flag == FALSE))                                       /* AN000 */
 
-            BEGIN                                                       /* AN000 */
+            {                                                       /* AN000 */
             reboot_flag = FALSE;
             /* See if running evironment is ok (Got hardfile, no network */
             if (check_valid_environment())
-                BEGIN                                                   /* AN000 */
+                {                                                   /* AN000 */
                 /* Get and save screen mode information */
                 init_video_information();
                 clear_screen(u(0),u(0),u(24),u(79));                    /* AC006 */
@@ -196,34 +196,34 @@ BEGIN
                 good_disk[1] = TRUE;
 
                 if (get_disk_info())
-                    BEGIN
+                    {
                     /* build memory model of partitions */
                     init_partition_tables();
 
                     /* Go do main screen */
                     do_main_menu();
                     write_info_to_disk();
-                    END
+                    }
 
                 if (reboot_flag)
-                    BEGIN                                               /* AN000 */
+                    {                                               /* AN000 */
                     reboot_system();
                     DOSEXIT((unsigned) 0,(unsigned) 0);                 /* AC000 */
-                    END                                                 /* AN000 */
+                    }                                                 /* AN000 */
 
                 /* Nearly done, go reset screen mode */
                 if (no_fatal_error)
-                    BEGIN
+                    {
                     reset_video_information();
-                    END                                                 /* AN000 */
+                    }                                                 /* AN000 */
                 /* this is end of check valid environment */
-                END                                                     /* AN000 */
+                }                                                     /* AN000 */
             /* This is end for no switches set */
-            END                                                         /* AN000 */
+            }                                                         /* AN000 */
 
         else                                                            /* AN000 */
 
-            BEGIN                                                       /* AN000 */
+            {                                                       /* AN000 */
             if ( ((primary_flag == FALSE)  &&
                   (extended_flag == FALSE) &&
                   (logical_flag == FALSE)) ||
@@ -231,17 +231,17 @@ BEGIN
                 display_msg((int)8,(int)DosStdEr,(int)nosubcnt,(int)nosubptr,c(noinput),c(Utility_Msg_Class)); /*;AN000; AC014 AC015 */
 
             else
-                BEGIN
+                {
                 reboot_flag = FALSE;                                        /* AN000 */
                 /* Get disk size information */                             /* AN000 */
                 good_disk[0] = TRUE;                                        /* AN000 */
                 good_disk[1] = TRUE;                                        /* AN000 */
                 if (get_disk_info())                                        /* AN000 */
-                    BEGIN
+                    {
                     if (number_of_drives < (cur_disk_buff+1))
                         display_msg((int)8,(int)DosStdEr,(int)nosubcnt,(int)nosubptr,c(noinput),c(Utility_Msg_Class)); /*;AN000; AC014 AC015*/
                     else
-                        BEGIN                                                   /* AN000 */
+                        {                                                   /* AN000 */
                         /* build memory model of partitions */
                         init_partition_tables();                                /* AN000 */
 
@@ -254,7 +254,7 @@ BEGIN
                            ( (!find_partition_type(uc(DOS12))) &&
                              (!find_partition_type(uc(DOS16))) &&
                              (!find_partition_type(uc(DOSNEW))) ) )  /* AC000 */
-                            BEGIN
+                            {
                             temp = find_part_free_space((char) PRIMARY);        /* AN000 */
                             if (primary_buff >= free_space[temp].mbytes_unused) /* AN000 */
                                 input = free_space[temp].space;                 /* AN000 */
@@ -262,7 +262,7 @@ BEGIN
                                 input = (unsigned)mbytes_to_cylinders(primary_buff,
                                                                       cur_disk_buff);   /* AN004 */
                             make_partition(input,temp,uc(ACTIVE),(char)PRIMARY);        /* AN000 */
-                            END
+                            }
 
                         /* If /EXT: was specified, create extended partition */
                         /* Check and see if there is a primary partition before you create an extended */
@@ -271,10 +271,10 @@ BEGIN
                            (find_partition_type(uc(DOS12))) ||
                            (find_partition_type(uc(DOS16))) ||
                            (find_partition_type(uc(DOSNEW))) ) )        /* AC000 */
-                           BEGIN
+                           {
                            /* Make sure there isn't an extended already there */
                            if (!find_partition_type(uc(EXTENDED)))                         /* AC000 */
-                               BEGIN
+                               {
                                temp = find_part_free_space((char) EXTENDED);       /* AN000 */
                                if (extended_buff >= free_space[temp].mbytes_unused) /* AN000 */
                                    input = free_space[temp].space;                 /* AN000 */
@@ -282,13 +282,13 @@ BEGIN
                                    input = (unsigned)mbytes_to_cylinders(extended_buff,
                                                                          cur_disk_buff);    /* AN004 */
                                make_partition(input,temp,(unsigned char) NUL,(char) EXTENDED);      /* AN000 */
-                               END
-                            END
+                               }
+                            }
 
                         /* If /LOG: was specified, create logical partition */
                         if ( (logical_flag == TRUE) &&
                              (find_partition_type(uc(EXTENDED))) )                               /* AN000 */
-                            BEGIN                                               /* AN000 */
+                            {                                               /* AN000 */
                             temp = find_ext_free_space();                       /* AN000 */
                             if (logical_buff >= free_space[temp].mbytes_unused) /* AN000 */
                                 input = free_space[temp].space;                 /* AN000 */
@@ -296,21 +296,21 @@ BEGIN
                                 input = (unsigned)mbytes_to_cylinders(logical_buff,
                                                                       cur_disk_buff);    /* AN004 */
                             make_volume(input,temp);                            /* AN000 */
-                            END
+                            }
 
                         /* This is end of switch execution */
                         write_info_to_disk();                                   /* AN000 */
-                        END                                                     /* AN000 */
+                        }                                                     /* AN000 */
                     /* This is the end of compare cur_disk_buff for valid drive */
-                    END
+                    }
                 /* This is the end of just disk_flag set */
-                END
+                }
             /* This is end of if switch is present */
-            END
+            }
         /* This is end of Parse command line */
-        END                                                             /* AN000 */
+        }                                                             /* AN000 */
     /* This end of Preload_messages function */
-    END                                                                 /* AN000 */
+    }                                                                 /* AN000 */
     cur_disk = c(0);                                                    /* AN001 */
     if ( (quiet_flag == TRUE) &&
          (!find_partition_type(uc(DOS12))) &&
@@ -318,7 +318,7 @@ BEGIN
          (!find_partition_type(uc(DOSNEW))) )                           /* AN001 */
         exit(ERR_LEVEL_1);                                              /* AN001 */
     else
-        BEGIN                                                           /* AN005 */
+        {                                                           /* AN005 */
         if ((quiet_flag == TRUE)     &&                                 /* AN005 */
             (primary_flag == FALSE)  &&                                 /* AN008 */
             (extended_flag == FALSE) &&                                 /* AN008 */
@@ -326,7 +326,7 @@ BEGIN
             exit(ERR_LEVEL_2);                                          /* AN005 */
         else                                                            /* AN005 */
             exit(ERR_LEVEL_0);                                          /* AN001 */
-        END                                                             /* AN005 */
-END
+        }                                                             /* AN005 */
+}
 
 

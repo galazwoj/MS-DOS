@@ -32,7 +32,7 @@ char parse_command_line(argc,argv)                                      /* AN000
 char *argv[];                                /* array of pointer arguments AN000 */
 int  argc;
 
-BEGIN                                                                   /* AN000 */
+{                                                                   /* AN000 */
 
 
         char    cmd_line[128];                                          /* AN000 */
@@ -66,35 +66,35 @@ BEGIN                                                                   /* AN000
 
         finished = FALSE;
         while ( !finished )                                            /* AN000 */
-         BEGIN                                                         /* AN000 */
+         {                                                         /* AN000 */
 
           Parse_Ptr = regs.x.si;                                       /* AN010  point to next parm       */
           parse(&regs,&regs);                                          /* AN000 Call DOS PARSE service routines*/
 
           if (regs.x.ax == u(NOERROR))                                 /* AN000 If there was an error*/
-             BEGIN
+             {
               if (regs.x.dx == (unsigned)&p_buff)                      /* AN000 */
                 check_disk_validity();                                 /* AN000 It's a drive letter */
 
               if (regs.x.dx == (unsigned)&sp_buff)                     /* AN000 */
                 process_switch();                                      /* AN000 It's a switch*/
-             END
+             }
           else
-             BEGIN
+             {
               if (regs.x.ax == u(0xffff))
                  finished = TRUE;                                      /* AN000 Then we are done*/
               else
-                BEGIN
+                {
                  Parse_msg(regs.x.ax,STDERR,Parse_err_class);          /* AN010  */
                  parse_good = FALSE;
                  finished = TRUE;                                      /* AN000 Then we are done*/
-                END
-              END
-          END /* End WHILE */                                          /* AN000 */
+                }
+              }
+          } /* End WHILE */                                          /* AN000 */
 
         return(parse_good);                                             /* AN000 Return to caller*/
 
-END     /* end parser */                                                /* AN000 */
+}     /* end parser */                                                /* AN000 */
 
 
 /*  */
@@ -117,7 +117,7 @@ END     /* end parser */                                                /* AN000
 
 void parse_init()                                                       /* AN000 */
 
-BEGIN                                                                   /* AN000 */
+{                                                                   /* AN000 */
 
 
   primary_flag            = FALSE;                                      /* AN000 */
@@ -175,7 +175,7 @@ BEGIN                                                                   /* AN000
 
   return;                                                               /* AN000 */
 
-END
+}
                                                                         /* AN000 */
 /*  */
 /******************************************************************************/
@@ -198,12 +198,12 @@ END
 
 void check_disk_validity()                                              /* AN000 */
 
-BEGIN                                                                   /* AN000 */
+{                                                                   /* AN000 */
 
         disk_flag = (FLAG)TRUE;                                         /* AN000 */
         cur_disk_buff = ((char)p_buff.p_value - 1);                     /* AN000 */
         return;                                                         /* AN000 */
-END                                                                     /* AN000 */
+}                                                                     /* AN000 */
 
 /*  */
 /******************************************************************************/
@@ -227,35 +227,35 @@ END                                                                     /* AN000
 
 void process_switch()                                                   /* AN000 */
 
-BEGIN                                                                   /* AN000 */
+{                                                                   /* AN000 */
 
 
-       BEGIN                                                            /* AN000 */
+       {                                                            /* AN000 */
            if (sp_buff.p_synonym == (unsigned)p_swi1.sp_switch1)        /* AN000 */
-            BEGIN                                                       /* AN000 */
+            {                                                       /* AN000 */
              primary_flag = (FLAG)TRUE;                                 /* AN000 */
              primary_buff = (unsigned)sp_buff.p_value;                  /* AN000 */
-            END                                                         /* AN000 */
+            }                                                         /* AN000 */
 
            if (sp_buff.p_synonym == (unsigned)p_swi1.sp_switch2)        /* AN000 */
-            BEGIN                                                       /* AN000 */
+            {                                                       /* AN000 */
              extended_flag = (FLAG)TRUE;                                /* AN000 */
              extended_buff = (unsigned)sp_buff.p_value;                 /* AN000 */
-            END                                                         /* AN000 */
+            }                                                         /* AN000 */
 
            if (sp_buff.p_synonym == (unsigned)p_swi1.sp_switch3)        /* AN000 */
-            BEGIN                                                       /* AN000 */
+            {                                                       /* AN000 */
              logical_flag = (FLAG)TRUE;                                 /* AN000 */
              logical_buff = (unsigned)sp_buff.p_value;                  /* AN000 */
-            END                                                         /* AN000 */
+            }                                                         /* AN000 */
 
            if (sp_buff.p_synonym == (unsigned)p_swi2.sp_switch4)        /* AN000 */
-            BEGIN                                                       /* AN000 */
+            {                                                       /* AN000 */
              quiet_flag = (FLAG)TRUE;                                   /* AN000 */
-            END                                                         /* AN000 */
-       END                                                              /* AN000 */
+            }                                                         /* AN000 */
+       }                                                              /* AN000 */
         return;                                                         /* AN000 Return to caller*/
-END     /* end parser */                                                /* AN000 */
+}     /* end parser */                                                /* AN000 */
 
 /************************************************************************/                                                       /* ;an000; */
 /* Parse_Message                - This routine will print only those    */
@@ -279,11 +279,11 @@ int             Msg_Num;                                                /* AN010
 int             Handle;                                                 /* AN010 */
 unsigned char   Message_Type;                                           /* AN010 */
 
-BEGIN                                                                   /* AN010 */
+{                                                                   /* AN010 */
 char    far *Cmd_Ptr;                                                   /* AN010 */
 
 
-        BEGIN                                                           /* AN010 */
+        {                                                           /* AN010 */
         segread(&segregs);                                              /* AN010 */
         FP_SEG(Cmd_Ptr) = segregs.ds;                                   /* AN010 */
         FP_OFF(Cmd_Ptr) = regs.x.si;                                    /* AN010 */
@@ -306,7 +306,7 @@ char    far *Cmd_Ptr;                                                   /* AN010
         regs.h.dh = Message_Type;                                       /* AN010 */
         regs.x.si = (unsigned int)&sublistp[0];                         /* AN010 */
         sysdispmsg(&regs,&regs);                                        /* AN010 */
-        END                                                             /* AN010 */
+        }                                                             /* AN010 */
         return;                                                         /* AN010 */
-END                                                                     /* AN010 */
+}                                                                     /* AN010 */
 

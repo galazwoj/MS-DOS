@@ -14,7 +14,7 @@ char            free_pointer;
 unsigned char   bootable;
 char            type;
 
-BEGIN
+{
 
 char table_pointer;
 unsigned i;
@@ -25,31 +25,31 @@ unsigned long   total_sectors;
     table_pointer = find_free_partition();
 
     if (table_pointer != ((char)(NOT_FOUND)))
-        BEGIN
+        {
         /* found a free partition, now lets go fill it up */
 
         /* Do we need to make it active? */
         if (bootable == ((unsigned char)(ACTIVE)))
-            BEGIN
+            {
 
             /* Go clear out a previously active one */
             for (i=u(0); i <u(4); i++)                                  /* AC000 */
-                BEGIN
+                {
                 if (part_table[cur_disk][i].boot_ind == uc(0x80))       /* AC000 */
-                    BEGIN
+                    {
                     part_table[cur_disk][i].changed = TRUE;
                     part_table[cur_disk][i].boot_ind = uc(0);           /* AC000 */
-                    END
-                END
+                    }
+                }
 
                 /* Now mark the new one active */
                 part_table[cur_disk][table_pointer].boot_ind = uc(0x80); /* AC000 */
-            END
+            }
         else
-            BEGIN
+            {
             /* Mark it as not active, leaving the others alone */
             part_table[cur_disk][table_pointer].boot_ind = uc(0);       /* AC000 */
-            END
+            }
 
             /* Go get the start cylinder */
             part_table[cur_disk][table_pointer].start_cyl = free_space[free_pointer].start;
@@ -69,9 +69,9 @@ unsigned long   total_sectors;
             /* Start head is always 0 unless this is track 0 - then it is 1 */
             temp = uc(0);                                               /* AC000 */
             if (part_table[cur_disk][table_pointer].start_cyl == u(0))  /* AC000 */
-                BEGIN
+                {
                 temp = uc(1);                                           /* AC000 */
-                END
+                }
             part_table[cur_disk][table_pointer].start_head = temp;
 
             /* Figure out the total number of sectors */
@@ -120,21 +120,21 @@ unsigned long   total_sectors;
 
             /* Setup the system id byte */
             if (type == ((char)(EXTENDED)))
-                BEGIN
+                {
                 temp = uc(EXTENDED);                                    /* AC000 */
-                END
+                }
             else
-                BEGIN
+                {
                 if (type == ((char)(PRIMARY)))
-                    BEGIN
+                    {
                     /* Always set to 06h - let format worry about setting to correct value */
                     temp = uc(DOSNEW);                                  /* AC000 */                            /*  AN000  */
-                    END
+                    }
                 else
-                    BEGIN
+                    {
                     internal_program_error();
-                    END
-                END
+                    }
+                }
 
             /* We got the sys id, now put it in */
             part_table[cur_disk][table_pointer].sys_id = temp;
@@ -150,17 +150,17 @@ unsigned long   total_sectors;
             part_table[cur_disk][table_pointer].percent_used =
                 cylinders_to_percent(((part_table[cur_disk][table_pointer].end_cyl-part_table[cur_disk][table_pointer].start_cyl)+1),
                 total_disk[cur_disk]);                                  /* AN000 */
-        END
+        }
         else
 
-            BEGIN
+            {
             /* This should not have happened */
             internal_program_error();
             return;
-            END
+            }
 
         return;
-END
+}
 
 
 /*  */
@@ -169,7 +169,7 @@ char make_volume(size,free_pointer)
 unsigned    size;
 char   free_pointer;
 
-BEGIN
+{
 
 char table_pointer;
 unsigned i;
@@ -181,7 +181,7 @@ unsigned long   total_sectors;
         table_pointer = find_free_ext();
 
         if (table_pointer != ((char)(NOT_FOUND)))
-           BEGIN
+           {
             /* found a free partition, now lets go fill it up */
 
 
@@ -269,14 +269,14 @@ unsigned long   total_sectors;
                 strcpy(ext_table[cur_disk][table_pointer].system,NOFORMAT);     /* AN000 */
                 strcpy(ext_table[cur_disk][table_pointer].vol_label,NOVOLUME);  /* AN000 */
 
-           END
+           }
         else
 
-           BEGIN
+           {
             /* This should not have happened */
             internal_program_error();
-           END
+           }
 
         return(table_pointer);
-END
+}
 

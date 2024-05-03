@@ -21,15 +21,15 @@
 #define QUIET                   "/Q"            /* AN000 */
 
 struct p_parms                                  /* AN000 */
-       BEGIN                                    /* AN000 */
+       {                                    /* AN000 */
         unsigned        p_parmsx_ptr;           /* AN000 - address of p_parmsx */
         unsigned char   p_num_extra;            /* AN000 - number of extra stuff */
         unsigned char   p_len_extra_delim;      /* AN000 - length of extra delimiter */
         char            p_extra_delim;          /* AN000 - extra delimiters */
-       END;                                     /* AN000 */
+       };                                     /* AN000 */
 
 struct p_parmsx                                 /* AN000 */
-       BEGIN                                    /* AN000 */
+       {                                    /* AN000 */
         unsigned char   p_minp;                 /* AN000 - Minimum positional number */
         unsigned char   p_maxp;                 /* AN000 - Maximum positional number  */
         unsigned        p_con1_ptr;             /* AN000 - Address of the 1st CONTROL block */
@@ -37,20 +37,20 @@ struct p_parmsx                                 /* AN000 */
         unsigned        p_swi1_ptr;             /* AN000 - Address of the 1st CONTROL block */
         unsigned        p_swi2_ptr;             /* AN000 - Address of the 2nd CONTROL block */
         unsigned char   p_maxk;                 /* AN000 - Any keyworks?? */
-       END;                                     /* AN000 */
+       };                                     /* AN000 */
 
 
 struct p_control_blk                            /* AN000 */
-       BEGIN                                    /* AN000 */
+       {                                    /* AN000 */
         unsigned        p_match_flag;           /* AN000 - Controls type matched */
         unsigned        p_function_flag;        /* AN000 - Function should be taken */
         unsigned        p_buff1_ptr;            /* AN000 - Result buffer address */
         unsigned        p_val1_ptr;             /* AN000 - Value list address */
         unsigned char   p_nid;                  /* AN000 - # of keyword/SW synonyms */
-       END;                                     /* AN000 */
+       };                                     /* AN000 */
 
 struct p_switch_blk                             /* AN000 */
-       BEGIN                                    /* AN000 */
+       {                                    /* AN000 */
         unsigned        sp_match_flag;          /* AN000 - Controls type matched */
         unsigned        sp_function_flag;       /* AN000 - Function should be taken */
         unsigned        sp_buff1_ptr;           /* AN000 - Result buffer address */
@@ -59,34 +59,34 @@ struct p_switch_blk                             /* AN000 */
         unsigned char   sp_switch1[5];          /* AN000 - keyword or sw */
         unsigned char   sp_switch2[5];          /* AN000 - keyword or sw */
         unsigned char   sp_switch3[5];          /* AN000 - keyword or sw */
-       END;                                     /* AN000 */
+       };                                     /* AN000 */
 
 struct p_switch1_blk                             /* AN000 */
-       BEGIN                                    /* AN000 */
+       {                                    /* AN000 */
         unsigned        sp_match_flag;          /* AN000 - Controls type matched */
         unsigned        sp_function_flag;       /* AN000 - Function should be taken */
         unsigned        sp_buff1_ptr;           /* AN000 - Result buffer address */
         unsigned        sp_val1_ptr;            /* AN000 - Value list address */
         unsigned char   sp_nid;                 /* AN000 - # of keyword/SW synonyms */
         unsigned char   sp_switch4[3];          /* AN000 - keyword or sw */
-       END;                                     /* AN000 */
+       };                                     /* AN000 */
 
 struct p_result_buff                            /* AN000 */
-       BEGIN                                    /* AN000 */
+       {                                    /* AN000 */
         unsigned char   p_type;                 /* AN000 - type returned */
         unsigned char   p_item_tag;             /* AN000 - Matched item tag */
         unsigned        p_synonym;              /* AN000 - Synonym list */
         unsigned long   p_value;                /* AN000 - result value */
-       END;                                     /* AN000 */
+       };                                     /* AN000 */
 
 struct p_value_list                             /* AN000 */
-       BEGIN                                    /* AN000 */
+       {                                    /* AN000 */
         unsigned char   p_values;               /* AN000 - number of values */
         unsigned char   p_range;                /* AN000 - number of ranges */
         unsigned char   p_range_one;            /* AN000 - range one */
         unsigned long   p_low_range;            /* AN000 - low value of range */
         unsigned long   p_high_range;           /* AN000 - high value of range */
-       END;                                     /* AN000 */
+       };                                     /* AN000 */
 
 /* Match_Flags */
 

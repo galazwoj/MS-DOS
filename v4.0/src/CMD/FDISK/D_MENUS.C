@@ -85,7 +85,7 @@
 /*  */
 void delete_partition()
 
-BEGIN
+{
 
     unsigned i;
     char input;
@@ -110,14 +110,14 @@ BEGIN
     /* check to see if there is an avail partition                 */
     temp = c(0);                                                        /* AC000 */
     for (i = u(0); i < u(4);i++)                                        /* AC000 */
-       BEGIN
+       {
 
         /* See if any non - zero system id bytes */
         temp = temp | part_table[cur_disk][i].sys_id ;
-       END
+       }
     /* Any entry that isn't zero means */
     if (temp != c(0))                                                   /* AC000 */
-       BEGIN
+       {
         /* ############# ADD CODE HERE FOR THIS FUNCTION ############## */
         /* Do something about defaults and highlighting                */
         /*                                                              */
@@ -136,59 +136,59 @@ BEGIN
         input = get_num_input(c(NUL),max_input,input_row,input_col);    /* AC000 */
         /* Go branch to the requested function */
         switch(input)
-           BEGIN
+           {
             case '1':
                       if (find_partition_type(uc(DOS12)) ||             /* AN016 AC016 */
                           find_partition_type(uc(DOS16)) ||             /* AN016 AC016 */
                           find_partition_type(uc(DOSNEW)))              /* AN016 AC016 */
                            dos_delete();
                       else                                              /* AN000 */
-                          BEGIN                                         /* AN000 */
+                          {                                         /* AN000 */
                           /* No Pri partition to delete */
                           clear_screen(u(17),u(0),u(17),u(79));         /* AN000 */
                           display(error_6);                             /* AN000 */
                           wait_for_ESC();                               /* AN000 */
-                          END                                           /* AN000 */
+                          }                                           /* AN000 */
                       break;
 
             case '2':
                       if (find_partition_type(uc(EXTENDED)))            /* AN000 */
                           ext_delete();
                       else                                              /* AN000 */
-                          BEGIN                                         /* AN000 */
+                          {                                         /* AN000 */
                           /* No Ext partition to delete */
                           clear_screen(u(17),u(0),u(17),u(79));         /* AN000 */
                           display(error_7);                             /* AN000 */
                           wait_for_ESC();                               /* AN000 */
-                          END                                           /* AN000 */
+                          }                                           /* AN000 */
                       break;
 
             case '3':
                       if ((find_partition_type(uc(EXTENDED))) && (find_logical_drive()))  /* AC000 */
                           volume_delete();
                       else
-                          BEGIN
+                          {
                           clear_screen(u(17),u(0),u(17),u(79));         /* AN000 */
                           display(error_36);                            /* AN000 */
                           wait_for_ESC();                               /* AN000 */
-                          END                                           /* AN000 */
+                          }                                           /* AN000 */
                       break;
 
             case ESC: break;
 
             default : internal_program_error();
                       break;
-           END
-       END
+           }
+       }
     else
-       BEGIN
+       {
         display(error_14);
         wait_for_ESC();
-       END
+       }
     /* clear the screen before going back to main menu */
     clear_screen(u(0),u(0),u(24),u(79));                                /* AC000 */
     return;
-END
+}
 
 
 /*  */
@@ -268,7 +268,7 @@ END
 /*  */
 void dos_delete()
 
-BEGIN
+{
 
     char input;
     unsigned i;
@@ -290,7 +290,7 @@ BEGIN
 
     /* Display partition data and double check if partition exists*/
     if (table_display())
-       BEGIN
+       {
 
         sprintf(insert,"%4.0d",total_mbytes[cur_disk]);
         display(menu_15);
@@ -298,7 +298,7 @@ BEGIN
         /* See if drive 1 and extended partition exists */
 
         if (!(find_partition_type(uc(EXTENDED)) && (cur_disk == c(0)))) /* AC000 */
-           BEGIN
+           {
 
             /* Nope, we can keep going */
             /* Display Y/N prompt */
@@ -307,17 +307,17 @@ BEGIN
             /* Get yes/no prompt */
             input = get_yn_input(c(No),input_row,input_col);        /* AC000 AC011 */
             switch(input)
-               BEGIN
+               {
                 case 1:                                             /* AC000 */
-                          BEGIN
+                          {
                            for (i=u(0); i < u(4); i++)              /* AC000 */
-                              BEGIN
+                              {
 
                                if ( (part_table[cur_disk][i].sys_id==uc(DOS12)) ||
                                     (part_table[cur_disk][i].sys_id==uc(DOS16)) ||
                                     (part_table[cur_disk][i].sys_id==uc(DOSNEW)) )  /* AC000 */
 
-                                  BEGIN
+                                  {
                                    /* Set Partition entry to zero */
                                    part_table[cur_disk][i].boot_ind = uc(0);        /* AC000 */
                                    part_table[cur_disk][i].start_head = uc(0);      /* AC000 */
@@ -350,9 +350,9 @@ BEGIN
 
                                    wait_for_ESC();
                                    break;
-                                  END
-                              END
-                          END
+                                  }
+                              }
+                          }
                            break;
 
                 case 0:    break;                                   /* AC000 */
@@ -360,27 +360,27 @@ BEGIN
                 case ESC:  break;
 
                 default:
-                           BEGIN
+                           {
                             internal_program_error();
                             break;
-                           END
-               END
-           END
+                           }
+               }
+           }
         else
-           BEGIN
+           {
             /* Tell user he can't do it while extended exists on drive 1 */
             display(error_32);
             wait_for_ESC();
-           END
-       END
+           }
+       }
 
     else
-       BEGIN
+       {
         internal_program_error();
-       END
+       }
     clear_screen(u(0),u(0),u(24),u(79));                                /* AC000 */
     return;
-END
+}
 
 
 /*  */
@@ -462,7 +462,7 @@ END
 void ext_delete()
 
 
-BEGIN
+{
 
     char   input;
     unsigned i;
@@ -488,24 +488,24 @@ BEGIN
     sprintf(insert,"%4.0d",total_mbytes[cur_disk]);
     display(menu_15);
 
-       BEGIN
+       {
         /* See if there are still volumes */
         if (!find_logical_drive())
-           BEGIN
+           {
             /* Display Y/N prompt */
             display(menu_31);
 
             /* Get yes/no prompt */
             input = get_yn_input(c(No),input_row,input_col);            /* AC000 AC011 */
             switch(input)
-               BEGIN
+               {
                 case 1:                                                 /* AC000 */
-                      BEGIN
+                      {
                        for (i=u(0); i < u(4); i++)                      /* AC000 */
                        /* Note: This will delete all occurances of EXTENDED DOS partitions found */
-                          BEGIN
+                          {
                            if (part_table[cur_disk][i].sys_id == uc(EXTENDED))  /* AC000 */
-                              BEGIN
+                              {
                                /* Set Partition entry to zero */
                                part_table[cur_disk][i].boot_ind = uc(0);        /* AC000 */
                                part_table[cur_disk][i].start_head = uc(0);      /* AC000 */
@@ -535,11 +535,11 @@ BEGIN
 
                                /* Set the reboot flag */
                                reboot_flag = (FLAG)TRUE;                /* AC000 */
-                              END
-                          END
+                              }
+                          }
                        wait_for_ESC();
                        break;
-                      END
+                      }
 
                 case 0:    break;                                       /* AC000 */
 
@@ -547,18 +547,18 @@ BEGIN
 
                 default:   internal_program_error();
                            break;
-               END
-           END
+               }
+           }
         else
-           BEGIN
+           {
             /* Logical drives still exist, can't delete partition */
             display(error_21);
             wait_for_ESC();
-           END
-       END
+           }
+       }
     clear_screen(u(0),u(0),u(24),u(79));                                /* AC000 */
     return;
-END
+}
 
 
 /*  */
@@ -639,7 +639,7 @@ END
 /*  */
 void volume_delete()
 
-BEGIN
+{
 
     char   input;
     char   drive_input;
@@ -684,25 +684,25 @@ BEGIN
 
     /* Initialize array of drive letters that exist at this point */
     for (i=(int)0; i < (int)23; i++)                                    /* AC000 */
-        BEGIN
+        {
         /* See if we've exceeded the drive letter range */
         if (temp <= high_drive)
-            BEGIN
+            {
             /* Put in drive letter */
             drive_list[i][0] = ((unsigned char)(temp));
             /* Initialize the offsets into the array to something harmless */
             drive_list[i][1] = uc(INVALID);                             /* AC000 */
-            END
+            }
         else
-            BEGIN
+            {
             /* No drive there, put in NUL */
             drive_list[i][0] = uc(NUL);                                 /* AC000 */
             drive_list[i][1] = uc(INVALID);                             /* AC000 */
-            END
+            }
 
         /* Check for next drive */
         temp++;
-        END
+        }
 
     /* Set up partition size message */
     sprintf(insert,"%4.0d",get_partition_size( uc(EXTENDED) ) );
@@ -713,7 +713,7 @@ BEGIN
 
     /* Loop until ESC or all deleted */
     while (input != c(ESC))                                             /* AC000 */
-        BEGIN
+        {
 
         /* Are there any drives left?*/
         drives_exist = (FLAG)FALSE;                                     /* AC000 */
@@ -721,10 +721,10 @@ BEGIN
         error_high_drive = ((char)(NUL));
 
         for (i=(int)0;i < (int)23; i++)                                 /* AC000 */
-            BEGIN
+            {
             drive_temp = drive_list[i][0];
             if ((drive_temp != uc(NUL)) && (drive_list[i][1] != uc(DELETED))) /* AC011 */
-                BEGIN
+                {
                 drives_exist = (FLAG)TRUE;                              /* AC000 */
 
                 /* Find last existing drive letter */
@@ -733,17 +733,17 @@ BEGIN
                 /* See if we've found the first drive yet */
                 if (error_low_drive == ((char)(NUL)))
                     error_low_drive = ((char)(drive_temp));
-                END
-            END
+                }
+            }
 
         /* If there are drives, go let user try to delete them */
         if (drives_exist)
-            BEGIN
+            {
 
             /* Get input until given a correct drive */
             valid_input = (FLAG)FALSE;                                  /* AC000 */
             while ( (!valid_input) && (input != c(ESC)) )
-                BEGIN
+                {
 
                 /* Prompt for input */
                 display(menu_33);
@@ -756,24 +756,24 @@ BEGIN
                 /* See if it has been deleted already or ESC pressed */
                 drives_exist = FALSE;
                 for (i=(int)0;i < (int)23; i++)                         /* AC000 */
-                    BEGIN
+                    {
                     if (drive_list[i][0] == ((unsigned char)(drive_input)) &&
                        (drive_list[i][1] != ((unsigned char) DELETED))) /* AC013 */
-                        BEGIN
+                        {
                         drives_exist = TRUE;
                         list_index = i;
-                        END
+                        }
                     if (ext_table[cur_disk][i].drive_letter == c(drive_input) )
                         point = i;
-                    END
-                END
+                    }
+                }
 
             /* Input volume string to confirm delete */
             vol_matches = FALSE;
             if (input != c(ESC))
-                BEGIN
+                {
                 if (drives_exist)
-                    BEGIN
+                    {
                     /* delete privious volume mismatch message */
                     string_input[0] = uc(NUL);                          /* AN000 */
                     clear_screen( u(22), u(0), u(23), u(79) );
@@ -786,21 +786,21 @@ BEGIN
                     if (strcmp(ext_table[cur_disk][point].vol_label,string_input) == (int)ZERO)
                            vol_matches = TRUE;                          /* AN000 */
                       else if (input != c(ESC)) display(error_34);
-                    END
+                    }
                  else
-                    BEGIN
+                    {
                     /* Tell user the drive has already been deleted */
                     insert[0] = dos_upper(drive_input);                 /* AC000 */
                     insert[1] = c(DRIVE_INDICATOR);                     /* AC000 */
                     clear_screen( u(21), u(0), u(22), u(79) );          /* AN000 */
                     display(error_29);
-                    END
+                    }
 
-                END
+                }
 
                 /* If it is a valid drive indicate that the input was ok */
                 if ( (input != c(ESC)) && (drives_exist) && (vol_matches) )                /* AC000 */
-                    BEGIN
+                    {
                     valid_input = TRUE;
 
                     /* At this point we have a valid drive letter to delete */
@@ -819,9 +819,9 @@ BEGIN
 
                     /* Go handle the delete */
                     switch(input)
-                        BEGIN
+                        {
                         case 1:                                         /* AC000 */
-                            BEGIN
+                            {
                              /* Go ahead and mark it deleted in list array */
 
                              /* Throw up a flag to indicate we need to delete this one for real later */
@@ -834,26 +834,26 @@ BEGIN
 
                              /* Put prompt up on screen */
                              for (i=(int)0; i < (int)23; i++)           /* AC000 */
-                                 BEGIN
+                                 {
                                  /* See if drive deleted */
                                  if (drive_list[i][1] == uc(DELETED))   /* AC011 */
-                                     BEGIN
+                                     {
                                      /* Wipe out the drive info and print deleted message */
                                      /* See what column it is in */
                                      if (i < (int)12)                   /* AC000 */
-                                         BEGIN
+                                         {
                                          column = (int)4;               /* AC000 */
                                          row = (int)(4 + i - (int)0);
                                          clear_screen( (unsigned)row, (unsigned)column,
                                                        (unsigned)row, (unsigned)39 );
-                                         END
+                                         }
                                      else
-                                         BEGIN
+                                         {
                                          column = (int)45;              /* AC000 */
                                          row = (int)(4 + i - (int)12);
                                          clear_screen( (unsigned)row, (unsigned)column,
                                                        (unsigned)row, (unsigned)79 );
-                                         END
+                                         }
 
                                      /* Put the start row,col of message in the message string */
                                      s=status_3;
@@ -863,13 +863,13 @@ BEGIN
                                      *s++ = ((char)(column/10))+'0';
                                      *s = ((char)(column%10))+'0';
                                      display(status_3);
-                                     END
-                                 END
+                                     }
+                                 }
                              /* Set the reboot flag */
                              reboot_flag = TRUE;
                              clear_screen( u(21), u(0), u(23), u(79) ); /* AN000 */
                              break;
-                             END
+                             }
 
                         case ESC:
                         case 0:
@@ -879,30 +879,30 @@ BEGIN
                         default:
                             internal_program_error();
                             break;
-                        END
-                    END
+                        }
+                    }
 
-            END
+            }
          else     /* drives do not exist! */
-            BEGIN
+            {
             /* No more logical drives to delete */
             clear_screen(u(16),u(0),u(21),u(79));                       /* AC000 */
             display(error_22);
             input = wait_for_ESC();
-            END
-        END /* while input != esc */
+            }
+        } /* while input != esc */
 
     if (drives_reassigned)
-        BEGIN
+        {
         /* If anything got deleted, lets go do it for real */
         for (i=(int)0; i < (int)23;i++)                                 /* AC000 */
-            BEGIN
+            {
             if (drive_list[i][1] == uc(DELETED))                        /* AC011 */
-                BEGIN                                                   /* AN011 */
+                {                                                   /* AN011 */
                 for (j=(int)0; j < (int)23;j++)                         /* AN011 */
-                    BEGIN                                               /* AN011 */
+                    {                                               /* AN011 */
                     if (drive_list[i][0] == ext_table[cur_disk][j].drive_letter)  /* AN011 */
-                        BEGIN
+                        {
                         /* Zero sys id and show it changed */
                         ext_table[cur_disk][j].boot_ind = uc(0);        /* AC000 */
                         ext_table[cur_disk][j].start_head = uc(0);      /* AC000 */
@@ -920,10 +920,10 @@ BEGIN
                         ext_table[cur_disk][j].drive_letter = NUL;      /* AN000 */
                         strcpy(ext_table[cur_disk][j].system,c(NUL));   /* AN000 */
                         strcpy(ext_table[cur_disk][j].vol_label,c(NUL)); /* AN000 */
-                        END                                             /* AN011 */
-                    END                                                 /* AN011 */
-                END
-            END
+                        }                                             /* AN011 */
+                    }                                                 /* AN011 */
+                }
+            }
 
         /* Show new drive letters */
         volume_display();
@@ -932,10 +932,10 @@ BEGIN
         clear_screen(u(16),u(0),u(23),u(79));                           /* AC000 */
         display(status_10);
         wait_for_ESC();
-        END
+        }
     clear_screen(u(0),u(0),u(24),u(79));                                /* AC000 */
 
     return;
 
-END
+}
 

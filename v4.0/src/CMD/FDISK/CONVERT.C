@@ -36,7 +36,7 @@ char            which_disk;                                             /* AN004
 
 
 
-BEGIN                                                                   /* AN000 */
+{                                                                   /* AN000 */
 
 unsigned        cylinders_out;                                          /* AN000 */
 unsigned long   cylinders_out1;                                         /* AN000 */
@@ -47,13 +47,13 @@ unsigned long   divide_by;                                              /* AN000
            /* If trying to create a 3.30 compatible 32 MB partition */
            /* Set the 32mb limit - round down                       */
            if (mbytes_in == (XFLOAT)32)
-               BEGIN
+               {
                cylinders_out1 = ul(DOS_MAX - max_sector[which_disk]);           /* AN004 */
                divide_by = ul((max_head[which_disk]) * ul(max_sector[which_disk])); /* AN004 */
                cylinders_out = u(cylinders_out1 / divide_by);                   /* AN000 */
-               END
+               }
            else
-               BEGIN
+               {
                number_of_sectors = ul(((mbytes_in * ONE_MEG)/BYTES_PER_SECTOR)); /* AN000 */
                if (((int)(mbytes_in * ONE_MEG) % BYTES_PER_SECTOR) != (int)0)    /* AN000 */
                  number_of_sectors++;                                            /* AN000 */
@@ -63,10 +63,10 @@ unsigned long   divide_by;                                              /* AN000
                cylinders_out = u((number_of_tracks / max_head[which_disk]));     /* AN004 */
                if (((int)number_of_tracks % max_head[which_disk]) != (int)0)     /* AN004 */
                   cylinders_out++;                                          /* AN000 */
-               END
+               }
 
            return(cylinders_out);                                       /* AN000 */
-END                                                                     /* AN000 */
+}                                                                     /* AN000 */
 
 
 
@@ -97,7 +97,7 @@ XFLOAT     cylinders_to_mbytes(cylinders_in,which_disk)                 /* AN004
 unsigned        cylinders_in;                                           /* AN000 */
 char            which_disk;                                             /* AN004 */
 
-BEGIN                                                                   /* AN000 */
+{                                                                   /* AN000 */
 
 unsigned         mbytes_out;                                            /* AN000 */
 unsigned long    number_of_bytes;                                       /* AN000 */
@@ -113,7 +113,7 @@ unsigned long    bytes_in_one_sector;                                   /* AN004
      if ((number_of_bytes % ONE_MEG) >= (ONE_MEG / 2)) mbytes_out++;    /* AN000 */
      return(mbytes_out);                                                /* AN000 */
 
-END                                                                     /* AN000 */
+}                                                                     /* AN000 */
 
 
 
@@ -145,7 +145,7 @@ unsigned  cylinders_to_percent(cylinders_in,total_cylinders)            /* AN000
 unsigned      cylinders_in;                                             /* AN000 */
 unsigned      total_cylinders;                                          /* AN000 */
 
-BEGIN                                                                   /* AN000 */
+{                                                                   /* AN000 */
 
 unsigned      percentage_out;                                           /* AN000 */
 double        large_number;                                             /* AN000 */
@@ -156,16 +156,16 @@ double        large_number;                                             /* AN000
      if (total_cylinders == 0)
          percentage_out = 0;
      else
-         BEGIN
+         {
          large_number = (double)((long)cylinders_in * 100l);            /* AN000 */
          percentage_out = u(large_number / total_cylinders);            /* AN000 */
-         END
+         }
      /* this should round up to the next percent if more than .5 percent */
      if (((cylinders_in * 100) % total_cylinders) >= (total_cylinders / 2))
        percentage_out++;                                                /* AN000 */
      if (percentage_out > u(100)) percentage_out = u(100);              /* AN000 */
      return(percentage_out);                                            /* AN000 */
-END                                                                     /* AN000 */
+}                                                                     /* AN000 */
 
 
 
@@ -198,7 +198,7 @@ unsigned     percent_in;                                                /* AN000
 XFLOAT       total_cylinders;                                           /* AN000 */
 
 
-BEGIN                                                                   /* AN000 */
+{                                                                   /* AN000 */
 
         XFLOAT       cylinders_out;                                     /* AN000 */
 #if IBMCOPYRIGHT
@@ -209,7 +209,7 @@ BEGIN                                                                   /* AN000
         if (((percent_in * total_cylinders) % 100) != u(0))             /* AN000 */
            cylinders_out++;                                             /* AN000 */
         return(cylinders_out);                                          /* AN000 */
-END                                                                     /* AN000 */
+}                                                                     /* AN000 */
 
 
 
@@ -241,7 +241,7 @@ char dos_upper(drive_value)                                             /* AN000
 
 char drive_value;                                                       /* AN000 */
 
-BEGIN                                                                   /* AN000 */
+{                                                                   /* AN000 */
 
           char output;                                                  /* AN000 */
 
@@ -255,7 +255,7 @@ BEGIN                                                                   /* AN000
 #endif
 
             return(output);                                             /* AN000 */
-END                                                                     /* AN000 */
+}                                                                     /* AN000 */
 
 
 
@@ -287,7 +287,7 @@ char check_yn_input(input_value)                                        /* AN000
 
          char   input_value;                                            /* AN000 */
 
-BEGIN
+{
          char   input;                                                  /* AN000 */
 
          /* Get extended country information */
@@ -312,7 +312,7 @@ BEGIN
 #endif
 
          return(input);                                                 /* AN000 */
-END                                                                     /* AN000 */
+}                                                                     /* AN000 */
 
 
 
@@ -339,7 +339,7 @@ FLAG get_fs_and_vol(input_drive)                                        /* AN000
 
           char input_drive;                                             /* AN000 */
 
-BEGIN                                                                   /* AN000 */
+{                                                                   /* AN000 */
 
           char output;
 
@@ -360,7 +360,7 @@ BEGIN                                                                   /* AN000
 
           return(output);                                               /* AN000 */
                                                                         /* AN000 */
-END
+}
 
 
 
@@ -384,7 +384,7 @@ END
 void get_volume_string(input_drive,vol_label_addr)                      /* AN000 */
         char input_drive;                                               /* AN000 */
         char *vol_label_addr;                                           /* AN000 */
-BEGIN                                                                   /* AN000 */
+{                                                                   /* AN000 */
 
           char  first_string[13];                                       /* AC000 */
           char  find_first_buffer[50];                                  /* AN000 */
@@ -392,9 +392,9 @@ BEGIN                                                                   /* AN000
 
           /* clear out any garbage in volume label field */
           for (i = u(0); i < u(12); i++)                                /* AN015 */
-              BEGIN                                                     /* AN015 */
+              {                                                     /* AN015 */
                   vol_label_addr[i] = u(0);                             /* AN015 */
-              END                                                       /* AN015 */
+              }                                                       /* AN015 */
 
           /* Point the DTA to our buffer so we can get the FindFirst output */
           regs.h.ah = uc(0x1A);                                         /* AN000 */
@@ -415,17 +415,17 @@ BEGIN                                                                   /* AN000
 /*name */
 
           if ((regs.x.cflag & CARRY_FLAG) != CARRY_FLAG)                /* AN000 AC015 */
-            BEGIN                                                       /* AN000 */
+            {                                                       /* AN000 */
             for (i=j=u(0); i < strlen (&find_first_buffer[30]) ; i++)   /* AN000 */
-                BEGIN                                                   /* AN000 */
+                {                                                   /* AN000 */
                 if (find_first_buffer[30+i] != PERIOD)                  /* AN003 */
                         vol_label_addr[i-j] = find_first_buffer[30+i];  /* AN000 */
                 else                                                    /* AN000 */
                         j = u(1);                                       /* AN000 */
-                END                                                     /* AN000 */
-            END                                                         /* AN000 */
+                }                                                     /* AN000 */
+            }                                                         /* AN000 */
           return;                                                       /* AN000 */
-END                                                                     /* AN000 */
+}                                                                     /* AN000 */
 
 
 /*  */
@@ -451,7 +451,7 @@ FLAG check_format(input_drive)                                          /* AN002
 
           char input_drive;                                             /* AN002 */
 
-BEGIN                                                                   /* AN002 */
+{                                                                   /* AN002 */
 
           char formatted;                                               /* AN002 */
 
@@ -472,7 +472,7 @@ BEGIN                                                                   /* AN002
 
           return(formatted);                                            /* AN002 */
 
-END                                                                     /* AN002 */
+}                                                                     /* AN002 */
 
 
 

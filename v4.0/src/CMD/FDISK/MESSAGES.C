@@ -29,7 +29,7 @@
 
 char preload_messages()                                                 /* AN000 */
 
-BEGIN                                                                   /* AN000 */
+{                                                                   /* AN000 */
 
 char message_flag;                                                      /* AN000 */
 
@@ -38,13 +38,13 @@ char message_flag;                                                      /* AN000
      sysloadmsg(&regs,&regs);                                           /* AN000   load the messages         */
 
      if ((regs.x.cflag & CARRY_FLAG) == CARRY_FLAG)                     /* AN000   If msg load problem       */
-       BEGIN
+       {
         sysdispmsg(&regs,&regs);                                        /* AN000   write the error message */
         message_flag = FALSE;                                           /* AN000 */
-       END
+       }
      return(message_flag);                                              /* AN000 */
 
-END                                                                     /* AN000 */
+}                                                                     /* AN000 */
 
 /*  */
 /*컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴�*/
@@ -85,7 +85,7 @@ int   *msgsub;                          /*;AN000; offset of sublist           */
 char  msginput;                         /*;AN000; 0=no input, else input func */
 char  msgclass;                         /*;AN014; 0=no input, else input func */
 
-BEGIN
+{
         regs.x.ax = u(msgnum);             /*;AN000; set registers               */
         regs.x.bx = u(msghan);             /*;AN000;                             */
         regs.x.cx = u(msgparms);           /*;AN000;                             */
@@ -95,7 +95,7 @@ BEGIN
         sysdispmsg(&regs,&regs);           /*;AN000;  write the messages         */
 
         return;                            /*;AN000;                             */
-END
+}
 
 /*  */
 /******************************************************************************/
@@ -119,7 +119,7 @@ END
 
 char get_yes_no_values()                                                /* AN012 */
 
-BEGIN                                                                   /* AN012 */
+{                                                                   /* AN012 */
 
 char            message_flag;                                           /* AN012 */
 char far        *msg_buff;                                              /* AN012 */
@@ -137,7 +137,7 @@ char far        *msg_buff;                                              /* AN012
      Yes = *msg_buff;                                                   /* AN012 */
 
      if ((regs.x.cflag & CARRY_FLAG) != CARRY_FLAG)                     /* AN012   If msg load problem       */
-          BEGIN                                                         /* AN012 */
+          {                                                         /* AN012 */
           /* do sysgetmsg for 'N' */
           regs.x.ax = NoMsg;                                            /* AN012 */
           regs.h.dh = uc(utility_msg_class);                            /* AN012 */
@@ -148,15 +148,15 @@ char far        *msg_buff;                                              /* AN012
 
           No = *msg_buff;                                               /* AN012 */
 
-          END                                                           /* AN012 */
+          }                                                           /* AN012 */
 
      if ((regs.x.cflag & CARRY_FLAG) == CARRY_FLAG)                     /* AN012   If msg load problem       */
-       BEGIN                                                            /* AN012 */
+       {                                                            /* AN012 */
         sysdispmsg(&regs,&regs);                                        /* AN012   write the error message */
         message_flag = FALSE;                                           /* AN012 */
-       END                                                              /* AN012 */
+       }                                                              /* AN012 */
 
      return(message_flag);                                              /* AN012 */
 
-END                                                                     /* AN012 */
+}                                                                     /* AN012 */
 
