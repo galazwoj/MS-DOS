@@ -2,8 +2,7 @@
  *   search the last charater occurrence in a string
  */
 
-#include "local.h"
-#include <string.h>
+#include "_comsubs.h"
 
 static unsigned char cc[2];
 static unsigned char *pcc = cc;

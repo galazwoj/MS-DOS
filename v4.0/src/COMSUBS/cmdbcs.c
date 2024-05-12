@@ -1,22 +1,20 @@
-#include "local.h"
-#include <stdlib.h>
+#include "_comsubs.h"
 
 // https://www.osfree.org/doku/doku.php?id=en:docs:fapi:dosgetdbcsev
 
 extern unsigned char *casemap_lo;
 extern unsigned char *casemap_lo;
 
-#define TRUE 1
-#define FALSE 0
-
 unsigned char com_settbl(void)
 {
 	static int done = FALSE;
-	struct countrycode cc = {0,0};
+	struct countrycode cc;
 	int error;
 	unsigned char *p;
 	int i;
 
+	cc.country = 0;  
+	cc.codepage = 0; 
 	if (done)
 		return 0;
 	casemap_lo = malloc(TABLE_SIZE);

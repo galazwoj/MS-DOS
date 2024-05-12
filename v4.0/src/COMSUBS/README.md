@@ -1,1 +1,1 @@
-Preliminary disassembly of comsubs.lib
+Preliminary C code of comsubs.lib

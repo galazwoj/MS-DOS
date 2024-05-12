@@ -2,7 +2,7 @@
  *   search the first occurrence of a character in a string
  */
 
-#include "local.h"
+#include "_comsubs.h"
 
 char *com_strchr(
    unsigned char *s,	      /* a source string */

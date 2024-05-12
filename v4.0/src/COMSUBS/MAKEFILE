@@ -1,0 +1,91 @@
+#******************************************************************************
+#	title	MAKEFILE - COMSUBS.LIB build file
+#******************************************************************************
+#
+#   BASED ON (C) Copyright MICROSOFT Corp. 1986
+#
+#   Title:    COMSUBS - MICROSOFT common doublebyte functions
+#		COMSUBS.LIB - common functions library
+#
+#   Module:   MAKEFILE for COMSUBS - library
+#
+#   Version:  0.02
+#
+#   Date:     May 03, 2024
+#
+#******************************************************************************
+#
+#   Change log:
+#
+#     DATE    REVISION			DESCRIPTION
+#   --------  --------	-------------------------------------------------------
+#   05/03/24  Original       		first written
+#   05/12/24  works			works	
+#
+#******************************************************************************
+#
+#   Functional Description:
+#
+#   This file assembles and links COMSUBS.LIB
+#
+#******************************************************************************
+.SUFFIXES:
+.SUFFIXES:	.c .asm .obj .lst .def .lnk .lrf .exe .com
+
+LIB	 = lib
+
+cflags	= /Fc /I..\H
+
+all:   	comsubs.lib
+
+OBJS= 	cmchkdos.obj	\
+	cmcmpi.obj 	\
+	cmdbcs.obj     	\
+	cmgetarg.obj   	\
+	cmlower.obj     \
+	cmputmsg.obj 	\
+	cmrrchr.obj     \
+	cmstrchr.obj   	\
+	cmstrlwr.obj   	\
+	cmstrupr.obj    \
+	cmsubstr.obj  	\
+	cmupper.obj   	\
+	rctomid.obj   	\
+	realopen.obj 
+
+comsubs.lib:	$(OBJS)
+		-del comsubs.lib
+		$(LIB) @comsubs.lbr
+
+cmchkdos.obj:  	cmchkdos.c _comsubs.h
+
+cmcmpi.obj:     cmcmpi.c   _comsubs.h     
+
+cmdbcs.obj:     cmdbcs.c   _comsubs.h     
+
+cmgetarg.obj:   cmgetarg.c _comsubs.h    
+
+cmlower.obj:    cmlower.c  _comsubs.h   
+
+cmputmsg.obj:   cmputmsg.c _comsubs.h   
+
+cmrrchr.obj:    cmrrchr.c  _comsubs.h   
+
+cmstrchr.obj:   cmstrchr.c _comsubs.h   
+
+cmstrlwr.obj:   cmstrlwr.c _comsubs.h   
+
+cmstrupr.obj:   cmstrupr.c _comsubs.h   
+
+cmsubstr.obj:   cmsubstr.c _comsubs.h   
+
+cmupper.obj:    cmupper.c  _comsubs.h   
+
+rctomid.obj:    rctomid.c  _comsubs.h    
+
+realopen.obj:   realopen.c _comsubs.h    
+
+clean:
+	-del *.obj 
+	-del comsubs.lib
+	-del *.COD

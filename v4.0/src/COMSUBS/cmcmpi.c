@@ -2,7 +2,7 @@
  *   compare two strings with regard to case
  */
 
-#include "local.h"
+#include "_comsubs.h"
 
 int com_strcmpi(
   unsigned char *s1,	      /* source string	       */

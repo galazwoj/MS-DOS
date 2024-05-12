@@ -2,7 +2,7 @@
  *  verify correct DOS version
  */
 
-#include "local.h"
+#include "_comsubs.h"
 
 unsigned comcheckdosver(void)
 {

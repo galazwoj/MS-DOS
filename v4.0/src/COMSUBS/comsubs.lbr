@@ -1,0 +1,17 @@
+comsubs.lib
+y
++cmchkdos.obj& 
++cmcmpi.obj& 
++cmdbcs.obj& 
++cmgetarg.obj& 
++cmlower.obj& 
++cmputmsg.obj& 
++cmrrchr.obj& 
++cmstrchr.obj& 
++cmstrlwr.obj& 
++cmstrupr.obj& 
++cmsubstr.obj& 
++cmupper.obj& 
++rctomid.obj&
++realopen.obj 
+comsubs.lst;

@@ -1,6 +1,12 @@
 
 #include "comsub.h"
 #include "doscalls.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define FALSE 0
+#define TRUE  1
 
 #define TABLE_SIZE	0x100
 

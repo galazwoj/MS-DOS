@@ -2,7 +2,7 @@
  *   convert a string to uppercase
  */
 
-#include "local.h"
+#include "_comsubs.h"
 
 unsigned char
 *com_strupr(

@@ -1,7 +1,4 @@
-#include "local.h"
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "_comsubs.h"
 #include <conio.h>
 
 #define NO_ERROR			  0   
@@ -25,7 +22,7 @@ static unsigned char local_msg_filename[] = "OSO001.MSG";
 extern unsigned far pascal KBDFLUSHBUFFER(unsigned n);
 int init_req = 1;
 int msg_buf_size = 0xc8;
-static char cm_flhandle_enable_sw = 0;
+char cm_flhandle_enable_sw = 0;
 
 #define STDIN  0
 #define STDOUT 1
@@ -34,17 +31,12 @@ static char cm_flhandle_enable_sw = 0;
 #define STDPRN 4
 #define STDXXX 5 
 
-
-#define TRUE 1
-#define FALSE 0
-
 static unsigned getmessage(
 	char **  msg_table,
   	unsigned msg_num,
 	unsigned msg_id,
 	char *   msg_filename,
 	char *   msg_buf_xxx);
-
 
 /*
  * print a message and get a response

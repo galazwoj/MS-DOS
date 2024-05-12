@@ -1,8 +1,4 @@
-#include "local.h"
-#include <stdlib.h>
-
-#define FALSE 0
-#define TRUE 1
+#include "_comsubs.h"
 
 extern unsigned long logicaldrivenumber;
 extern unsigned char drivenumber;

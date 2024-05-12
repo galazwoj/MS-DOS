@@ -2,8 +2,7 @@
  *   search the first substring occurrence in a string
  */
 
-#include "local.h"
-#include <string.h>
+#include "_comsubs.h"
 
 unsigned char
 *com_substr(

@@ -5,7 +5,7 @@
 // Actually the function has not been implemented, the original cvoe is a joke.
 // So an invalid handle is returned if anyone wanted to use this function anyway.
 
-#include "local.h"
+#include "_comsubs.h"
 
 unsigned far pascal REALOPEN(
 	char far *name ,	   /* pointer to drive name */

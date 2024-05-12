@@ -2,7 +2,7 @@
  *   convert character to lowercase
  */
 
-#include "local.h"
+#include "_comsubs.h"
 
 int com_tolower(unsigned char c)	      /* character to be converted to lowercase */
 {

@@ -2,7 +2,7 @@
  *   convert character to uppercase
  */
 
-#include "local.h"
+#include "_comsubs.h"
 
 int com_toupper(unsigned char c)	      /* character to be converted to uppercase */
 {
