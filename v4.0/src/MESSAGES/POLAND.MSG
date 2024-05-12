@@ -1,0 +1,1186 @@
+0086
+COMMON   0006 0038
+0001 U 0000 "Nieprawid≥owa wersja DOS",CR,LF
+0002 U 0000 "%1 juø zainstalowane",CR,LF
+0003 U 0000 "%1 bajtÛw dostÍpnych na dysku",CR,LF
+0004 U 0000 "%1 bajtÛw wolnych",CR,LF
+0005 U 0000 "%1 bajtÛw w uszkodzonych sektorach",CR,LF
+0006 U 0000 "%1 bajtÛw ≥πcznej przestrzeni dyskowej",CR,LF
+0007 U 0000 "%1 bajtÛw ca≥kowitej pamiÍci",CR,LF
+0008 U 0000 "%1 bajtÛw uøywanych przez system",CR,LF
+0009 U 0000 "%1 zainstalowane",CR,LF
+0010 U 0000 "%1 niezainstalowane",CR,LF
+0011 U 0000 "%1 nie zainstalowane",CR,LF
+0012 U 0000 "Nie moøna %1 dysku sieciowego",CR,LF
+0013 U 0000 "",
+0014 U 0000 "Nie moøna %1 dysku SUBST lub przypisanego",CR,LF
+0015 U 0000 "Nie moøna wykonaÊ %1",CR,LF
+0016 U 0000 "PamiÍÊ rozszerzona niedostÍpna",CR,LF
+0017 U 0000 "Z≥y spis alokacji plikÛw, dysk %1",CR,LF
+0018 U 0000 "Nie moøna skopiowaÊ pliku na siebie",CR,LF
+0019 U 0000 "W≥Ûø docelowy dysk do stacji %1",CR,LF
+0020 U 0000 "Niewystarczajπca przestrzeÒ dyskowa",CR,LF
+0021 U 0000 "Nieprawid≥owe znaki w etykiecie woluminu",CR,LF
+0022 U 0000 "Nieprawid≥owa strona kodowa",CR,LF
+0023 U 0000 "Nieprawid≥owa data",CR,LF
+0024 U 0000 "Nieprawid≥owy czas",CR,LF
+0025 U 0000 "Nieprawid≥owa úcieøka",CR,LF
+0026 U 0000 "Nie podano ürÛd≥owej stacji dyskowej",CR,LF
+0027 U 0000 "Nie podano docelowej stacji dyskowej",CR,LF
+0028 U 0000 "Naciúnij dowolny klawisz, aby kontynuowaÊ . . .",CR,LF
+0029 U 0000 "Wymagana úcieøka ürÛd≥owa",CR,LF
+0030 U 0000 "System przeniesiony",CR,LF
+0031 U 0000 "",
+0032 U 0000 "Nie moøna utworzyÊ katalogu",CR,LF
+0033 U 0000 "W stacji %1 nie ma etykiety",CR,LF
+0034 U 0000 "W stacji %1 jest %2",CR,LF
+0035 U 0001 "Etykieta woluminu (11 znakÛw, WCIåNIJ ENTER, aby by≥a pusta)? "
+0036 U 0000 "Numer seryjny woluminu to %1-%2",CR,LF
+0037 U 0000 "Nieprawid≥owy typ pliku",CR,LF
+0038 U 0001 CR,LF
+EXTEND   073a 0090
+0001 U 0003 "Nieprawid≥owa funkcja"
+0002 U 0000 "Plik nie znaleziony"
+0003 U 0000 "åcieøka nie znaleziona"
+0004 U 0000 "Zbyt wiele otwartych plikÛw"
+0005 U 0000 "Odmowa dostÍpu "
+0006 U 0000 "Nieprawid≥owy uchwyt"
+0007 U 0000 "Blok sterujπcy pamiÍci zniszczony"
+0008 U 0000 "Niewystarczajπca pamiÍÊ"
+0009 U 0000 "Nieprawid≥owy adres bloku pamiÍci"
+0010 U 0000 "Nieprawid≥owe úrodowisko"
+0011 U 0000 "Nieprawid≥owy format"
+0012 U 0000 "Nieprawid≥owy parametr funkcji"
+0013 U 0000 "Nieprawid≥owe dane"
+0014 U 0000 "",
+0015 U 0000 "Nieprawid≥owa specyfikacja dysku"
+0016 U 0000 "PrÛba usuniÍcia bieøπcego katalogu"
+0017 U 0000 "Nie ten sam urzπdzenie"
+0018 U 0000 "Nie ma wiÍcej plikÛw"
+0019 U 0000 "B≥πd zabezpieczenia przed zapisem"
+0020 U 0000 "Nieprawid≥owa jednostka"
+0021 U 0000 "Nie gotowy"
+0022 U 0000 "Nieprawid≥owe øπdanie urzπdzenia"
+0023 U 0000 "B≥πd danych"
+0024 U 0000 "Nieprawid≥owe parametry øπdania urzπdzenia"
+0025 U 0000 "B≥πd wyszukiwania"
+0026 U 0000 "Nieprawid≥owy typ noúnika"
+0027 U 0000 "Sektor nie znaleziony"
+0028 U 0000 "B≥πd braku papieru w drukarce"
+0029 U 0000 "B≥πd zapisu"
+0030 U 0000 "B≥πd odczytu"
+0031 U 0000 "OgÛlny b≥πd"
+0032 U 0000 "Naruszenie udostÍpniania"
+0033 U 0000 "Naruszenie blokady"
+0034 U 0000 "Nieprawid≥owa zmiana dysku"
+0035 U 0000 "NiedostÍpne bloki sterujπce plikÛw"
+0036 U 0000 "Wyczerpanie zasobÛw systemowych"
+0037 U 0000 "Nieprawid≥owe dopasowanie strony kodowej"
+0038 U 0000 "Brak danych wejúciowych"
+0039 U 0000 "Niewystarczajπca przestrzeÒ dyskowa"
+0040 U 0000 "",
+0041 U 0000 "",
+0042 U 0000 "",
+0043 U 0000 "",
+0044 U 0000 "",
+0045 U 0000 "",
+0046 U 0000 "",
+0047 U 0000 "",
+0048 U 0000 "",
+0049 U 0000 "",
+0050 U 0000 "NET809: Øπdanie sieci nieobs≥ugiwane"
+0051 U 0000 "NET801: Zdalny komputer nie nas≥uchuje"
+0052 U 0000 "NET802: Duplikat nazwy w sieci"
+0053 U 0000 "NET803: åcieøka sieciowa nie znaleziona"
+0054 U 0000 "NET804: SieÊ zajÍta"
+0055 U 0000 "NET805: Urzπdzenie sieciowe nie istnieje juø"
+0056 U 0000 "NET806: Przekroczono limit komend NETBIOS"
+0057 U 0000 "NET807: B≥πd systemu; b≥πd NETBIOS"
+0058 U 0000 "NET808: Niepoprawna odpowiedü sieciowa"
+0059 U 0000 "NET810: Nieoczekiwany b≥πd sieciowy"
+0060 U 0000 "NET811: Niezgodny adapter zdalny"
+0061 U 0000 "NET812: Kolejka wydruku pe≥na"
+0062 U 0000 "NET813: Brak miejsca na plik wydruku"
+0063 U 0000 "NET814: Plik wydruku zosta≥ anulowany"
+0064 U 0000 "NET815: Nazwa sieciowa zosta≥a usuniÍta"
+0065 U 0000 "Odmowa dostÍpu"
+0066 U 0000 "NET817: Nieprawid≥owy typ urzπdzenia sieciowego"
+0067 U 0000 "NET818: Nie znaleziono nazwy sieciowej"
+0068 U 0000 "NET819: Przekroczono limit nazw sieciowych"
+0069 U 0000 "NET820: Przekroczono limit sesji NETBIOS"
+0070 U 0000 "NET821: UdostÍpnianie tymczasowo wstrzymane"
+0071 U 0000 "NET823: Øπdanie sieciowe nie zosta≥o zaakceptowane"
+0072 U 0000 "NET822: Przekierowanie drukowania lub dysku jest wstrzymane"
+0073 U 0000 "NET476: Netbeui nie jest za≥adowane"
+0074 U 0000 "NET477: Nieoczekiwane zamkniÍcie adaptera"
+0075 U 0000 "",
+0076 U 0000 "",
+0077 U 0004 "",
+0078 U 0004 "",
+0079 U 0004 "",
+0080 U 0004 "Plik istnieje"
+0081 U 0004 "",
+0082 U 0004 "Nie moøna utworzyÊ wpisu katalogowego"
+0083 U 0004 "Niepowodzenie w INT 24"
+0084 U 0004 "Zbyt wiele przekierowaÒ"
+0085 U 0004 "Duplikat przekierowania"
+0086 U 0004 "Nieprawid≥owe has≥o"
+0087 U 0004 "Nieprawid≥owy parametr"
+0088 U 0004 "B≥πd danych sieciowych"
+0089 U 0004 "Funkcja nieobs≥ugiwana przez sieÊ"
+0090 U 0002 "Wymagany komponent systemu niezainstalowany"
+PARSE    1541 0011
+0001 U 0000 "Za duøo parametrÛw"
+0002 U 0000 "Brak wymaganego parametru"
+0003 U 0000 "Nieprawid≥owy prze≥πcznik"
+0004 U 0000 "Nieprawid≥owe s≥owo kluczowe"
+0005 U 0000 "",
+0006 U 0000 "WartoúÊ parametru spoza dozwolonego zakresu"
+0007 U 0000 "Nieprawid≥owa wartoúÊ parametru"
+0008 U 0000 "Nieprawid≥owa wartoúÊ parametru"
+0009 U 0000 "Niepoprawny format parametru"
+0010 U 0000 "Nieprawid≥owy parametr"
+0011 U 0000 "Nieprawid≥owa kombinacja parametrÛw"
+COMMAND  1724 0091
+0201 U 0000 "A"
+0202 U 0000 "R"
+0203 U 0000 "I"
+0204 U 0000 "F"
+0205 U 0000 "Y"
+0206 U 0000 "N"
+0210 U 0000 "Przerwij"
+0211 U 0000 ", PonÛw"
+0212 U 0000 ", Ignoruj"
+0213 U 0000 ", Niepowodzenie"
+0214 U 0000 "?"
+0215 U 0000 "czytanie",0
+0216 U 0000 "pisanie",0
+0217 U 0000 " %1 dysk %2",CR,LF
+0218 U 0000 " %1 urzπdzenie %2",CR,LF
+0219 U 0000 "ProszÍ w≥oøyÊ wolumin %1 numer seryjny %2-%3",CR,LF
+0221 U 0000 "Nieprawid≥owe COMMAND.COM",CR,LF
+0222 U 0000 "W≥Ûø dysk z %1 do stacji %2",CR,LF
+0224 U 0000 CR,LF,"ZakoÒczyÊ zadanie wsadowe (T/N)?"
+0225 U 0000 "Nie moøna wykonaÊ %1",CR,LF
+0226 U 0000 "B≥πd w pliku EXE",CR,LF
+0227 U 0000 "Program jest zbyt duøy, aby zmieúciÊ siÍ w pamiÍci",CR,LF
+0228 U 0000 CR,LF,"Brak wolnych uchwytÛw plikÛw"
+0229 U 0000 "Nieprawid≥owa komenda lub nazwa pliku",CR,LF
+0231 U 0000 CR,LF,"B≥πd alokacji pamiÍci"
+0232 U 0000 CR,LF,"Nie moøna wczytaÊ COMMAND, system zatrzymany",CR,LF
+0233 U 0000 CR,LF,"Nie moøna uruchomiÊ COMMAND, wychodzÍ",CR,LF
+0234 U 0000 CR,LF,"ZakoÒczono proces na najwyøszym poziomie, nie moøna kontynuowaÊ",CR,LF
+0235 U 0000 CR,LF
+0463 U 0000 "Brak miejsca w úrodowisku",CR,LF
+0464 U 0001 CR,LF,CR,LF,"Microsoft(R) MS-DOS(R) Wersja 4.00",CR,LF
+	"             (C)Prawa autorskie Microsoft Corp 1981-1988",CR,LF
+0465 U 0000 "Wskazany katalog wyszukiwania COMMAND jest nieprawid≥owy",CR,LF
+0466 U 0000 "Wskazany katalog wyszukiwania COMMAND ma nieprawid≥owy dostÍp",CR,LF
+1002 U 0000 "Duplikat nazwy pliku lub plik nie znaleziony",CR,LF
+1003 U 0000 "Nieprawid≥owa úcieøka lub nazwa pliku",CR,LF
+1007 U 0000 "Brak miejsca w úrodowisku",CR,LF
+1008 U 0000 "B≥πd tworzenia pliku",CR,LF
+1009 U 0000 "Brak pliku wsadowego",CR,LF
+1010 U 0000 CR,LF,"W≥Ûø dysk z plikiem wsadowym",CR,LF
+1011 U 0000 "Nieprawid≥owa komenda lub nazwa pliku",CR,LF
+1016 U 0000 "ZawartoúÊ docelowa zosta≥a utracona przed kopiowaniem",CR,LF
+1017 U 0000 "Nieprawid≥owa nazwa pliku lub plik nie znaleziony",CR,LF
+1018 U 0000 "%1 plik(i) skopiowane",CR,LF
+1019 U 0000 "%1 plik(i) "
+1022 U 0000 "Strona kodowa %1 nie jest przygotowana dla systemu",CR,LF
+1023 U 0000 "Strona kodowa %1 nie jest przygotowana dla wszystkich urzπdzeÒ",CR,LF
+1024 U 0000 "Aktywna strona kodowa: %1",CR,LF
+1025 U 0000 "NLSFUNC nie jest zainstalowany",CR,LF
+1027 U 0000 "Bieøπcy dysk nie jest juø waøny"
+1029 U 0000 "Etykieta nie znaleziona",CR,LF
+1030 U 0000 "B≥πd sk≥adni",CR,LF
+1032 U 0000 "Bieøπca data to %1 %2",CR,LF
+1033 U 0000 "NdzPonWtoåroCzwPtkSob"
+1034 U 0000 "Podaj nowπ datÍ (%1): "
+1036 U 0000 "Bieøπcy czas to %1",CR,LF
+1037 U 0000 "Podaj nowy czas: "
+1038 U 0000 ",    UsunπÊ (T/N)?"
+1039 U 0000 "Wszystkie pliki w katalogu zostanπ usuniÍte!",CR,LF
+	"Czy na pewno (T/N)?"
+1040 U 0000 "MS-DOS Wersja %1.%2"
+1044 U 0000 "Nieprawid≥owy katalog",CR,LF
+1046 U 0000 "Nieprawid≥owa úcieøka, nie jest katalogiem,",CR,LF,"lub katalog nie jest pusty",CR,LF
+1047 U 0000 "Naleøy okreúliÊ W£. lub WY£.",CR,LF
+1048 U 0000 "Katalog %1",CR,LF
+1049 U 0000 "Brak úcieøki",CR,LF
+1050 U 0000 "Nieprawid≥owy dysk w úcieøce wyszukiwania",CR,LF
+1051 U 0000 "Nieprawid≥owe urzπdzenie",CR,LF
+1052 U 0000 "FOR nie moøe byÊ zagnieødøony",CR,LF
+1053 U 0000 "B≥πd pliku tymczasowego podczas potoku",CR,LF
+1054 U 0000 "Nie moøna wykonywaÊ odczytÛw binarnych z urzπdzenia",CR,LF
+1055 U 0000 "BREAK jest %1",CR,LF
+1056 U 0000 "VERIFY jest %1",CR,LF
+1057 U 0000 "ECHO jest %1",CR,LF
+1059 U 0000 "wy≥πczone",0
+1060 U 0000 "w≥πczone",0
+1061 U 0000 "B≥πd zapisu do urzπdzenia",CR,LF
+1063 U 0000 "%1"
+1064 U 0000 "%1"
+1065 U 0000 "%1"
+1066 U 0000 "%1"
+1067 U 0000 9
+1068 U 0000 " <DIR>    "
+1069 U 0000 8," ",8
+1070 U 0000 CR,LF
+1071 U 0000 "%1"
+1072 U 0000 "mm-dd-rr"
+1073 U 0000 "dd-mm-rr"
+1074 U 0000 "rr-mm-dd"
+1075 U 0000 "%1 %2"
+1076 U 0000 "%1"
+1077 U 0000 " %1  %2"
+1078 U 0000 "Katalog juø istnieje",CR,LF
+ATTRIB   265d 0016
+0004 U 0000 "Nieprawid≥owa liczba parametrÛw",CR,LF
+0005 U 0000 "Nieprawid≥owa úcieøka lub plik nie znaleziony",CR,LF
+0006 U 0000 "B≥πd sk≥adni",CR,LF
+0008 U 0000 "  %1"
+0009 U 0000 "%1    %2",CR,LF
+0010 U 0000 "%1",CR,LF,"%2",CR,LF
+0011 U 0000 "%1, NiespÛjnoúÊ strony kodowej",CR,LF,"Czy na pewno (T/N)?"
+0012 U 0000 "%1",CR,LF
+0014 U 0000 CR,LF
+0015 U 0000 "Nieprawid≥owa wartoúÊ typu pliku",CR,LF
+0199 U 0000 "B≥πd atrybutu rozszerzonego",CR,LF
+0201 U 0000 "Nie znaleziono nazwy atrybutu rozszerzonego",CR,LF
+0204 U 0000 "Nie moøna ustawiÊ nazwy atrybutu rozszerzonego",CR,LF
+0205 U 0000 "Nazwa atrybutu rozszerzonego znana w tym systemie plikÛw, ale nieobs≥ugiwana",CR,LF
+0206 U 0000 "NiespÛjnoúÊ typu atrybutu rozszerzonego",CR,LF
+0208 U 0000 "WartoúÊ atrybutu rozszerzonego nieobs≥ugiwana",CR,LF
+ASSIGN   29a3 0001
+0002 U 0000 "Oryginalne %1: ustawione na %2:",cr,lf
+CHKDSK   29ec 0063
+0003 U 0000 "Przekszta≥ciÊ zgubione ≥aÒcuchy w pliki (T/N)?"
+0004 U 0000 "Nieodwracalny b≥πd w katalogu"
+0005 U 0000 "Przekszta≥ciÊ katalog w plik (T/N)?"
+0007 U 0000 "%1 bajtÛw miejsca na dysku"
+0008 U 0000 "%1 bajtÛw w uszkodzonych sektorach"
+0009 U 0000 "%1 bajtÛw w %2 ukrytych plikach"
+0010 U 0000 "%1 bajtÛw w %2 katalogach"
+0011 U 0000 "%1 bajtÛw w %2 plikach uøytkownika"
+0012 U 0000 "%1 bajtÛw w %2 odzyskanych plikach"
+0013 U 0000 "%1 bajtÛw zosta≥oby w %2 odzyskanych plikach"
+0014 U 0000 "%1 bajtÛw dostÍpnych na dysku"
+0015 U 0000 "%1 ≥πczna iloúÊ bajtÛw pamiÍci"
+0016 U 0000 "%1 bajtÛw wolnych"
+0017 U 0000 "Nie moøna uøyÊ CHKDSK na dysku sieciowego"
+0018 U 0000 "Nie moøna uøyÊ CHKDSK na dysku typu SUBST lub ASSIGN"
+0019 U 0000 "Prawdopodobnie dysk nie w formacie DOS",CR,LF,"KontynuowaÊ (T/N)?"
+0020 U 0000 "B≥πd dysku podczas odczytywania FAT %1",CR,LF
+0021 U 0000 "Katalog %1"
+0022 U 0000 "%1 Zawiera %2 nieciπg≥ych blokÛw"
+0023 U 0000 "Wszystkie okreúlone pliki sπ ciπg≥e"
+0024 U 0000 "Znaleziono b≥Ídy, nie podano parametru F",CR,LF,"Korekty nie zostanπ zapisane na dysku"
+0025 U 0000 "   Przetwarzanie nie moøe byÊ kontynuowane %1%2"
+0026 U 0000 "   Tablica alokacji plikÛw uszkodzona, dysk %1"
+0029 U 0000 "   CHDIR .. nie powiod≥o siÍ, prÛba alternatywnej metody"
+0030 U 0001 "   Posiada nieprawid≥owπ jednostkÍ alokacji, plik uciÍty"
+0031 U 0000 "   Nieprawid≥owy wpis podkatalogu"
+0032 U 0000 "   Nie istnieje"
+0033 U 0001 "   Pierwsza jednostka alokacji jest nieprawid≥owa, wpis uciÍty"
+0034 U 0000 "   B≥πd alokacji pliku, rozmiar dostosowany"
+0035 U 0000 "   Nie moøna odzyskaÊ wpisu .., przetwarzanie kontynuowane"
+0036 U 0000 "   Katalog jest ca≥kowicie pusty, brak . lub .."
+0037 U 0000 "   Katalog jest po≥πczony"
+0038 U 0000 "   Nie moøna odzyskaÊ wpisu .."
+0039 U 0000 "   Wpis ma z≥y odnoúnik"
+0040 U 0000 "   Wpis ma z≥y atrybut"
+0041 U 0000 "   Wpis ma z≥y rozmiar"
+0042 U 0000 "   Jest zapÍtlony na jednostce alokacji %1"
+0043 U 0000 "   Nie moøna przejúÊ do CHDIR do %1,",CR,LF,"drzewo za tym punktem nieprzetworzone"
+0044 U 0000 "   drzewo za tym punktem nieprzetworzone"
+0045 U 0000 "%1 bajtÛw miejsca na dysku zwolniono"
+0046 U 0000 "%1 bajtÛw miejsca na dysku zosta≥oby zwolnione"
+0047 U 0000 "Wolumin %1 utworzono %2 %3",CR,LF
+0048 U 0000 "%1 ≥πcznie jednostek alokacji na dysku"
+0049 U 0000 "%1 bajtÛw w kaødej jednostce alokacji"
+0050 U 0000 "CHKDSK niedostÍpne na dysku %1"
+0051 U 0001 "   Rozszerzone atrybuty majπ nieprawid≥owe jednostki alokacji, atrybuty ucinane"
+0052 U 0000 "   B≥πd alokacji rozszerzonych atrybutÛw, atrybuty uciÍte"
+0053 U 0000 "Nieprawid≥owy parametr"
+0055 U 0000 "åcieøka nie znaleziona"
+0056 U 0000 "Plik nie znaleziony"
+0058 U 0001 "   %1 zgubionych jednostek alokacji znalezionych w %2 ≥aÒcuchach."
+0059 U 0000 CR,LF
+0060 U 0000 "   Nie moøna przejúÊ do katalogu g≥Ûwnego",CR,LF
+0061 U 0000 "   B≥πd dysku podczas zapisywania FAT %1"
+0062 U 0000 "        %1"
+0063 U 0000 "Nieprawid≥owy bieøπcy katalog"
+0064 U 0000 "%1",CR,LF
+0065 U 0000 "   Niewystarczajπca iloúÊ miejsca w katalogu g≥Ûwnym",CR,LF,"   Przenieú pliki z katalogu g≥Ûwnego i ponÛw CHKDSK"
+0066 U 0000 "%1 %2 %3"
+0067 U 0000 "%1 %2, %3"
+0068 U 0000 "%1%2%3%4%5"
+0069 U 0000 "%1%2%3%4"
+0070 U 0000 "%1 dostÍpnych jednostek alokacji na dysku"
+DEBUG    3711 0057
+0004 U 0000 "Alokacja nie powiod≥a siÍ lub okreúlony bufor jest za ma≥y",CR,LF
+0006 U 0000 "Nieprawid≥owa nazwa urzπdzenia"
+0007 U 0000 "Nie moøna otworzyÊ urzπdzenia listy PRN",CR,LF
+	"Podaj nazwÍ urzπdzenia listy? "
+0008 U 0000 CR,LF
+0009 U 0000 CR,LF,"Program zakoÒczony normalnie",CR,LF
+0010 U 0001 "Nieprawid≥owa specyfikacja dysku",CR,LF
+0012 U 0001 "B≥πd tworzenia pliku",CR,LF
+0013 U 0001 "Niewystarczajπca iloúÊ miejsca na dysku",CR,LF
+0014 U 0001 "B≥πd dysku podczas odczytu dysku %1",CR,LF
+0015 U 0001 "B≥πd dysku podczas zapisywania dysku %1",CR,LF
+0016 U 0001 "B≥πd zabezpieczenia przed zapisem podczas odczytu dysku %1",CR,LF
+0017 U 0001 "B≥πd zabezpieczenia przed zapisem podczas zapisywania dysku %1",CR,LF
+0019 U 0000 "%1^ B≥πd"
+0020 U 0001 "B≥πd w pliku EXE lub HEX",CR,LF
+0021 U 0001 "Pliki EXE i HEX nie mogπ byÊ zapisywane",CR,LF
+0022 U 0000 "Niepowodzenie wykonania"
+0023 U 0001 "(B)≥πd zapisu, nie zdefiniowano miejsca docelowego",CR,LF
+0024 U 0001 "Odmowa dostÍpu",CR,LF
+0025 U 0000 "Wykryto b≥πd parzystoúci lub nieistniejπcπ pamiÍÊ"
+0026 U 0000 "-"
+0027 U 0000 "%1 -"
+0032 U 0000 "%1%2"
+0033 U 0000 "%1:%2 %3"
+0034 U 0000 "%1  %2"
+0035 U 0000 "%1 %2",CR,LF,":"
+0036 U 0000 "%1=%2  "
+0037 U 0000 "%1 B≥πd"
+0038 U 0000 "Zapisywanie %1 bajtÛw"
+0039 U 0000 "%1:%2="
+0040 U 0000 "%1"
+0041 U 0000 "%1"
+0042 U 0000 "%1:%2  %3  %4  %5:%6"
+0044 U 0000 32,8
+0046 U 0000 "%1"
+0047 U 0000 "%1"
+0050 U 0000 "%1 z ≥πcznie %2 stron EMS zosta≥o przydzielone",cr,lf
+0051 U 0000 "%1 z ≥πcznie %2 uchwytÛw EMS zosta≥o przydzielone",cr,lf
+0055 U 0000 "Utworzony uchwyt = %1 ",cr,lf
+0056 U 0000 "Strona logiczna %1 odwzorowana na stronÍ fizycznπ %2 ",cr,lf
+0057 U 0001 "Awaria sprzÍtu/oprogramowania EMS",cr,lf
+0058 U 0000 "Nie znaleziono uchwytu",cr,lf
+0059 U 0000 "Nieprawid≥owy kod funkcji",cr,lf
+0060 U 0000 "Brak wolnych uchwytÛw",cr,lf
+0061 U 0000 "B≥πd zapisu/przywracania",cr,lf
+0062 U 0000 "Przekroczono ≥πcznπ liczbÍ stron",cr,lf
+0063 U 0000 "Przekroczono liczbÍ wolnych stron",cr,lf
+0064 U 0000 "B≥πd parametru",cr,lf
+0065 U 0000 "Strona logiczna poza zakresem",cr,lf
+0066 U 0000 "Strona fizyczna poza zakresem",cr,lf
+0067 U 0000 "Obszar zapisu juø w uøyciu",cr,lf
+0068 U 0000 "Obszar zapisu nie jest uøywany",cr,lf
+0070 U 0001 "OgÛlny b≥πd EMS",cr,lf
+0071 U 0000 "Brakujπcy lub nieprawid≥owy parametr EMS",cr,lf
+0072 U 0000 "Uchwyt %1 ma przydzielone %2 strony",cr,lf
+0075 U 0000 "Strona fizyczna %1 = Segment ramki %2",cr,lf
+0076 U 0003 "Uchwyt %1 zwolniony",cr,lf
+0078 U 0000 "EMS nie zainstalowane",cr,lf
+DRIVER   413c 0002
+0002 U 0000 "Nie okreúlono dysku",CR,LF
+0003 U 0000 "Za≥adowano zewnÍtrzny sterownik dysku dla dysku %1",CR,LF
+EDLIN    41c1 0027
+0006 U 0000 "*"
+0007 U 0000 "Nieprawid≥owa nazwa dysku lub pliku",CR,LF
+0008 U 0000 "Nazwa pliku musi byÊ okreúlona",CR,LF
+0010 U 0000 "Plik jest tylko DO ODCZYTU",CR,LF
+0011 U 0000 "B≥πd tworzenia pliku",CR,LF
+0012 U 0000 "Zbyt wiele otwartych plikÛw",CR,LF
+0013 U 0000 "B≥πd odczytu w:",CR,LF,"%1",CR,LF
+0014 U 0000 "Nie moøna edytowaÊ pliku .BAK--zmieÒ nazwÍ pliku",CR,LF
+0015 U 0000 "Brak miejsca w katalogu na plik",CR,LF
+0016 U 0000 "Dysk pe≥ny. Utracone edycje.",CR,LF
+0017 U 0000 "Plik nie znaleziony",CR,LF
+0018 U 0000 "B≥πd wpisu",CR,LF
+0019 U 0000 "Nowy plik",CR,LF
+0020 U 0000 "Nie znaleziono",CR,LF
+0021 U 0000 "O.K.? "
+0022 U 0000 "Linia za d≥uga",CR,LF
+0023 U 0000 "Koniec pliku wejúciowego",CR,LF
+0024 U 0000 "PrzerwaÊ edycjÍ (T/N)? "
+0025 U 0000 "Naleøy okreúliÊ numer linii docelowej",CR,LF
+0026 U 0000 "Brak miejsca na scalenie ca≥ego pliku",CR,LF
+0027 U 0000 CR,LF
+0028 U 0000 LF
+0029 U 0000 "KontynuowaÊ (T/N)?"
+0030 U 0000 "Nie moøna wydrukowaÊ komunikatu",CR,LF
+0031 U 0000 "%1"
+0032 U 0000 "%1:%2"
+0033 U 0000 "Nie moøna po≥πczyÊ - niezgodnoúÊ stron kodowych",CR,LF
+EXE2BIN  4632 0008
+0002 U 0000 "Niewystarczajπca pamiÍÊ",CR,LF
+0003 U 0000 "Nie moøna znaleüÊ komunikatÛw",CR,LF
+0004 U 0000 "Odmowa dostÍpu",CR,LF
+0005 U 0000 "Plik nie moøe byÊ przekonwertowany",CR,LF
+0006 U 0000 "Plik nie znaleziony",CR,LF
+0007 U 0000 "B≥πd tworzenia pliku",CR,LF
+0008 U 0000 "Poprawki sπ potrzebne - bazowy segment (szesnastkowy):"
+0012 U 0000 "Nazwa pliku musi byÊ okreúlona",CR,LF
+FIND     47cf 0001
+0004 U 0000 "FIND: "
+FORMAT   47f9 0043
+0002 U 0000 CR,"%1 procent dysku sformatowane                                       ",CR
+0004 U 0003 CR,"Formatowanie zakoÒczone                                             ",CR,LF
+0007 U 0000 "W≥Ûø nowy dysk do dysku %1:",CR,LF
+0009 U 0000 "W≥Ûø ponownie dysk do dysku %1:",CR,LF
+0011 U 0000 CR,"Formatowanie nieobs≥ugiwane na dysku %1:", CR,LF
+0012 U 0000 CR,"Nieprawid≥owe parametry urzπdzenia od sterownika urzπdzenia",CR,LF
+0013 U 0000 CR,"B≥πd w wywo≥aniu IOCTL      ",CR,LF
+0014 U 0000 CR,"To nie urzπdzenie blokowe   ",CR,LF
+0015 U 0000 CR,"B≥πd zapisu FAT             ",CR,LF
+0016 U 0000 CR,"B≥πd zapisu katalogu",CR,LF
+0017 U 0000 CR,"Nie moøna formatowaÊ dysku SUBST lub przypisanego. ",CR,LF
+0018 U 0000 CR,"Nie moøna znaleüÊ plikÛw systemowych",CR,LF
+0019 U 0000 CR,"Nie moøna FORMATOWA∆ dysku sieciowego",CR,LF
+0021 U 0000 CR,"Parametry nieobs≥ugiwane",CR,LF
+0022 U 0003 CR,"Formatowanie przerwane                                              ",CR,LF
+0023 U 0000 CR,"Dysk nieodpowiedni do dysku systemowego",CR,LF
+0024 U 0000 CR,"Nieprawid≥owy noúnik lub uszkodzony úlad 0 - dysk niezdatny do uøytku",CR,LF
+0025 U 0000 CR,"Nie moøna zapisaÊ BOOT                      ",CR,LF
+0026 U 0000 CR,"B≥πd odczytu katalogu",CR,LF
+0028 U 0000 CR,"i naciúnij klawisz ENTER, gdy bÍdziesz gotowy..."
+0029 U 0000 CR,"Nieprawid≥owy identyfikator woluminu        ",CR,LF
+0031 U 0000 CR,"Wprowadü bieøπcπ etykietÍ woluminu dla dysku %1: "
+0032 U 0000 CR,"Parametry niekompatybilne",CR,LF,"z dyskiem sta≥ym",CR,LF
+0035 U 0000 CR,"B≥πd odczytu tabeli partycji",CR,LF
+0037 U 0000 CR,"Formatowanie przerwane",CR,LF
+0038 U 0000 CR,"Formatowanie niedostÍpne na dysku %1",CR,LF
+0039 U 0000 CR,"Nie-systemowy dysk lub b≥πd dysku",CR,LF
+0040 U 0000 CR,"Z≥a tabela partycji",CR,LF
+0041 U 0000 CR,"Parametry nieobs≥ugiwane przez napÍd",CR,LF
+0042 U 0000 CR,LF
+0043 U 0000 CR,LF,LF
+0044 U 0000 CR,"W≥Ûø dysk DOS do napÍdu %1:",CR,LF
+0045 U 0000 CR,LF,"OSTRZEØENIE, WSZYSTKIE DANE NA DYSKU TWARDYM",CR,LF
+	"NAP D %1: ZOSTAN• UTRACONE!",CR,LF
+	"KontynuowaÊ formatowanie (T/N)?"
+0046 U 0000 CR,"SformatowaÊ kolejny (T/N)?"
+0047 U 0000 CR,"B≥πd odczytu tabeli partycji",CR,LF
+0048 U 0000 CR,"B≥πd zapisu tabeli partycji",CR,LF
+0049 U 0000 CR,"Parametry niekompatybilne", CR,LF
+0050 U 0000 "%1 jednostek alokacji dostÍpnych na dysku",CR,LF
+0051 U 0000 "%1 bajtÛw w kaødej jednostce alokacji",CR,LF
+0052 U 0000 CR, "B≥πd zapisu tabeli partycji",CR,LF
+0053 U 0000 CR,"Ten sam parametr wprowadzony dwa razy",CR,LF
+0054 U 0000 CR,"Naleøy podaÊ zarÛwno parametry /T, jak i /N",CR,LF
+0055 U 0000 CR,"PrÛba odzyskania jednostki alokacji %1                          ",CR
+JOIN     528c 0001
+0002 U 0001 "Katalog nie jest pusty",CR,LF
+MORE     52cc 0001
+0002 U 0000 "-- WiÍcej --"
+PRINT    52fc 0021
+0002 U 0000 CR,LF
+0006 U 0000 " b≥πd odczytu pliku",CR,LF,"$"
+0007 U 0000 "Plik nie znaleziony",CR,LF,"$"
+0008 U 0000 CR,LF,LF,"Plik $"
+0009 U 0000 " anulowany przez operatora$"
+0010 U 0000 CR,LF,LF,"Wszystkie pliki anulowane przez operatora$"
+0011 U 0000 "Tabela alokacji plikÛw jest uszkodzona na dysku "
+0012 U 0000 "A.",CR,LF,"$"
+0013 U 0000 "Wyjúcie listy nie jest przypisane do urzπdzenia",CR,LF
+0014 U 0000 "CzÍúÊ rezydentna drukarki PSPRINT zainstalowana",CR,LF
+0015 U 0000 "Nie moøna uøywaÊ PRINT - Uøyj NET PRINT",CR,LF
+0017 U 0000 "Kolejka drukowania jest pe≥na",CR,LF
+0018 U 0000 "Kolejka drukowania jest pusta",CR,LF
+0019 U 0000 "Odmowa dostÍpu",CR,LF
+0020 U 0000 "Nieprawid≥owa specyfikacja napÍdu",CR,LF
+0021 U 0000 "B≥Ídy na urzπdzeniu listy wskazujπ na to, øe",CR,LF
+	"byÊ moøe jest wy≥πczone. ProszÍ to sprawdziÊ.",CR,LF
+0022 U 0000 CR,LF,LF,"  %1 jest obecnie drukowany",CR,LF
+0023 U 0000 "  %1 jest w kolejce",CR,LF
+0025 U 0001 "Zbyt d≥uga úcieøka",CR,LF
+0026 U 0001 "Plik nie znajduje siÍ w kolejce drukowania",CR,LF
+0027 U 0000 "Nazwa urzπdzenia listy [PRN]: "
+RECOVER  5761 0011
+0002 U 0000 CR,LF,"Plik nie znaleziony",CR,LF
+0003 U 0000 CR,LF,"Nie moøna ODZYSKA∆ napÍdu przypisanego lub SUBSTed",CR,LF
+0004 U 0000 CR,LF,"Nieprawid≥owa nazwa napÍdu lub pliku",CR,LF
+0005 U 0000 CR,LF,"OSTRZEØENIE - katalog pe≥ny",CR,LF
+0006 U 0000 CR,LF,"Nie moøna ODZYSKA∆ napÍdu sieciowego", CR,LF
+0008 U 0000 CR,LF,"%1 plik(i) odzyskano",CR,LF
+0009 U 0000 CR,LF,"%1 z %2 bajtÛw odzyskano",CR,LF
+0010 U 0000 CR,LF,"Naciúnij dowolny klawisz, aby rozpoczπÊ odzyskiwanie",CR,LF,"pliku(Ûw) na napÍdzie %1",CR,LF,CR,LF
+0011 U 0000 CR,LF,"Nie moøna odczytaÊ tabeli alokacji plikÛw",CR,LF
+0012 U 0000 CR,LF,"Nie moøna zapisaÊ tabeli alokacji plikÛw",CR,LF
+0013 U 0000 CR,LF
+SORT     5a21 0001
+0005 U 0000 "SORT: "
+SUBST    5a4b 0001
+0002 U 0001 "Nieprawid≥owa liczba parametrÛw",CR,LF
+SYS      5a94 0008
+0004 U 0000 "Nieprawid≥owa specyfikacja napÍdu",CR,LF
+0007 U 0000 "Brak miejsca na systemie na docelowym dysku",CR,LF
+0008 U 0001 "Nieprawid≥owa úcieøka lub nie znaleziono plikÛw systemowych",CR,LF
+0010 U 0000 "Brak systemu na domyúlnym dysku",CR,LF
+0011 U 0000 "Nie moøna okreúliÊ domyúlnego napÍdu",CR,LF
+0012 U 0000 "B≥πd zapisu, dyskietka niezdatna do uøycia",CR,LF
+0014 U 0000 "W≥Ûø dysk systemowy do napÍdu %1",CR,LF
+0016 U 0000 "Nie moøna wykonaÊ SYS na systemie plikÛw %1",CR,LF
+SHARE    5c97 0000
+NLSFUNC  5cab 0000
+ANSI     5cbf 0001
+0010 U 0000 "Nieprawid≥owy parametr - %1",CR,LF
+IFSFUNC  5d04 0001
+0004 U 0001 "Nieprawid≥owa konfiguracja",CR,LF
+MSBIO    5d48 0019
+0003 U 0000 13,10,"Nie rozpoznana komenda w CONFIG.SYS"
+0004 U 0000 13,10,"$"
+0005 U 0000 13,10,"Rozmiar sektora jest zbyt duøy w pliku $"
+0006 U 0000 13,10,"Z≥y lub brakujπcy $"
+0007 U 0000 "Interpreter komend",0
+0008 U 0000 13,10,"Nieprawid≥owy kod kraju lub strona kodowa",13,10,"$"
+0009 U 0000 13,10,"B≥πd w poleceniu COUNTRY",13,10,"$"
+0010 U 0000 13,10, "Niewystarczajπca iloúÊ pamiÍci dla pliku COUNTRY.SYS",13,10,"$"
+0011 U 0000 13,10,"Konfiguracja za duøa dla pamiÍci",13,10,"$"
+0012 U 0000 13,10,"Zbyt wiele urzπdzeÒ blokowych",13,10,"$"
+0013 U 0000 13,10,"Nieprawid≥owe parametry STACK",13,10,"$"
+0014 U 0000 13,10,"Nieprawid≥owa kolejnoúÊ w linii CONFIG.SYS ","$"
+0015 U 0000 "B≥πd w linii CONFIG.SYS ","$"
+0016 U 0000 13,10,"B≥πd alokacji pamiÍci ","$"
+0017 U 0001 0DH,0AH,7,0DH,0AH, "WewnÍtrzne przekroczenie stosu",0DH,0AH
+	"System zatrzymany",0DH,0AH,"$"
+0020 U 0000 13,10,"W≥Ûø dyskietkÍ do napÍdu "
+0021 U 0000 "A: i naciúnij dowolny klawisz, gdy bÍdziesz gotowy",13,10,10,0
+0022 U 0000 13,10,"Nieprawid≥owe polecenie lub parametry - $"
+0023 U 0002 "OSTRZEØENIE! SHARE powinien byÊ za≥adowany dla duøych noúnikÛw",13,10,"$"
+BOOT     61e6 0001
+0001 U 0000 13,10,"Nie-systemowy dysk lub b≥πd dysku",13,10
+	"Zastπp i naciúnij dowolny klawisz, gdy bÍdziesz gotowy",13,10,0
+DBCSDOS  627a 0000
+MSDOS    628e 0003
+0001 U 0001 13,10,"Przepe≥nienie dzielenia",13,10
+0002 U 0002 "tak"
+0003 U 0002 "nie"
+PSPRINT  62fb 0007
+0002 U 0000 " b≥πd odczytu pliku",CR,LF,FORMFD,BELL,"$"
+0003 U 0000 CR,LF,LF,"Plik anulowany przez operatora",CR,FORMFD,BELL
+0004 U 0000 "Tabela alokacji plikÛw jest uszkodzona na dysku "
+0005 U 0000 "A.",CR,LF,"$"
+0006 U 0000 "Wyjúcie listy nie jest przypisane do urzπdzenia",CR,LF
+0007 U 0000 "PSPRINT jest juø zainstalowany",CR,LF
+0008 U 0000 "Konflikt PSPRINT/PRINT",CR,LF
+BACKUP   648f 0023
+0002 U 0000 CR,LF,"Niewystarczajπca pamiÍÊ",CR,LF
+0006 U 0000 CR,LF,"Nieprawid≥owa specyfikacja napÍdu",CR,LF
+0014 U 0000 CR,LF,"NapÍdy ürÛd≥owy i docelowy sπ takie same",CR,LF
+0015 U 0001 CR,LF,"B≥πd podczas wykonywania FORMAT",CR,LF
+0016 U 0001 CR,LF,"Nie moøna znaleüÊ FORMAT.COM",CR,LF
+0017 U 0000 CR,LF,"B≥πd otwarcia pliku dziennika",CR,LF
+0018 U 0000 CR,LF,"Rejestrowanie w pliku %1",CR,LF
+0019 U 0000 CR,LF,"Ostatnia dyskietka kopii zapasowej nie zosta≥a w≥oøona",CR,LF
+0020 U 0000 CR,LF,"OSTRZEØENIE! Pliki na docelowym dysku",CR,LF
+	"%1:\ w katalogu g≥Ûwnym zostanπ usuniÍte",CR,LF
+0021 U 0000 CR,LF,"OSTRZEØENIE! Pliki na docelowym dysku",CR,LF
+	"%1:\BACKUP zostanπ usuniÍte",CR,LF
+0022 U 0000 CR,LF,"*** Tworzenie kopii zapasowej plikÛw na dysku %1: ***",CR,LF
+0023 U 0000 "Numer dyskietki: %1",CR,LF
+0024 U 0000 CR,LF,"OSTRZEØENIE! Nie znaleziono plikÛw do zrobienia kopii zapasowej",CR,LF
+0025 U 0000 CR,LF,"W≥Ûø ürÛd≥owπ dyskietkÍ kopii zapasowej do napÍdu %1:",CR,LF
+0026 U 0000 CR,LF,"W≥Ûø dyskietkÍ kopii zapasowej %1 do napÍdu %2:",CR,LF
+0027 U 0000 CR,LF,"*** Nie moøna wykonaÊ kopii zapasowej pliku ***",CR,LF
+0028 U 0000 CR,LF,"W≥Ûø ostatniπ dyskietkÍ kopii zapasowej do napÍdu %1:",CR,LF
+0029 U 0000 CR,LF,"Docelowy nie moøe byÊ uøywany do kopii zapasowej",CR,LF
+0030 U 0000 CR,LF,"*** Nie zrobiono kopii zapasowej ostatniego pliku ***",CR,LF
+0031 U 0000 CR,LF,"Urzπdzenie kopii zapasowej %1: jest pe≥ne",CR,LF
+0032 U 0000 CR,LF,"B≥πd pe≥nego dysku podczas zapisu do pliku dziennika kopii zapasowej",CR,LF
+0034 U 0000 CR,LF
+0035 U 0001 CR,LF,"Nie moøna FORMATOWA∆ napÍdu sta≥egoa %1:",CR,LF
+BASIC    6b0a 0001
+0001 U 0001 "Nie moøna uruchomiÊ BASICA.COM"
+COMP     6b4c 0013
+0004 U 0000 "10 NiespÛjnoúci - zakoÒczono porÛwnywanie",CR,LF
+0006 U 0000 "B≥πd porÛwnania na OFFSET %1",CR,LF
+0007 U 0000 "Plik 1 = %1",CR,LF
+0008 U 0000 "Plik 2 = %1",CR,LF
+0009 U 0000 "Nie znaleziono znacznika EOF",CR,LF
+0010 U 0000 "Pliki sπ zgodne",CR,LF
+0015 U 0000 CR,LF,CR,LF,"Wprowadü podstawowπ nazwÍ pliku",CR,LF
+0016 U 0000 CR,LF,CR,LF,"Wprowadü drugπ nazwÍ pliku lub identyfikator dysku",CR,LF
+0017 U 0000 "Pliki majπ rÛøne rozmiary",CR,LF
+0018 U 0000 "PorÛwnaj wiÍcej plikÛw (T/N) ?"
+0019 U 0000 "%1 i %2",CR,LF
+0020 U 0000 CR,LF
+0023 U 0000 "PorÛwnanie plikÛw zakoÒczone pomyúlnie",CR,LF
+DISKCOMP 6dc8 0016
+0004 U 0000 "Nie podawaj nazw plikÛw",CR,LF
+	"Format komendy: DISKCOMP d: d: [/1][/8]",LF,CR
+0005 U 0000 CR,LF,"Nieprawid≥owa specyfikacja napÍdu",CR,LF
+	"Okreúlony napÍd nie istnieje",CR,LF
+	"lub jest dyskietkπ",CR,LF
+0006 U 0000 CR,LF,"Nie moøna uøyÊ DISKCOMP",CR,LF 
+	"na napÍdzie sieciowym",CR,LF
+0007 U 0000 CR,LF,"W≥Ûø PIERWSZ• dyskietkÍ do napÍdu %1:",CR,LF
+0008 U 0000 CR,LF,"W≥Ûø DRUG• dyskietkÍ do napÍdu %1:",CR,LF
+0009 U 0000 CR,LF,"PIERWSZA dyskietka jest uszkodzona lub niezgodna",CR,LF
+0010 U 0000 CR,LF,"DRUGA dyskietka jest uszkodzona lub niezgodna",CR,LF
+0014 U 0000 CR,LF,"PorÛwnaÊ innπ dyskietkÍ (T/N) ?"
+0015 U 0000 CR,LF,"PorÛwnywanie %1 úcieøek",CR,LF
+	"%2 sektory na úcieøkÍ, %3 strona(y)",CR,LF
+0016 U 0000 CR,LF,"Typy napÍdÛw lub dyskietek",CR,LF
+	"nie sπ zgodne",CR,LF
+0017 U 0000 CR,LF,"Nieodwracalny b≥πd odczytu na napÍdzie %2",CR,LF
+	"strona %3, úcieøka %4",CR,LF
+0018 U 0000 CR,LF,"B≥πd porÛwnania na",CR,LF,"stronie %3, úcieøka %4",CR,LF
+0019 U 0000 "Upewnij siÍ, øe dyskietka jest w≥oøona do",CR,LF
+	"napÍdu i drzwi sπ zamkniÍte",CR,LF
+0020 U 0000 CR,LF,"Proces porÛwnywania zakoÒczony",CR,LF
+0021 U 0000 CR,LF,"PorÛwnanie OK",CR,LF
+0022 U 0000 CR,LF
+DISKCOPY 7295 0018
+0002 U 0000 CR,LF
+0004 U 0000 "Nie podawaj nazw plikÛw",CR,LF
+	"Format komendy: DISKCOPY d: d: [/1]",CR,LF
+0005 U 0000 CR,LF,"Nieprawid≥owa specyfikacja napÍdu",CR,LF
+	"Okreúlony napÍd nie istnieje",CR,LF
+	"lub jest dyskietkπ",CR,LF
+0006 U 0000 CR,LF,"Nie moøna uøyÊ DISCOPY",CR,LF
+	" na napÍdzie sieciowym",CR,LF
+0007 U 0000 CR,LF,"Formatowanie podczas kopiowania",CR,LF
+0008 U 0000 CR,LF,"W≥Ûø èR”D£OW• dyskietkÍ do napÍdu %1:",CR,LF
+0009 U 0000 CR,LF,"W≥Ûø DOCELOWπ dyskietkÍ do napÍdu %1:",CR,LF
+0010 U 0000 "Upewnij siÍ, øe dyskietka jest w≥oøona do",CR,LF
+	"napÍdu i drzwi sπ zamkniÍte",CR,LF
+0011 U 0000 CR,LF,"Dyskietka docelowa moøe byÊ niezdatna do uøycia",CR,LF
+0012 U 0000 CR,LF,"Dyskietka docelowa jest niezdatna do uøycia",CR,LF
+0016 U 0000 CR,LF,"SkopiowaÊ innπ dyskietkÍ (T/N)? "
+0017 U 0000 CR,LF,"Kopiowanie %1 úcieøek",CR,LF
+	"%2 sektory na úcieøkÍ, %3 strona(y)",CR,LF
+0018 U 0000 CR,LF,"Typy napÍdÛw lub dyskietek",CR,LF
+	"nie sπ zgodne",CR,LF
+0019 U 0000 CR,LF,"Nieodwracalny b≥πd odczytu na napÍdzie %1",CR,LF
+	"Strona %2, úcieøka %3",CR,LF
+0020 U 0000 CR,LF,"Nieodwracalny b≥πd zapisu na napÍdzie %1",CR,LF
+	"Strona %2, úcieøka %3",CR,LF
+0021 U 0000 CR,LF,"Proces kopiowania zakoÒczony",CR,LF
+0022 U 0000 CR,LF,"èR”D£OWA dyskietka jest uszkodzona lub niezgodna"
+0023 U 0000 CR,LF,"DOCELOWA dyskietka jest uszkodzona lub niezgodna"
+LABL     780f 0001
+0009 U 0003 CR,LF,"UsunπÊ bieøπcπ etykietÍ woluminu (T/N)? "
+MODE     7861 0068
+0003 U 0000 CR,LF,"Naleøy okreúliÊ COM1, COM2, COM3 lub COM4",CR,LF
+0004 U 0000 CR,LF,"Za≥adowano czÍúÊ rezydentnπ MODE",CR,LF
+0005 U 0000 CR,LF,"Nieprawid≥owa nazwa urzπdzenia",CR,LF
+0006 U 0000 CR,LF,"B≥πd drukarki",CR,LF
+0007 U 0000 CR,LF,"LPT%1: ustawiono na 80",CR,LF
+0008 U 0000 CR,LF,"LPT%1: ustawiono na 132",CR,LF
+0009 U 0000 CR,LF,"Liczba linii na cal ustawiona",CR,LF
+0010 U 0000 CR,LF,"Okreúlono nieprawid≥owπ prÍdkoúÊ transmisji",CR,LF
+0011 U 0000 CR,LF,"COM%1: %2,%3,%4,%5,%6",CR,LF
+0012 U 0000 "0123456789"
+0013 U 0001 CR,LF,"Czy widzisz %1? (T/N) "
+0015 U 0000 "LPT%1: przekierowano na COM%2:",CR,LF
+0016 U 0000 "LPT%1: nie przekierowano",CR,LF
+0017 U 0000 CR,LF,"%1 prÛba na timeout drukarki rÛwnoleg≥ej",CR,LF
+0018 U 0000 CR,LF,"      Nie moøna przesunπÊ ekranu %1",CR,LF
+0020 U 0000 CR,LF,"Nieprawid≥owa liczba parametrÛw",CR,LF
+0021 U 0000 CR,LF,"NET 042: Nie moøna wykonaÊ øπdanej komendy",CR,LF
+0022 U 0001 CR,LF,"NieskoÒczona ponowna prÛba nie jest obs≥ugiwana na drukarce sieciowej",CR,LF
+0023 U 0001 CR,LF,"B≥πd dostÍpu do pliku czcionki strony kodowej",cr,lf
+0024 U 0000 CR,LF,"B≥πd dostÍpu do urzπdzenia: %1",CR,LF
+0025 U 0001 CR,LF,"Urzπdzenie lub strona kodowa brakujπca w pliku czcionki",CR,LF
+0026 U 0000 CR,LF,"Nieprawid≥owa zawartoúÊ pliku czcionki",CR,LF
+0027 U 0001 CR,LF,"Wczeúniej przygotowana strona kodowa zastπpiona",CR,LF
+0028 U 0001 CR,LF,"Aktywna strona kodowa dla urzπdzenia %1 to %2",CR,LF
+0029 U 0000 CR,LF,"Urzπdzenie %1 nie jest przygotowane",CR,LF
+0030 U 0001 "%1 strony kodowe:",CR,LF
+0031 U 0001 "  strona kodowa %1",CR,LF
+0032 U 0001 CR,LF,"Funkcja strony kodowej MODE %1 ukoÒczona",CR,LF
+0033 U 0002 CR,LF,"Bieøπce ustawienia strony kodowej:",CR,LF
+0034 U 0002 "   %1 - strona kodowa %2",CR,LF
+0035 U 0002 "  strona kodowa nie jest przygotowana",CR,LF
+0036 U 0002 "Operacja strony kodowej nieobs≥ugiwana na tym urzπdzeniu",CR,LF
+0037 U 0002 "Nie wybrano strony kodowej",cr,lf
+0038 U 0002 "B≥πd urzπdzenia podczas %1",CR,LF
+0039 U 0002 "Strona kodowa nie jest przygotowana",CR,LF
+0040 U 0002 CR,LF,"Bieøπca klawiatura nie obs≥uguje tej strony kodowej",CR,LF
+0041 U 0002 CR,LF,"B≥πd podczas odczytu pliku czcionki",CR,LF
+0042 U 0002 CR,LF,"Nie moøna wykonaÊ operacji odúwieøania",CR,LF
+0043 U 0002 CR,LF
+0044 U 0002 CR,LF,"Status dla urzπdzenia %1:",CR,LF
+0045 U 0002 "------------------"
+0046 U 0002 "----",CR,LF
+0047 U 0002 "-----",CR,LF
+0048 U 0002 "LINIE=%1",CR,LF
+0049 U 0002 "KOLUMNY=%1",CR,LF
+0050 U 0002 CR,LF,"PR DKOå∆ i OP”èNIENIE muszπ byÊ okreúlone razem",CR,LF
+0051 U 0002 "PR DKOå∆=%1",CR,LF
+0052 U 0002 "OP”èNIENIE=%1",CR,LF
+0053 U 0002 CR,LF,"Funkcja nieobs≥ugiwana na tym komputerze - %1",CR,LF
+0054 U 0002 CR,LF,"Wymagana czcionka nie jest za≥adowana",CR,LF
+0055 U 0002 CR,LF,"Naleøy zainstalowaÊ ANSI.SYS, aby wykonaÊ øπdanπ funkcjÍ",CR,LF
+0056 U 0002 CR,LF,"Wymagana jest prÍdkoúÊ transmisji",CR,LF
+0057 U 0002 "PONOWIENIE=%1",CR,LF
+0059 U 0002 "skrajnie prawy 9",0
+0060 U 0002 "skrajnie lewy 0",0
+0061 U 0002 "Nie",0
+0062 U 0002 "NieskoÒczony",0
+0063 U 0002 "lewo",0
+0064 U 0002 "prawo",0
+0065 U 0002 "SprzÍtowe",0
+0066 U 0002 "Przygotowane",0
+0067 U 0002 "status",0
+0068 U 0002 "przygotuj",0
+0069 U 0002 "wybierz",0
+0070 U 0002 "odúwieø",0
+0071 U 0002 "zapis pliku czcionki do urzπdzenia",0
+0072 U 0002 "wybrano",0
+0073 U 0002 "systemowe",0
+RESTORE  85ab 0020
+0002 U 0000 CR,LF,"èrÛd≥owy i docelowy napÍd sπ takie same",CR,LF
+0003 U 0000 CR,LF,"Nieprawid≥owa liczba parametrÛw",CR,LF
+0006 U 0000 CR,LF,"Nieprawid≥owa specyfikacja napÍdu",CR,LF
+0007 U 0000 CR,LF,"OSTRZEØENIE! Nie znaleziono plikÛw do przywrÛcenia",CR,LF
+0008 U 0000 CR,LF,"W≥Ûø dyskietkÍ z kopiπ zapasowπ %1 do napÍdu %2:",CR,LF
+0009 U 0000 CR,LF,"W≥Ûø docelowy noúnik przywracania do napÍdu %1:",CR,LF
+0011 U 0000 CR,LF,"OSTRZEØENIE! Dyskietka jest poza kolejnoúciπ",CR,LF
+	"ZamieÒ dyskietkÍ lub kontynuuj, jeúli jest to OK",CR,LF
+0012 U 0000 CR,LF,"Ostatni plik nie zosta≥ przywrÛcony",CR,LF
+0013 U 0000 CR,LF,"*** Pliki zosta≥y zbackupowane %1 ***",CR,LF
+0014 U 0000 CR,LF,"èrÛd≥o nie zawiera plikÛw kopii zapasowych",CR,LF
+0015 U 0000 CR,LF,"Niewystarczajπca pamiÍÊ",CR,LF
+0016 U 0000 CR,LF,"OSTRZEØENIE! Plik %1",CR,LF
+	"jest plikiem tylko do odczytu",CR,LF
+	"ZamieÒ plik (T/N)?",CR,LF
+0017 U 0000 CR,LF,"B≥πd kolejnoúci przywracania pliku",CR,LF
+0018 U 0000 CR,LF,"B≥πd tworzenia pliku",CR,LF
+0019 U 0000 CR,LF,"Niewystarczajπca iloúÊ miejsca na dysku",CR,LF
+0020 U 0000 CR,LF,"*** Nie moøna przywrÛciÊ pliku ***",CR,LF
+0021 U 0000 CR,LF,"*** Przywracanie plikÛw z dysku %1: ***",CR,LF
+0022 U 0000 CR,LF,"OSTRZEØENIE! Plik %1",CR,LF
+	"zosta≥ zmieniony po zbackupowaniu",CR,LF
+	"ZamieniÊ plik (T/N)?",CR,LF
+0023 U 0000 "Dyskietka: %1",CR,LF
+0025 U 0000 07
+SELECT   8b30 0016
+0004 U 0000 "Nieprawid≥owe wybranie noúnika startowego",CR,LF,CR,LF
+	"W≥Ûø dyskietkÍ INSTALL do napÍdu A:, a nastÍpnie sprÛbuj ponownie"
+0005 U 0000 "Nieprawid≥owy noúnik dysku/dyskietki",cr,lf,cr,lf
+	"W≥Ûø dyskietkÍ INSTALL do napÍdu A:, a nastÍpnie sprÛbuj ponownie"
+0006 U 0000 "Nieprawid≥owe parametry w linii komend SELECT",CR,LF,CR,LF
+	"Upewnij siÍ, øe dyskietka INSTALL jest w napÍdzie A:,",CR,LF
+	"a nastÍpnie naciúnij Ctrl+Alt+Del, aby zrestartowaÊ."
+0007 U 0000 BELL,"Nie moøna zainstalowaÊ DOS. Program zakoÒczony",CR,LF
+0008 U 0000 "£adowanie SELECT. ProszÍ czekaÊ..."
+0009 U 0000 "Naleøy ponownie uruchomiÊ komputer, aby kontynuowaÊ.",CR,LF,CR,LF
+	"Naciúnij Ctrl+Alt+Del, aby kontynuowaÊ instalacjÍ DOS."
+0010 U 0000 "W≥Ûø dyskietkÍ SELECT do napÍdu A:",CR,LF,CR,LF
+	"Naciúnij Enter, aby kontynuowaÊ instalacjÍ DOS,",CR,LF
+	"lub naciúnij Esc, aby wyjúÊ.",CR,LF
+0011 U 0000 BELL
+0012 U 0000 "W≥Ûø dyskietkÍ SELECT do napÍdu A:",CR,LF,CR,LF
+	"Naciúnij Enter, aby kontynuowaÊ.",CR,LF
+0013 U 0001 "UsuÒ dyskietkÍ SELECT COPY z napÍdu A:",CR,LF,CR,LF
+	"W≥Ûø dyskietkÍ INSTALL do napÍdu A:",CR,LF,CR,LF,CR,LF
+	"Naciúnij Enter, aby kontynuowaÊ.",CR,LF
+0014 U 0001 "UsuÒ dyskietkÍ INSTALL z napÍdu A:",CR,LF,CR,LF
+	"W≥Ûø dyskietkÍ SELECT COPY do napÍdu A:",CR,LF,CR,LF,CR,LF
+	"Naciúnij Enter, aby kontynuowaÊ.",CR,LF
+0015 U 0001 "Kopiowanie dyskietki...",CR,LF
+0016 U 0001 "NapÍd nie gotowy. ProszÍ zamknπÊ",CR,LF,CR,LF
+	"klapÍ napÍdu dyskietek i nacisnπÊ Enter",CR,LF
+	"aby kontynuowaÊ, lub Esc, aby wyjúÊ z SELECT.",CR,LF
+0017 U 0001 "Dyskietka zabezpieczona przed zapisem w napÍdzie.",CR,LF,CR,LF
+	"ProszÍ usunπÊ zak≥adkÍ zabezpieczajπcπ i",CR,LF
+	"nacisnπÊ Enter, aby kontynuowaÊ, lub Esc, aby wyjúÊ z SELECT.",CR,LF
+0018 U 0001 "Wystπpi≥ b≥πd podczas instalacji DOS.",CR,LF
+	"Naciúnij Enter, aby kontynuowaÊ, lub Esc, aby wyjúÊ z SELECT.",CR,LF
+0019 U 0001 "W≥Ûø dyskietkÍ INSTALL do napÍdu A:",CR,LF,CR,LF
+	"Naciúnij Enter, aby kontynuowaÊ.",CR,LF
+TREE     930d 0004
+0002 U 0000 "Lista úcieøki katalogÛw dla woluminu %1",CR,LF
+0003 U 0000 "Lista úcieøki katalogÛw",CR,LF
+0004 U 0000 "Brak podkatalogÛw",CR,LF,LF
+0007 U 0000 "¿ƒ√≥"
+REPLACE  93c9 0009
+0003 U 0000 CR,LF,"Brak zastπpionych plikÛw",CR,LF
+0004 U 0000 CR,LF,"Brak dodanych plikÛw",CR,LF
+0013 U 0000 CR,LF,"ZastÍpowanie %1",CR,LF
+0014 U 0000 CR,LF,"Dodawanie %1",CR,LF
+0015 U 0000 CR,LF,"Zastπpiono %1 plikÛw",CR,LF
+0016 U 0000 CR,LF,"Dodano %1 plikÛw",CR,LF
+0017 U 0000 CR,LF,"Nie znaleziono plikÛw - %1",CR,LF
+0022 U 0000 CR,LF,"ZamieniÊ %1? (T/N)"
+0023 U 0000 CR,LF,"DodaÊ %1? (T/N)"
+XCOPY    9573 0018
+0004 U 0000 "Czy %1 okreúla nazwÍ pliku",CR,LF
+	"czy nazwÍ katalogu docelowego",CR,LF
+	"(F = plik, D = katalog)?"
+0005 U 0000 "Naciúnij dowolny klawisz, aby rozpoczπÊ kopiowanie plikÛw"
+0006 U 0000 "Zbyt d≥uga úcieøka",CR,LF
+0008 U 0000 "Nie moøna wykonaÊ cyklicznego kopiowania",CR,LF
+0012 U 0000 "Nie moøna wykonaÊ XCOPY z urzπdzenia zarezerwowanego",CR,LF
+0021 U 0000 "Nieprawid≥owa liczba parametrÛw",CR,LF
+0022 U 0000 "Nie moøna wykonaÊ XCOPY do urzπdzenia zarezerwowanego",CR,LF
+0024 U 0000 "B≥πd tworzenia pliku",CR,LF
+0025 U 0000 "Czytanie plikÛw ürÛd≥owych...",CR,LF
+0026 U 0000 CR,LF
+0027 U 0000 "Skopiowano %1 plik(i)",CR,LF
+0028 U 0000 "Nie znaleziono pliku %1",CR,LF
+0029 U 0000 "F D "
+0030 U 0000 "%1%2",CR,LF
+0031 U 0000 "%1\%2",CR,LF
+0032 U 0000 "%1",CR,LF
+0033 U 0000 "%1%2 (T/N)?"
+0034 U 0000 "%1\%2 (T/N)?"
+VDISK    98d5 0013
+0002 U 0000 "Niewystarczajπca iloúÊ pamiÍci",CR,LF
+0003 U 0000 "Wersja MS-DOS 4.00, wirtualny dysk VDISK %1",CR,LF
+0004 U 0000 "   Rozmiar bufora dostosowany",CR,LF
+0005 U 0000 "   Rozmiar sektora dostosowany",CR,LF
+0006 U 0000 "   Liczba wpisÛw katalogu dostosowana",CR,LF
+0007 U 0000 "   Nieprawid≥owy znak prze≥πcznika",CR,LF
+0008 U 0000 "   Rozmiar transferu dostosowany",CR,LF
+0009 U 0000 "   Rozmiar bufora:         %1 KB",CR,LF
+0010 U 0000 "   Rozmiar sektora:        %1",CR,LF
+0011 U 0000 "   Liczba wpisÛw katalogu: %1",CR,LF
+0012 U 0000 "   Rozmiar transferu: %1",CR,LF
+0013 U 0000 "VDISK nie zainstalowany - "
+0014 U 0000 "   Prze≥πczniki karty rozszerzeÒ",CR,LF
+	"nie pasujπ do rozmiaru pamiÍci systemowej",CR,LF,CR,LF
+GRAFTABL 9bd2 0009
+0002 U 0000 "Aktywna strona kodowa: %1",CR,LF
+0003 U 0000 "Poprzednia strona kodowa: %1",CR,LF
+0004 U 0000 "Brak",NULL
+0005 U 0000 "Niestandardowy",NULL
+0006 U 0002 CR,LF,"Parametry linii komend DOS obs≥ugiwane",COLON,CR,LF,LF
+0007 U 0002 "    /STA - Øπdanie tylko statusu",CR,LF
+	"    ?    - Wyúwietlenie podsumowania parametrÛw",CR,LF,CR,LF
+0008 U 0002 "    DostÍpne strony kodowe",COLON,CR,LF
+	"    437  - Zestaw znakÛw graficznych USA",CR,LF
+0009 U 0002 "    850  - WielojÍzyczny zestaw znakÛw graficznych",CR,LF
+	"    860  - Portugalski zestaw znakÛw graficznych",CR,LF
+0010 U 0002 "    863  - Kanadyjski francuski zestaw znakÛw graficznych",CR,LF
+	"    865  - Nordic zestaw znakÛw graficznych",CR,LF
+FASTOPEN 9eb5 0016
+0004 U 0000 CR,LF,"FASTOPEN zainstalowany",CR,LF
+0005 U 0000 CR,LF,"FASTOPEN jest juø zainstalowany",CR,LF
+0006 U 0000 CR,LF,"Nieprawid≥owy parametr",CR,LF
+0007 U 0000 CR,LF,"Za duøo wpisÛw dla dysku",CR,LF
+0008 U 0000 CR,LF,"Ten sam dysk okreúlony wiÍcej niø raz",CR,LF
+0009 U 0000 CR,LF,"Nieprawid≥owy parametr",CR,LF
+0010 U 0000 CR,LF,"Nieprawid≥owy typ prze≥πcznika",CR,LF
+0011 U 0000 CR,LF,"Nieprawid≥owy wpis rozszerzenia",CR,LF
+0012 U 0001 CR,LF,"Nieprawid≥owy wpis pliku/katalogu",CR,LF
+0013 U 0000 CR,LF,"Nie moøna skonfigurowaÊ pamiÍci rozszerzonej",CR,LF
+0014 U 0000 CR,LF,"PamiÍÊ rozszerzona niedostÍpna",CR,LF
+0015 U 0000 CR,LF,"Nieprawid≥owa specyfikacja dysku %1",CR,LF
+0016 U 0002 CR,LF,"Przekroczono liczbÍ wpisÛw EMS FASTOPEN. Uøyj mniej wpisÛw",CR,LF
+0017 U 0000 CR,LF,"Nie moøna uøyÊ FASTOPEN dla dysku %1",CR,LF
+0018 U 0000 CR,LF,"Za duøo wpisÛw rozszerzenia",CR,LF
+0019 U 0000 CR,LF,"Za duøo wpisÛw pliku/katalogu",CR,LF
+APPEND   a288 0009
+0001 U 0000 "Nieprawid≥owa wersja APPEND",CR,LF
+0002 U 0000 "Nieprawid≥owa úcieøka",CR,LF
+0003 U 0000 "Nieprawid≥owy parametr",CR,LF
+0004 U 0000 "Nieprawid≥owa kombinacja parametrÛw",CR,LF
+0005 U 0000 "Brak Append",CR,LF
+0006 U 0000 "Konflikt APPEND / ASSIGN",CR,LF
+0007 U 0000 "Konflikt APPEND / TopView",CR,LF
+0008 U 0000 "Nieprawid≥owa wersja DOS",CR,LF
+0009 U 0000 "APPEND jest juø zainstalowany",CR,LF
+GRAPHICS a43c 0012
+0005 U 0000 "Nieprawid≥owy parametr:  %1",CR,LF
+0007 U 0000 "Zduplikowane parametry niedozwolone",CR,LF
+0009 U 0000 "Nie moøna znaleüÊ profilu GRAPHICS",CR,LF
+0010 U 0000 "Brak wymaganego oúwiadczenia profilu przed liniπ %1",CR,LF
+0011 U 0000 "Nieprawid≥owe oúwiadczenie profilu na linii %1",CR,LF
+0012 U 0000 "Oúwiadczenie profilu poza sekwencjπ na linii %1",CR,LF
+0013 U 0000 "B≥πd odczytu profilu GRAPHICS",CR,LF
+0014 U 0000 "B≥Ídy sk≥adni w profilu GRAPHICS",CR,LF
+0015 U 0000 "ID drukarki nie istnieje w profilu GRAPHICS",CR,LF
+0016 U 0000 "Typ drukarki nie istnieje w profilu GRAPHICS",CR,LF
+0017 U 0000 "/B nieprawid≥owy dla drukarki czarno-bia≥ej",CR,LF
+0018 U 0000 "Nie moøna ponownie za≥adowaÊ dostarczonego profilu",CR,LF
+DISPLAY  a739 0003
+0002 U 0000 "Nie moøna zainicjowaÊ sterownika strony kodowej %1",CR,LF,BELL
+0008 U 0000 "Niewystarczajπca pamiÍÊ",CR,LF,BELL
+0012 U 0000 "Nieprawid≥owa sk≥adnia sterownika strony kodowej DISPLAY.SYS",CR,LF,BELL
+PRINTER  a823 0002
+0002 U 0000 "Nie moøna zainicjowaÊ sterownika strony kodowej %1",CR,LF,BELL
+0012 U 0000 "Nieprawid≥owa sk≥adnia sterownika strony kodowej PRINTER.SYS",CR,LF,BELL
+KEYB     a8db 0016
+0002 U 0000 "Kod bieøπcej klawiatury: %1"
+0003 U 0000 "Identyfikator bieøπcej klawiatury: %1"
+0004 U 0000 "  strona kodowa: %1",CR,LF
+0005 U 0000 "Bieøπca strona kodowa CON: %1",CR,LF
+0006 U 0000 "Podano nieprawid≥owy kod klawiatury",CR,LF
+0007 U 0000 "Podano nieprawid≥owy identyfikator klawiatury",CR,LF
+0008 U 0000 "Podano nieprawid≥owπ stronÍ kodowπ",CR,LF
+0009 U 0000 "Z≥y lub brakujπcy plik definicji klawiatury",CR,LF
+0010 U 0000 "KEYB nie zosta≥ zainstalowany",CR,LF
+0011 U 0000 "Aktywna strona kodowa niedostÍpna z urzπdzenia CON",CR,LF
+0012 U 0000 "Okreúlona strona kodowa nie zosta≥a przygotowana",CR,LF
+0013 U 0000 "Jedna lub wiÍcej stron kodowych CON jest nieprawid≥owa dla okreúlonego kodu klawiatury",CR,LF
+0014 U 0000 "Øπdana strona kodowa (%1) nie jest prawid≥owa dla okreúlonego kodu klawiatury",CR,LF
+0015 U 0000 "Okreúlona strona kodowa jest niezgodna z wybranπ stronπ kodowπ",CR,LF
+0016 U 0001 "Podany identyfikator klawiatury jest niezgodny z wybranym uk≥adem klawiatury",CR,LF
+0017 U 0000 "Nie moøna utworzyÊ tabeli KEYB w pamiÍci rezydentnej",CR,LF
+REDIRSYS ad30 0000
+MEM      ad44 0042
+0010 U 0000  CR,LF
+0011 U 0000  "  Adres       Nazwa        Rozmiar      Typ ",CR,LF
+0012 U 0000  "  ƒƒƒƒƒƒƒ     ƒƒƒƒƒƒƒƒ     ƒƒƒƒƒƒ     ƒƒƒƒƒƒ",CR,LF
+0013 U 0000  "  Uchwyt      Nazwa EMS    Rozmiar ",CR,LF
+0014 U 0000  "  ƒƒƒƒƒƒƒ     ƒƒƒƒƒƒƒƒ     ƒƒƒƒƒƒ  ",CR,LF
+0015 U 0000  "  %1      %2     %3     %4",CR,LF
+0016 U 0000  "                %1   %2      %3 ",CR,LF
+0017 U 0000  "                  %1              %2 ",CR,LF
+0018 U 0000  "%1 bajtÛw pamiÍci ca≥kowitej",CR,LF
+0019 U 0000  "%1 bajtÛw dostÍpnych",CR,LF
+0020 U 0000  "NajwiÍkszy rozmiar programu wykonywalnego: %1 bajtÛw",CR,LF
+0021 U 0000  "%1 bajtÛw ca≥kowitej pamiÍci EMS",CR,LF
+0022 U 0000  "%1 bajtÛw wolnej pamiÍci EMS",CR,LF
+0023 U 0000  "%1 bajtÛw ca≥kowitej pamiÍci rozszerzonej",CR,LF
+0024 U 0000  "Wektor przerwania",0
+0025 U 0000  "Obszar komunikacji ROM",0
+0026 U 0000  "Obszar komunikacji DOS",0
+0027 U 0000  "IO",0
+0028 U 0000  "MSDOS",0
+0029 U 0000  "Dane systemowe",0
+0030 U 0000  "Program systemowy",0
+0031 U 0000  "Sterownik urzπdzenia systemowego",0
+0032 U 0000  "Zainstalowany sterownik urzπdzenia",0
+0033 U 0000  "%1:",0
+0034 U 0000  "%1: - %2:",0
+0035 U 0000  "BUFFERS=",0
+0036 U 0000  "FILES=",0
+0037 U 0000  "FCBS=",0
+0038 U 0000  "STACKS=",0
+0039 U 0000  "DEVICE=",0
+0040 U 0000  "IFS=",0
+0041 U 0000  "LASTDRIVE=",0
+0042 U 0000  "----------",0
+0043 U 0000  " ",0
+0044 U 0000  "     %1      %2     %3",CR,LF
+0045 U 0001  "INSTALL=",0
+0046 U 0001  "%1 bajtÛw dostÍpnej pamiÍci rozszerzonej",CR,LF
+0047 U 0000  "Stosy systemowe",0
+0048 U 0000  "-- Wolne --",0
+0049 U 0000  "Program",0
+0050 U 0000  "årodowisko",0
+0051 U 0000  "Dane",0
+REDIR    b3d9 0029
+0004 U 0000 "SieÊ nie zosta≥a uruchomiona",CR,LF
+0050 U 0000 "NET809: Øπdanie sieci nieobs≥ugiwane",CR,LF,0
+0051 U 0000 "NET801: Zdalny komputer nie nas≥uchuje",CR,LF,0
+0052 U 0000 "NET802: Duplikat nazwy w sieci",CR,LF,0
+0053 U 0000 "NET803: åcieøka sieci nie znaleziona",CR,LF,0
+0054 U 0000 "NET804: SieÊ zajÍta",CR,LF,0
+0055 U 0000 "NET805: Urzπdzenie sieciowe juø nie istnieje",CR,LF,0
+0056 U 0000 "NET806: Przekroczono limit polecenia NETBIOS",CR,LF,0
+0057 U 0000 "NET807: B≥πd systemowy; b≥πd NETBIOS",CR,LF,0
+0058 U 0000 "NET808: Nieprawid≥owa odpowiedü sieciowa",CR,LF,0
+0059 U 0000 "NET810: Nieoczekiwany b≥πd sieciowy",CR,LF,0
+0060 U 0000 "NET811: Niekompatybilny adapter zdalny",CR,LF,0
+0061 U 0000 "NET812: Kolejka wydruku pe≥na",CR,LF,0
+0062 U 0000 "NET813: Brak miejsca na plik wydruku",CR,LF,0
+0063 U 0000 "NET814: Plik wydruku zosta≥ anulowany",CR,LF,0
+0064 U 0000 "NET815: Nazwa sieci zosta≥a usuniÍta",CR,LF,0
+0065 U 0000 "Odmowa dostÍpu",CR,LF,0
+0066 U 0000 "NET817: Nieprawid≥owy typ urzπdzenia sieciowego",CR,LF,0
+0067 U 0000 "NET818: Nie znaleziono nazwy sieciowej",CR,LF,0
+0068 U 0004 "NET819: Przekroczono limit nazwy sieciowej",CR,LF,0
+0069 U 0000 "NET820: Przekroczono limit sesji NETBIOS",CR,LF,0
+0070 U 0000 "NET821: WspÛ≥dzielenie tymczasowo wstrzymane",CR,LF,0
+0071 U 0000 "NET823: Øπdanie sieci nieprzyjÍte",CR,LF,0
+0072 U 0000 "NET822: Wydruk lub przekierowanie dysku jest wstrzymane",CR,LF,0
+0073 U 0000 "NET476: Netbeui nie zosta≥ za≥adowany",CR,LF,0
+0074 U 0000 "NET477: Nieoczekiwane zamkniÍcie adaptera",CR,LF,0
+0084 U 0004 "NET819: Przekroczono limit nazwy sieciowej",CR,LF,0
+0085 U 0004 "NET802: Duplikat nazwy w sieci",CR,LF,0
+0088 U 0000 "NET825: B≥πd danych sieciowych",CR,LF,0
+XMA2EMS  bac2 0030
+0001 U 0000 CR,LF,"$"
+0002 U 0000 "XMA2EMS: Menedøer pamiÍci rozszerzonej",CR,LF
+	"(c)Prawa autorskie Microsoft Corporation 1988                     Wszelkie prawa zastrzeøone",CR,LF,"$"
+0003 U 0000 CR,LF,"Wykonywanie diagnostyki XMA:   ","$"
+0004 U 0000 CR,LF,"ZakoÒczono diagnostykÍ ",CR,LF,LF,"$"
+0005 U 0000 "Ramka strony zaczyna siÍ od........................ "
+0006 U 0000 "XXXX:0",CR,LF,"Strony przypisane do pamiÍci konwencjonalnej......... "
+0007 U 0000 "0   ",CR,LF,"$"
+0008 U 0000 "Strony zarezerwowane dla programu sterowania 3270 PC.. "
+0009 U 0000 "0   ",CR,LF,"$"
+0010 U 0000 "Strony dostÍpne dla pamiÍci rozszerzonej......... "
+0011 U 0000 "0   ",CR,LF,"$"
+0012 U 0000 CR,LF,"B≥πd adaptera ",CR,LF,"$"
+0013 U 0000 CR,LF,"Nie moøna znaleüÊ adaptera ",CR,LF,"$"
+0014 U 0000 CR,LF,"Sk≥adnia parametru lub wartoúci b≥Ídna ",CR,LF,"$"
+0015 U 0000 CR,LF,"Nie moøna znaleüÊ sterownika urzπdzenia emulacji XMA ",CR,LF,"$"
+0016 U 0000 CR,LF,"Nieprawid≥owa wersja XMAEM.SYS ",CR,LF,"$"
+0017 U 0000 CR,LF,"Nieprawid≥owa wersja INDXMAA.SYS ",CR,LF,"$"
+0018 U 0000 CR,LF,"Zbyt wiele stron EMS øπdanych w parametrze /X ",CR,LF,"$"
+0019 U 0000 "Menedøer pamiÍci rozszerzonej NIE zosta≥ zainstalowany",CR,LF,"$"
+0020 U 0000 "Okreúlony adres strony koliduje z zainstalowanym adapterem pod adresem "
+0021 U 0000 "0   ",CR,LF,"$"
+0022 U 0000 "Moøliwa strona o rozmiarze 16KB dostÍpna pod adresem  "
+0023 U 0000 "0   ",CR,LF,"$"
+0024 U 0000 CR,LF,"Moøliwa ramka o rozmiarze 64KB dostÍpna pod adresem "
+0025 U 0000 "0   ",CR,LF,"$"
+0026 U 0000 "Nie okreúlono adresÛw stron",CR,LF,"$"
+0027 U 0000 " "
+0028 U 0000 "    "," KB OK","$"
+0029 U 0000 "     ",CR,LF,"$"
+0030 U 0000 "$"
+FILESYS  c17e 0007
+0010 U 0003  "  PAUZA  %1   %2   %3",CR,LF
+0011 U 0001  "          %1   %2   %3",CR,LF
+0012 U 0001  "          Lokalny   IFS",CR,LF
+0013 U 0001  "  Status  Urzπdzenie  Nazwa        Parametry",CR,LF
+0014 U 0001  "  ______  ______  _________   ___________________",CR,LF,CR,LF
+0015 U 0003  "Nie znaleziono wpisÛw",CR,LF
+0016 U 0003  "  B£•D   %1   %2   %3",CR,LF
+FDISK    c302 0122
+0004 U 0000 "Nie moøna wykonaÊ FDISK z za≥adowanπ sieciπ",CR,LF
+0005 U 0000 "Brak dyskÛw sta≥ych",CR,LF
+0006 U 0000 "B≥πd odczytu dysku sta≥ego",CR,LF
+0007 U 0000 "B≥πd zapisu na dysk sta≥y",CR,LF
+0009 U 0003 "T",0
+0010 U 0003 "N",0
+1001 U 0000 "Wersja MS-DOS 4.00"
+1002 U 0000 "Program konfiguracji dysku sta≥ego"
+1003 U 0000 "(C)Prawa autorskie Microsoft Corp. 1983, 1988"
+1004 U 0000 "Opcje FDISK"
+1005 U 0000 "1. <R>UtwÛrz partycjÍ DOS lub logiczny dysk DOS"
+1006 U 0000 "2. <R>Ustaw aktywnπ partycjÍ"
+1007 U 0000 "3. <R>UsuÒ partycjÍ DOS lub logicznπ dyskowπ DOS"
+1008 U 0000 "4. <R>Wyúwietl informacje o partycji"
+1009 U 0000 "Naciúnij <H>Esc<R>, aby wyjúÊ z FDISK"
+1010 U 0000 "Wybierz jednπ z poniøszych opcji:"
+1011 U 0000 "5. <R>Wybierz nastÍpny sta≥y dysk"
+1012 U 0000 "Bieøπcy sta≥y dysk: <H><I>"
+1013 U 0000 "OSTRZEØENIE! <R>Brak ustawionych aktywnych partycji - dysk 1 nie moøna uruchomiÊ, chyba øe"
+1014 U 0000 "partycja jest ustawiona jako aktywna"
+1015 U 0000 "Wpisz wybÛr: [<S> ]"
+1016 U 0000 "UtwÛrz partycjÍ DOS lub logicznπ dyskowπ DOS"
+1017 U 0000 "1. <R>UtwÛrz podstawowπ partycjÍ DOS"
+1018 U 0000 "2. <R>UtwÛrz rozszerzonπ partycjÍ DOS"
+1019 U 0000 "3. <R>UtwÛrz logiczne dyski DOS w rozszerzonej partycji DOS"
+1020 U 0000 "Naciúnij <H>Esc<R>, aby powrÛciÊ do opcji FDISK"
+1021 U 0000 "UtwÛrz podstawowπ partycjÍ DOS"
+1022 U 0000 "Czy chcesz uøyÊ maksymalnej dostÍpnej wielkoúci dla podstawowej partycji DOS"
+1023 U 0000 "i ustawiÊ partycjÍ jako aktywnπ (<Y>/<N>).....................? <H>[<S> ]"
+1024 U 0000 "(<Y>/<N>)...................................................? <H>[<S> ]"
+1025 U 0000 "Status partycji   Typ    WielkoúÊ w Mbytes   Procent uøycia dysku"
+1026 U 0000 "Ca≥kowita przestrzeÒ dysku wynosi <HIIIIR> Mbytes (1 Mbyte = 1048576 bajtÛw)"
+1027 U 0000 "Maksymalna dostÍpna przestrzeÒ dla partycji to <HIIIIR> Mbytes (<HIIIIR>)"
+1028 U 0000 "Wpisz wielkoúÊ partycji w Mbytes lub procent przestrzeni dyskowej (%) aby"
+1029 U 0000 "utwÛrz podstawowπ partycjÍ DOS.................................: <H>[<IIISI>]"
+1030 U 0000 "UtwÛrz rozszerzonπ partycjÍ DOS"
+1031 U 0000 "utwÛrz rozszerzonπ partycjÍ DOS................................: <H>[<IIISI>]"
+1032 U 0000 "Naciúnij <H>Esc<R>, aby kontynuowaÊ"
+1033 U 0000 "UtwÛrz logiczne dyski DOS w rozszerzonej partycji DOS"
+1034 U 0000 "Dysk Etykieta woluminu  Mbytes  System  Uøycie"
+1035 U 0000 "Ca≥kowita wielkoúÊ rozszerzonej partycji DOS wynosi <HIIIIR> Mbytes (1 MByte = 1048576 bajtÛw)"
+1036 U 0000 "Maksymalna dostÍpna przestrzeÒ dla dysku logicznego to <HIIIIR> Mbytes <H>(<IIII>)"
+1037 U 0000 "Wpisz wielkoúÊ dysku logicznego w Mbytes lub procent przestrzeni dyskowej (%)...<H>[<IIISI>]"
+1038 U 0000 "Ustaw aktywnπ partycjÍ"
+1039 U 0000 "Wpisz numer partycji, ktÛrπ chcesz ustawiÊ jako aktywnπ...........: <H>[<S> ]"
+1040 U 0000 "UsuÒ partycjÍ DOS lub logicznπ dyskowπ DOS"
+1041 U 0000 "1.  <R>UsuÒ podstawowπ partycjÍ DOS"
+1042 U 0000 "2.  <R>UsuÒ rozszerzonπ partycjÍ DOS"
+1043 U 0000 "3.  <R>UsuÒ logiczne dyski DOS w rozszerzonej partycji DOS"
+1044 U 0000 "UsuÒ podstawowπ partycjÍ DOS"
+1045 U 0000 "OSTRZEØENIE! <OR>Dane w usuniÍtej podstawowej partycji DOS zostanπ utracone."
+1046 U 0000 "Czy chcesz kontynuowaÊ (<Y>/<N>).................? <H>[<S> ]"
+1047 U 0000 "UsuÒ rozszerzonπ partycjÍ DOS"
+1048 U 0000 "OSTRZEØENIE! <OR>Dane w usuniÍtej rozszerzonej partycji DOS zostanπ utracone."
+1049 U 0000 "Czy chcesz kontynuowaÊ (<Y>/<N>).................? <H>[<S> ]"
+1050 U 0000 "UsuÒ logiczne dyski DOS w rozszerzonej partycji DOS"
+1051 U 0000 "OSTRZEØENIE! <OR>Dane w usuniÍtym logicznym dysku DOS zostanπ utracone."
+1052 U 0000 "KtÛry dysk chcesz usunπÊ...............................? <H>[<S> ]"
+1053 U 0000 "Jesteú pewien (<Y>/<N>)..............................? <H>[<S> ]"
+1054 U 0000 "Wpisz etykietÍ woluminu..............................? <H>[<S>           ]"
+1055 U 0000 "Wyúwietl informacje o partycji"
+1056 U 0000 "Rozszerzona partycja DOS zawiera logiczne dyski DOS."
+1057 U 0000 "Czy chcesz wyúwietliÊ informacje o dyskach logicznych (<Y>/<N>)......?<H>[<S> ]"
+1058 U 0000 "Wyúwietl informacje o logicznych dyskach DOS"
+1059 U 0000 "System zostanie teraz zrestartowany"
+1060 U 0001 "W≥Ûø dyskietkÍ instalacyjnπ DOS do stacji A:"
+1061 U 0000 "Naciúnij dowolny klawisz, gdy bÍdziesz gotowy . . .<S>"
+1062 U 0000 "Podstawowa partycja DOS usuniÍta"
+1063 U 0000 "Rozszerzona partycja DOS usuniÍta"
+1064 U 0000 "Dysk usuniÍty"
+1065 U 0000 "Partycja <I> ustawiona jako aktywna"
+1066 U 0000 "Utworzono podstawowπ partycjÍ DOS"
+1067 U 0000 "Utworzono rozszerzonπ partycjÍ DOS"
+1068 U 0000 "Utworzono logiczny dysk DOS, zmieniono lub dodano litery dyskÛw<W>"
+1069 U 0000 "Brak zdefiniowanych partycji"
+1070 U 0000 "Brak zdefiniowanych dyskÛw logicznych"
+1071 U 0000 "Litery dyskÛw zosta≥y zmienione lub usuniÍte<W>"
+1072 U 0000 "Dysk przekierowany"
+1073 U 0000 "Utworzono podstawowπ partycjÍ DOS, zmieniono lub dodano litery dyskÛw"
+1074 U 0000 "Brak sta≥ych dyskÛw."
+1075 U 0000 "B≥πd odczytu dysku sta≥ego."
+1076 U 0000 "B≥πd zapisu dysku sta≥ego."
+1077 U 0000 "Niepoprawna wersja DOS."
+1078 U 0000 "Nie moøna wykonaÊ FDISK z za≥adowanπ sieciπ."
+1079 U 0000 "Brak podstawowej partycji DOS do usuniÍcia."
+1080 U 0000 "Brak rozszerzonej partycji DOS do usuniÍcia."
+1081 U 0000 "Podstawowa partycja DOS juø istnieje."
+1082 U 0000 "Rozszerzona partycja DOS juø istnieje."
+1083 U 0000 "Brak miejsca do utworzenia partycji DOS."
+1084 U 0000 "Øπdana wielkoúÊ dysku logicznego przekracza maksymalnπ dostÍpnπ przestrzeÒ.<W>"
+1085 U 0000 "Øπdana wielkoúÊ partycji przekracza maksymalnπ dostÍpnπ przestrzeÒ.<W>"
+1086 U 0000 "Brak partycji do usuniÍcia."
+1087 U 0000 "Jedyna moøliwa do uruchomienia partycja na dysku 1 jest juø ustawiona jako aktywna.<W>"
+1088 U 0000 "Brak partycji do ustawienia jako aktywnej."
+1089 U 0000 "Wybrana partycja (<I>) nie jest moøliwa do uruchomienia, partycja aktywna nie zosta≥a zmieniona.<W>"
+1090 U 0000 "Nie moøna utworzyÊ rozszerzonej partycji DOS bez"
+1091 U 0000 "podstawowej partycji DOS na dysku 1.<W>"
+1092 U 0000 "Ca≥a dostÍpna przestrzeÒ w rozszerzonej partycji DOS"
+1093 U 0000 "jest przypisana do dyskÛw logicznych.<W>"
+1094 U 0000 "Nie moøna usunπÊ rozszerzonej partycji DOS, gdy istniejπ dyski logiczne.<W>"
+1095 U 0000 "Wszystkie dyski logiczne usuniÍte w rozszerzonej partycji DOS.<W>"
+1096 U 0000 " nie jest opcjπ. ProszÍ wprowadziÊ <III>.<W>"
+1097 U 0000 "OSTRZEØENIE! Partycja ustawiona jako aktywna nie jest moøliwa do uruchomienia.<W>"
+1098 U 0000 " Istniejπ tylko nieuruchamialne partycje."
+1099 U 0000 "Tylko partycje na dysku 1 mogπ byÊ ustawione jako aktywne.<W>"
+1100 U 0000 "Maksymalna liczba zainstalowanych dyskÛw logicznych DOS.<W>"
+1101 U 0000 "Nie moøna utworzyÊ partycji o zerowej wielkoúci."
+1102 U 0000 "Dysk <II> zosta≥ juø usuniÍty."
+1103 U 0000 "Nie moøna uzyskaÊ dostÍpu do dysku <I>.<OW>"
+1104 U 0000 "Nieprawid≥owe dane, proszÍ wprowadziÊ <III>.<W>"
+1105 U 0000 "Nie moøna usunπÊ podstawowej partycji DOS na dysku 1 "
+1106 U 0000 "gdy istnieje rozszerzona partycja DOS.<W>"
+1107 U 0000 "Nieprawid≥owe dane, proszÍ nacisnπÊ Enter.<W>"
+1108 U 0000 "Etykieta woluminu nie pasuje.<W>"
+1109 U 0000 "Nie moøna utworzyÊ logicznego dysku DOS bez"
+1110 U 0000 "rozrzerzonej partycji DOS na bieøπcym dysku.<W>"
+1111 U 0000 "Brak logicznych dyskÛw DOS do usuniÍcia."
+1112 U 0000 "B≥πd komunikatu <I>. Zobacz nag≥Ûwek pliku FDISKC.MSG w celu zdefiniowania b≥Ídu"
+1113 U 0000 "B≥πd wewnÍtrzny"
+1114 U 0001 "Nieprawid≥owa tablica partycji",0
+1115 U 0001 "B≥πd ≥adowania systemu operacyjnego",0
+1116 U 0001 "Brak systemu operacyjnego",0
+XMAEM    e12b 0006
+0001 U 0000 "Emulator XMA 80386 Wersja 1.10",CR,LF
+	"         (C) Prawa autorskie IBM Corporation 1987, 1988  Wszelkie prawa zastrzeøone",CR,LF,CR,LF,"$"
+0002 U 0000 "Emulator XMA 80386 zainstalowany",CR,LF,"$"
+0003 U 0004 "Emulator XMA 80386 niezainstalowany. Ten jednostka systemu",CR,LF
+	"         nie jest obs≥ugiwana.",CR,LF,CR,LF,"$"
+0004 U 0000 "Emulator XMA 80386 niezainstalowany.",CR,LF
+	"         Tryb chroniony jest juø uøywany.",CR,LF,CR,LF,"$"
+0005 U 0003 "Emulator XMA 80386 niezainstalowany",CR,LF
+	"     WartoúÊ parametru musi okreúlaÊ 64 strony lub wiÍcej",CR,LF,"$"
+0006 U 0000 "Emulator XMA 80386 niezainstalowany",CR,LF
+	"     Niewystarczajπca iloúÊ pamiÍci dla øπdanej wartoúci parametru",CR,LF,"$"
+UPDATE   e41b 0013
+0100 U 0000 CR,LF,"- Wpisz kod klawiatury: "
+0110 U 0000 "US"                    ;DOMYåLNY KOD KLAWIATURY
+0120 U 0000 CR,LF,"- Podaj dysk, ktÛry zawiera pliki do",CR,LF
+	"  zastπpienia (docelowy nie moøe byÊ dyskiem A): "
+0130 U 0000 "C"                     ;DOMYåLNY LITERA DYSKU
+0140 U 0000 CR,LF,"- Czy chcesz zastπpiÊ pliki DOS",CR,LF
+	"  we wszystkich katalogach (T/N)?"
+0150 U 0000 "T"                     ;DOMYåLNE ZAPYTANIE T/N
+0160 U 0000 CR,LF,"- Wpisz nazwÍ docelowego katalogu (\ dla g≥Ûwnego katalogu): "
+0170 U 0000 "\"                     ;DOMYåLNA åCIEØKA
+0180 U 0000 CR,LF,"- Czy uruchamiasz TUGBOAT z dysku C (T/N)? "
+0190 U 0000 CR,LF,"- W≥Ûø kolejnπ dyskietkÍ us≥ug korygujπcych do stacji A",CR,LF
+0200 U 0000 CR,LF,"- W≥Ûø dyskietkÍ us≥ug korygujπcych do stacji A",CR,LF
+	"  Naciúnij dowolny klawisz, aby zrestartowaÊ system . . ."
+0210 U 0000 CR,LF,"- Us≥ugi korygujπce zosta≥y pomyúlnie zainstalowane",CR,LF
+	"  Przygotuj system do ponownego uruchomienia",CR,LF
+	"  Naciúnij dowolny klawisz, aby zrestartowaÊ system . . ."
+0220 U 0000 CR,LF,"Podano nieprawid≥owy kod klawiatury",CR,LF
