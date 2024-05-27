@@ -47,6 +47,7 @@ CID_JP          EQU     081             ; Japan         2/17/KK
 CID_KO          EQU     082             ; Korea         2/17/KK
 CID_PR          EQU     086             ; PRC           2/17/KK
 CID_TA          EQU     088             ; Taiwan        2/17/KK
+CID_PL          EQU     048             ; Poland
 CID_XX          EQU     000             ; Dummy entry
 ;
 ; country code pages
@@ -73,6 +74,7 @@ CP_JP           EQU     932             ; Japan         2/17/KK
 CP_KO           EQU     934             ; Korea         2/17/KK
 CP_PR           EQU     936             ; PRC           2/17/KK
 CP_TA           EQU     938             ; Taiwan        2/17/KK
+CP_PL           EQU     852             ; POLAND
 ;
 ;       date formats
 ;
