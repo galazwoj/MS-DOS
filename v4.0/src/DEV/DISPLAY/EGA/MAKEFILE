@@ -9,47 +9,109 @@ hinc	=..\..\..\h
 ######################## Dependencies begin here #########################
 #
 
-all: ega.cpi
+all: 	ega.cpi \
+	egapl.cpi
 
-cpi-head.obj: cpi-head.asm \
-              makefile
+font2asm.exe: font2asm.c
+
+cpi-head.obj: cpi-head.asm 
 
 437-cpi.obj: 437-cpi.asm \
              437-8x16.asm \
              437-8x14.asm \
-             makefile      \
              437-8x8.asm
+
+cp667.f16:
+	!ERROR  See orgfont.mak how to prepare cp667.f16
+
+cp667.f14:	
+	!ERROR  See orgfont.mak how to prepare cp667.f14
+
+cp667.f08:    	
+	!ERROR  See orgfont.mak how to prepare cp667.f08
+
+667-8x16.asm: cp667.f16
+	font2asm cp667.f16 667 > 667-8x16.asm
+
+667-8x14.asm: cp667.f14
+	font2asm cp667.f14 667 > 667-8x14.asm
+
+667-8x8.asm:  cp667.f08
+	font2asm cp667.f08 667 > 667-8x8.asm
+
+667-cpi.obj: 667-cpi.asm \
+             667-8x16.asm \
+             667-8x14.asm \
+             667-8x8.asm
 
 850-cpi.obj: 850-cpi.asm \
              850-8x16.asm \
              850-8x14.asm \
-             makefile      \
              850-8x8.asm
+
+cp852.f16:  	
+	!ERROR copy cp852.f16 from external source	
+
+cp852.f14:      
+	!ERROR copy cp852.f14 from external source
+
+cp852.f08:	
+	!ERROR copy cp852.f08 from external source
+
+852-8x16.asm: cp852.f16
+	font2asm cp852.f16 852 > 852-8x16.asm
+
+852-8x14.asm: cp852.f14
+	font2asm cp852.f14 852 > 852-8x14.asm
+
+852-8x8.asm:  cp852.f08
+	font2asm cp852.f08 852 > 852-8x8.asm
+
+852-cpi.obj: 852-cpi.asm \
+             852-8x16.asm \
+             852-8x14.asm \
+             852-8x8.asm
 
 860-cpi.obj: 860-cpi.asm \
              860-8x16.asm \
              860-8x14.asm \
-             makefile      \
              860-8x8.asm
 
 863-cpi.obj: 863-cpi.asm \
              863-8x16.asm \
              863-8x14.asm \
-             makefile      \
              863-8x8.asm
 
 865-cpi.obj: 865-cpi.asm \
              865-8x16.asm \
              865-8x14.asm \
-             makefile      \
              865-8x8.asm
 
-copyrigh.obj: copyrigh.asm  $(inc)\copyrigh.inc \
-              makefile
+copyrigh.obj: copyrigh.asm  $(inc)\copyrigh.inc 
 
 ega.cpi: cpi-head.obj 437-cpi.obj 850-cpi.obj 860-cpi.obj \
-         863-cpi.obj 865-cpi.obj copyrigh.obj makefile ega.lnk \
-         makefile
-	       link @ega.lnk
-	       exe2bin cpi-head.exe ega.cpi
-	       del   cpi-head.exe
+         863-cpi.obj 865-cpi.obj copyrigh.obj makefile ega.lnk 
+	link @ega.lnk
+	exe2bin cpi-head.exe ega.cpi
+	del   cpi-head.exe
+
+egapl.cpi: cpi-head.obj 437-cpi.obj 667-cpi.obj 850-cpi.obj 852-cpi.obj \
+          copyrigh.obj makefile ega.lnk 
+	link @egapl.lnk
+	exe2bin cpi-pl.exe egapl.cpi
+	del   cpi-pl.exe
+
+clean:
+	-del *.obj
+	-del *.cpi
+	-del 667-8x16.asm  
+	-del 667-8x14.asm  
+	-del 667-8x8.asm   
+	-del 852-8x16.asm
+	-del 852-8x14.asm
+	-del 852-8x8.asm 
+
+cleancp:
+	-del cp667*
+	-del cp852*
+
