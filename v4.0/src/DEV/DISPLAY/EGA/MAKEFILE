@@ -90,13 +90,13 @@ cp852.f08:
 copyrigh.obj: copyrigh.asm  $(inc)\copyrigh.inc 
 
 ega.cpi: cpi-head.obj 437-cpi.obj 850-cpi.obj 860-cpi.obj \
-         863-cpi.obj 865-cpi.obj copyrigh.obj makefile ega.lnk 
+         863-cpi.obj 865-cpi.obj copyrigh.obj ega.lnk 
 	link @ega.lnk
 	exe2bin cpi-head.exe ega.cpi
 	del   cpi-head.exe
 
 egapl.cpi: cpi-head.obj 437-cpi.obj 667-cpi.obj 850-cpi.obj 852-cpi.obj \
-          copyrigh.obj makefile ega.lnk 
+         865-cpi.obj copyrigh.obj egapl.lnk 
 	link @egapl.lnk
 	exe2bin cpi-pl.exe egapl.cpi
 	del   cpi-pl.exe
